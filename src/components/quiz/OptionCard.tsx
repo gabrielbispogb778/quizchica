@@ -26,8 +26,8 @@ export const OptionCard = ({ label, image, onClick, className }: OptionCardProps
         </p>
       </div>
       
-      {/* Image Area - Fixed Height */}
-      <div className="h-[220px] sm:h-[280px] bg-[#f2f2f2] overflow-hidden">
+      {/* Image Area - Aspect Ratio */}
+      <div className="w-full aspect-[4/3] overflow-hidden">
         <img 
           src={image} 
           alt={label}
