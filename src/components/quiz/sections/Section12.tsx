@@ -14,7 +14,7 @@ export const Section12 = ({ onSelect, onBack }: Section12Props) => {
       {/* Back Button */}
       <button
         onClick={onBack}
-        className="absolute top-4 left-4 text-white hover:text-gray-300 transition-colors"
+        className="absolute top-8 left-4 text-white hover:text-gray-300 transition-colors z-10"
         aria-label="Go back"
       >
         <ChevronLeft className="w-8 h-8" />
@@ -36,9 +36,8 @@ export const Section12 = ({ onSelect, onBack }: Section12Props) => {
       </div>
 
       {/* Title */}
-      <h1 className="text-white text-xl sm:text-2xl font-bold text-center mb-2 max-w-md flex items-center justify-center gap-2 flex-wrap">
-        Look at what other men have to say after learning these Secret Techniques
-        <img src={shushEmoji} alt="Shush emoji" className="w-6 h-6 inline-block" />
+      <h1 className="text-white text-xl sm:text-2xl font-bold text-center mb-2 max-w-md">
+        Look at what other men have to say after learning these Secret Techniques <img src={shushEmoji} alt="Shush emoji" className="w-6 h-6 inline-block align-middle" />
       </h1>
 
       {/* Subtitle */}
