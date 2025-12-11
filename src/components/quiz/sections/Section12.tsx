@@ -1,6 +1,7 @@
 import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
 import chatImage from "@/assets/secao-12-chat.webp";
+import shushEmoji from "@/assets/emoji-shush.png";
 
 interface Section12Props {
   onSelect: () => void;
@@ -35,8 +36,9 @@ export const Section12 = ({ onSelect, onBack }: Section12Props) => {
       </div>
 
       {/* Title */}
-      <h1 className="text-white text-xl sm:text-2xl font-bold text-center mb-2 max-w-md">
-        Look at what other men have to say after learning these Secret Techniques 🤫
+      <h1 className="text-white text-xl sm:text-2xl font-bold text-center mb-2 max-w-md flex items-center justify-center gap-2 flex-wrap">
+        Look at what other men have to say after learning these Secret Techniques
+        <img src={shushEmoji} alt="Shush emoji" className="w-6 h-6 inline-block" />
       </h1>
 
       {/* Subtitle */}
