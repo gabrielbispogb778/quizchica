@@ -29,7 +29,7 @@ export const Section4 = ({ onSelect, onBack }: Section4Props) => {
       <div className="flex-1 flex flex-col items-center px-4 pt-8 pb-8">
         {/* Lips Icon */}
         <div className="mb-4">
-          <img src={lipsIcon} alt="Lips icon" className="w-10 h-10 object-contain" />
+          <img src={lipsIcon} alt="Lips icon" className="w-20 h-20 object-contain" />
         </div>
 
         {/* Progress Bar */}

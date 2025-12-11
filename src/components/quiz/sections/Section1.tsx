@@ -14,7 +14,7 @@ export const Section1 = ({ onConfirm }: Section1Props) => {
         <img 
           src={lipsIcon} 
           alt="Lips icon" 
-          className="w-16 h-16 object-contain"
+          className="w-20 h-20 object-contain"
         />
       </div>
 
