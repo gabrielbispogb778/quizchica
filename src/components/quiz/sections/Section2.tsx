@@ -42,7 +42,7 @@ export const Section2 = ({ onSelect, onBack }: Section2Props) => {
       </div>
 
       {/* Progress Bar */}
-      <div className="w-full max-w-2xl h-2 bg-white/20 rounded-full overflow-hidden mb-6">
+      <div className="w-full max-w-2xl h-2 bg-white rounded-full overflow-hidden mb-6">
         <div 
           className="h-full bg-primary rounded-full transition-all duration-500"
           style={{ width: `${progressPercentage}%` }}
