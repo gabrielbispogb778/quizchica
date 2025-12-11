@@ -4,6 +4,7 @@ import quadrinho1 from "@/assets/quadrinho-1.png";
 import quadrinho2 from "@/assets/quadrinho-2.png";
 import quadrinho3 from "@/assets/quadrinho-3.png";
 import quadrinho4 from "@/assets/quadrinho-4.png";
+import { OptionCard } from "../OptionCard";
 
 interface Section2Props {
   onSelect: () => void;
@@ -21,27 +22,27 @@ export const Section2 = ({ onSelect, onBack }: Section2Props) => {
   const progressPercentage = (2 / 22) * 100; // ~9%
 
   return (
-    <div className="flex flex-col items-center gap-4 -mt-8 w-full">
+    <div className="flex flex-col items-center w-full px-4">
       {/* Back Button */}
       <button
         onClick={onBack}
-        className="absolute top-4 left-4 flex items-center gap-1 text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+        className="absolute top-4 left-4 flex items-center gap-1 text-foreground/70 hover:text-foreground transition-colors text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded"
       >
         <ChevronLeft className="w-4 h-4" />
         Back
       </button>
 
       {/* Lips Icon */}
-      <div className="animate-scale-in">
+      <div className="animate-scale-in mb-4">
         <img 
           src={lipsIcon} 
           alt="Lips icon" 
-          className="w-16 h-16 object-contain"
+          className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
         />
       </div>
 
       {/* Progress Bar */}
-      <div className="w-full max-w-xs h-2 bg-white/20 rounded-full overflow-hidden">
+      <div className="w-full max-w-2xl h-2 bg-white/20 rounded-full overflow-hidden mb-6">
         <div 
           className="h-full bg-primary rounded-full transition-all duration-500"
           style={{ width: `${progressPercentage}%` }}
@@ -49,38 +50,24 @@ export const Section2 = ({ onSelect, onBack }: Section2Props) => {
       </div>
 
       {/* Title */}
-      <div className="text-center animate-fade-in">
-        <h1 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+      <div className="text-center animate-fade-in mb-7">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2">
           What is your Main Objective? 😈
         </h1>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm sm:text-base text-muted-foreground">
           You'll learn everything Practically and with Real Models!
         </p>
       </div>
 
       {/* Options Grid */}
-      <div className="grid grid-cols-2 gap-3 w-full max-w-md animate-fade-in">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl animate-fade-in justify-items-center">
         {options.map((option) => (
-          <button
+          <OptionCard
             key={option.id}
+            label={option.label}
+            image={option.image}
             onClick={onSelect}
-            className="group overflow-hidden rounded-xl border-2 border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
-          >
-            {/* Red Header with Text */}
-            <div className="bg-primary px-2 py-3">
-              <p className="text-foreground text-sm font-bold text-center leading-tight">
-                {option.label}
-              </p>
-            </div>
-            {/* Image */}
-            <div className="w-full aspect-[4/3] overflow-hidden">
-              <img 
-                src={option.image} 
-                alt={option.label}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </button>
+          />
         ))}
       </div>
     </div>
