@@ -19,10 +19,10 @@ export const Section3 = ({ onSelect, onBack }: Section3Props) => {
       {/* Back Button */}
       <button
         onClick={onBack}
-        className="absolute top-4 left-4 text-white hover:text-white/80 transition-colors z-10"
-        aria-label="Voltar"
+        className="absolute top-4 left-4 flex items-center gap-1 text-white hover:text-white/80 transition-colors z-10 text-sm font-medium"
       >
-        <ChevronLeft className="w-8 h-8" />
+        <ChevronLeft className="w-4 h-4" />
+        Back
       </button>
 
       {/* Content */}
