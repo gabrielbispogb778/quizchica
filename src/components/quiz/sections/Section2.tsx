@@ -11,10 +11,10 @@ interface Section2Props {
 }
 
 const options = [
-  { id: 1, image: quadrinho1 },
-  { id: 2, image: quadrinho2 },
-  { id: 3, image: quadrinho3 },
-  { id: 4, image: quadrinho4 },
+  { id: 1, image: quadrinho1, label: "Make any Woman Squirt!" },
+  { id: 2, image: quadrinho2, label: "Learn the 23 Orgasmic Techniques!" },
+  { id: 3, image: quadrinho3, label: "Be a Good Man in Bed! 🥰" },
+  { id: 4, image: quadrinho4, label: "Provide Multiple Orgasms! 💦" },
 ];
 
 export const Section2 = ({ onSelect, onBack }: Section2Props) => {
@@ -66,10 +66,17 @@ export const Section2 = ({ onSelect, onBack }: Section2Props) => {
             onClick={onSelect}
             className="group overflow-hidden rounded-xl border-2 border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
           >
+            {/* Red Header with Text */}
+            <div className="bg-primary px-2 py-3">
+              <p className="text-foreground text-sm font-bold text-center leading-tight">
+                {option.label}
+              </p>
+            </div>
+            {/* Image */}
             <div className="w-full aspect-[4/3] overflow-hidden">
               <img 
                 src={option.image} 
-                alt={`Option ${option.id}`}
+                alt={option.label}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
