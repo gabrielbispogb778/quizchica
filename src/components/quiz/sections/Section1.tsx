@@ -8,7 +8,7 @@ interface Section1Props {
 
 export const Section1 = ({ onConfirm }: Section1Props) => {
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="flex flex-col items-center gap-6 -mt-24">
       {/* Lips Icon */}
       <div className="animate-scale-in">
         <img 
