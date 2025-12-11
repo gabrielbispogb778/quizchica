@@ -15,7 +15,7 @@ const options = [
 
 export const Section4 = ({ onSelect, onBack }: Section4Props) => {
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center px-4 py-8 relative">
+    <div className="min-h-screen bg-[#000000] flex flex-col">
       {/* Back Button */}
       <button
         onClick={onBack}
@@ -25,49 +25,52 @@ export const Section4 = ({ onSelect, onBack }: Section4Props) => {
         Back
       </button>
 
-      {/* Lips Icon */}
-      <div className="mb-4">
-        <img src={lipsIcon} alt="Lips icon" className="w-10 h-10 object-contain" />
-      </div>
-
-      {/* Progress Bar */}
-      <div className="w-full max-w-md mb-8">
-        <div className="h-2 bg-white rounded-full overflow-hidden">
-          <div 
-            className="h-full bg-[#D92B27] transition-all duration-300"
-            style={{ width: `${(4 / 22) * 100}%` }}
-          />
-        </div>
-      </div>
-
-      {/* Title */}
-      <h1 className="text-white text-xl sm:text-2xl font-bold text-center mb-8 max-w-md">
-        How Would You Rate Your Sexual Performance?
-      </h1>
-
-      {/* Content - Image and Buttons */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 w-full max-w-2xl">
-        {/* Couple Image */}
-        <div className="w-48 sm:w-56 md:w-64 flex-shrink-0">
-          <img 
-            src={coupleImage} 
-            alt="Couple illustration" 
-            className="w-full h-auto object-contain"
-          />
+      {/* Content */}
+      <div className="flex-1 flex flex-col items-center px-4 pt-8 pb-8">
+        {/* Lips Icon */}
+        <div className="mb-4">
+          <img src={lipsIcon} alt="Lips icon" className="w-10 h-10 object-contain" />
         </div>
 
-        {/* Option Buttons */}
-        <div className="flex flex-col gap-3 w-full max-w-xs">
-          {options.map((option, index) => (
-            <button
-              key={index}
-              onClick={onSelect}
-              className="bg-[#D92B27] hover:bg-[#b82422] text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-between transition-colors"
-            >
-              <span className="text-left text-sm sm:text-base">{option}</span>
-              <ArrowRight className="w-5 h-5 flex-shrink-0 ml-2" />
-            </button>
-          ))}
+        {/* Progress Bar */}
+        <div className="w-full max-w-md mb-8">
+          <div className="h-2 bg-white rounded-full overflow-hidden">
+            <div 
+              className="h-full bg-[#D92B27] transition-all duration-300"
+              style={{ width: `${(4 / 22) * 100}%` }}
+            />
+          </div>
+        </div>
+
+        {/* Title */}
+        <h1 className="text-white text-xl sm:text-2xl font-bold text-center mb-8 max-w-md">
+          How Would You Rate Your Sexual Performance?
+        </h1>
+
+        {/* Content - Image and Buttons */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 w-full max-w-2xl">
+          {/* Couple Image */}
+          <div className="w-48 sm:w-56 md:w-64 flex-shrink-0">
+            <img 
+              src={coupleImage} 
+              alt="Couple illustration" 
+              className="w-full h-auto object-contain"
+            />
+          </div>
+
+          {/* Option Buttons */}
+          <div className="flex flex-col gap-3 w-full max-w-xs">
+            {options.map((option, index) => (
+              <button
+                key={index}
+                onClick={onSelect}
+                className="bg-[#D92B27] hover:bg-[#b82422] text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-between transition-colors"
+              >
+                <span className="text-left text-sm sm:text-base">{option}</span>
+                <ArrowRight className="w-5 h-5 flex-shrink-0 ml-2" />
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </div>
