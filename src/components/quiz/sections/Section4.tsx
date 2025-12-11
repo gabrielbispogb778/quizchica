@@ -1,6 +1,6 @@
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
-import coupleImage from "@/assets/secao-4-imagem.png";
+import coupleImage from "@/assets/secao-4-casal.png";
 
 interface Section4Props {
   onSelect: () => void;
