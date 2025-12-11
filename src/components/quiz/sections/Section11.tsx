@@ -41,7 +41,7 @@ export const Section11 = ({ onSelect, onBack }: Section11Props) => {
         </div>
 
         {/* Title */}
-        <h1 className="text-white text-xl sm:text-2xl font-bold text-center mb-8 max-w-md italic">
+        <h1 className="text-white text-xl sm:text-2xl font-bold text-center mb-8 max-w-md">
           Do You Think Learning These Advanced Techniques Could Be What You've Been Missing to Provide This Kind of Pleasure?
         </h1>
 
