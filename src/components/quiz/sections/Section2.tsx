@@ -1,3 +1,4 @@
+import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
 import quadrinho1 from "@/assets/quadrinho-1.png";
 import quadrinho2 from "@/assets/quadrinho-2.png";
@@ -6,6 +7,7 @@ import quadrinho4 from "@/assets/quadrinho-4.png";
 
 interface Section2Props {
   onSelect: () => void;
+  onBack: () => void;
 }
 
 const options = [
@@ -15,15 +17,34 @@ const options = [
   { id: 4, image: quadrinho4 },
 ];
 
-export const Section2 = ({ onSelect }: Section2Props) => {
+export const Section2 = ({ onSelect, onBack }: Section2Props) => {
+  const progressPercentage = (2 / 22) * 100; // ~9%
+
   return (
-    <div className="flex flex-col items-center gap-4 -mt-8">
+    <div className="flex flex-col items-center gap-4 -mt-8 w-full">
+      {/* Back Button */}
+      <button
+        onClick={onBack}
+        className="absolute top-4 left-4 flex items-center gap-1 text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+      >
+        <ChevronLeft className="w-4 h-4" />
+        Back
+      </button>
+
       {/* Lips Icon */}
       <div className="animate-scale-in">
         <img 
           src={lipsIcon} 
           alt="Lips icon" 
           className="w-16 h-16 object-contain"
+        />
+      </div>
+
+      {/* Progress Bar */}
+      <div className="w-full max-w-xs h-2 bg-white/20 rounded-full overflow-hidden">
+        <div 
+          className="h-full bg-primary rounded-full transition-all duration-500"
+          style={{ width: `${progressPercentage}%` }}
         />
       </div>
 

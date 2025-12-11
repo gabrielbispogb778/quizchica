@@ -14,12 +14,18 @@ export const Quiz = () => {
     }
   };
 
+  const handleBack = () => {
+    if (currentSection > 1) {
+      setCurrentSection(prev => prev - 1);
+    }
+  };
+
   const renderSection = () => {
     switch (currentSection) {
       case 1:
         return <Section1 onConfirm={handleNext} />;
       case 2:
-        return <Section2 onSelect={handleNext} />;
+        return <Section2 onSelect={handleNext} onBack={handleBack} />;
       // Placeholder for sections 3-22
       default:
         return (
