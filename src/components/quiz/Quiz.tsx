@@ -3,6 +3,7 @@ import { QuizLayout } from "./QuizLayout";
 import { Section1 } from "./sections/Section1";
 import { Section2 } from "./sections/Section2";
 import { Section3 } from "./sections/Section3";
+import { Section4 } from "./sections/Section4";
 
 const TOTAL_SECTIONS = 22;
 
@@ -29,6 +30,8 @@ export const Quiz = () => {
         return <Section2 onSelect={handleNext} onBack={handleBack} />;
       case 3:
         return <Section3 onSelect={handleNext} onBack={handleBack} />;
+      case 4:
+        return <Section4 onSelect={handleNext} onBack={handleBack} />;
       default:
         return (
           <div className="text-center">
