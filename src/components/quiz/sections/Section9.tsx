@@ -1,23 +1,11 @@
 import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
+import womenImage from "@/assets/secao-9-mulheres.png";
 
 interface Section9Props {
   onSelect: () => void;
   onBack: () => void;
 }
-
-const WomanIcon = ({ isHighlighted = false }: { isHighlighted?: boolean }) => (
-  <svg
-    viewBox="0 0 24 36"
-    fill={isHighlighted ? "#D92B27" : "#FFFFFF"}
-    className="w-8 h-12 sm:w-10 sm:h-14"
-  >
-    {/* Head */}
-    <circle cx="12" cy="5" r="4" />
-    {/* Body (dress shape) */}
-    <path d="M12 10 L6 28 L8 28 L10 20 L10 28 L14 28 L14 20 L16 28 L18 28 L12 10 Z" />
-  </svg>
-);
 
 export const Section9 = ({ onSelect, onBack }: Section9Props) => {
   return (
@@ -53,24 +41,13 @@ export const Section9 = ({ onSelect, onBack }: Section9Props) => {
           Studies claim that only 1 out of 10 women achieves this type of pleasure (Squirt).
         </h1>
 
-        {/* Woman Icons Grid */}
+        {/* Women Image */}
         <div className="mb-8">
-          {/* First Row */}
-          <div className="flex justify-center gap-2 sm:gap-4 mb-2">
-            <WomanIcon isHighlighted={true} />
-            <WomanIcon />
-            <WomanIcon />
-            <WomanIcon />
-            <WomanIcon />
-          </div>
-          {/* Second Row */}
-          <div className="flex justify-center gap-2 sm:gap-4">
-            <WomanIcon />
-            <WomanIcon />
-            <WomanIcon />
-            <WomanIcon />
-            <WomanIcon />
-          </div>
+          <img 
+            src={womenImage} 
+            alt="1 out of 10 women" 
+            className="w-full max-w-sm object-contain"
+          />
         </div>
 
         {/* Subtitle */}
