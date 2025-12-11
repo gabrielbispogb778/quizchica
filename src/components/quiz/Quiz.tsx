@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { QuizLayout } from "./QuizLayout";
 import { Section1 } from "./sections/Section1";
+import { Section2 } from "./sections/Section2";
 
 const TOTAL_SECTIONS = 22;
 
@@ -17,7 +18,9 @@ export const Quiz = () => {
     switch (currentSection) {
       case 1:
         return <Section1 onConfirm={handleNext} />;
-      // Placeholder for sections 2-22
+      case 2:
+        return <Section2 onSelect={handleNext} />;
+      // Placeholder for sections 3-22
       default:
         return (
           <div className="text-center">
