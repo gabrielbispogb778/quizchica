@@ -8,8 +8,8 @@ interface Section6Props {
 }
 
 const options = [
-  { label: "Yes, I know it well", emoji: "🥴" },
-  { label: "No, I've never heard about it", emoji: "🤷" },
+  { label: "Yes, I know it well", emoji: "😏" },
+  { label: "No, I've never heard about it", emoji: "🤔" },
 ];
 
 export const Section6 = ({ onSelect, onBack }: Section6Props) => {
