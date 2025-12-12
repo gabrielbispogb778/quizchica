@@ -46,7 +46,7 @@ export const Section18 = ({ onSelect, onBack }: Section18Props) => {
             onClick={onSelect}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-6 px-4 rounded-lg transition-all duration-200 flex flex-col items-center justify-center gap-3"
           >
-            <img src={emojiHappy} alt="Happy emoji" className="w-9 h-9 object-contain" />
+            <img src={emojiHappy} alt="Happy emoji" className="w-12 h-12 object-contain" />
             <span className="text-center text-sm sm:text-base">She'd be impressed and happy</span>
           </button>
           <button
