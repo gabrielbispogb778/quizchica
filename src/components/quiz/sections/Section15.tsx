@@ -37,7 +37,7 @@ export const Section15 = ({ onSelect, onBack }: Section15Props) => {
         </div>
 
         {/* Title */}
-        <h1 className="text-[#D92B27] text-xl sm:text-2xl font-bold text-center mb-6 max-w-md leading-relaxed">
+        <h1 className="text-white text-xl sm:text-2xl font-bold text-center mb-6 max-w-md leading-relaxed">
           87% of men who master and apply these Techniques make their Woman Squirting in the First Minutes! 😈
         </h1>
 
