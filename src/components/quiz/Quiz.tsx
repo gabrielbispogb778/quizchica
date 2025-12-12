@@ -19,6 +19,7 @@ import { Section16 } from "./sections/Section16";
 import { Section17 } from "./sections/Section17";
 import { Section18 } from "./sections/Section18";
 import { Section19 } from "./sections/Section19";
+import { Section20 } from "./sections/Section20";
 
 const TOTAL_SECTIONS = 22;
 
@@ -77,6 +78,8 @@ export const Quiz = () => {
         return <Section18 onSelect={handleNext} onBack={handleBack} />;
       case 19:
         return <Section19 onSelect={handleNext} onBack={handleBack} />;
+      case 20:
+        return <Section20 onSelect={handleNext} onBack={handleBack} />;
       default:
         return (
           <div className="text-center">
