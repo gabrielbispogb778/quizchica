@@ -1,5 +1,7 @@
 import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
+import emoji1 from "@/assets/emoji-secao20-1.png";
+import emoji2 from "@/assets/emoji-secao20-2.png";
 
 interface Section20Props {
   onSelect: () => void;
@@ -52,14 +54,14 @@ export const Section20 = ({ onSelect, onBack }: Section20Props) => {
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
           >
             <span className="text-lg">Yes</span>
-            <span className="text-2xl">😏</span>
+            <img src={emoji1} alt="emoji" className="w-8 h-8 object-contain" />
           </button>
           <button
             onClick={onSelect}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
           >
             <span className="text-lg">Certainly!</span>
-            <span className="text-2xl">🤩</span>
+            <img src={emoji2} alt="emoji" className="w-8 h-8 object-contain" />
           </button>
         </div>
       </div>
