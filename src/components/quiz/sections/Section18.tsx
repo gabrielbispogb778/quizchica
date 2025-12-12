@@ -1,6 +1,6 @@
 import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
-
+import emojiHappy from "@/assets/emoji-happy.png";
 interface Section18Props {
   onSelect: () => void;
   onBack: () => void;
@@ -46,7 +46,7 @@ export const Section18 = ({ onSelect, onBack }: Section18Props) => {
             onClick={onSelect}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-6 px-4 rounded-lg transition-all duration-200 flex flex-col items-center justify-center gap-3"
           >
-            <span className="text-3xl">🤩</span>
+            <img src={emojiHappy} alt="Happy emoji" className="w-10 h-10 object-contain" />
             <span className="text-center text-sm sm:text-base">She'd be impressed and happy</span>
           </button>
           <button
