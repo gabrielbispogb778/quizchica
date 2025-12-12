@@ -54,14 +54,14 @@ export const Section20 = ({ onSelect, onBack }: Section20Props) => {
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
           >
             <span className="text-lg">Yes</span>
-            <img src={emoji1} alt="emoji" className="w-8 h-8 object-contain" />
+            <img src={emoji1} alt="emoji" className="w-12 h-12 object-contain" />
           </button>
           <button
             onClick={onSelect}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
           >
             <span className="text-lg">Certainly!</span>
-            <img src={emoji2} alt="emoji" className="w-8 h-8 object-contain" />
+            <img src={emoji2} alt="emoji" className="w-12 h-12 object-contain" />
           </button>
         </div>
       </div>
