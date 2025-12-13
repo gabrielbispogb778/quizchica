@@ -268,7 +268,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           </div>
 
           {/* Part 9 - Reviews/Testimonials */}
-          <div className="mt-6 w-full">
+          <div className="mt-3 w-full">
             <img src={reviewsImage} alt="Customer reviews and testimonials" className="w-full h-auto rounded-xl" />
           </div>
 
