@@ -45,7 +45,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         </div>
 
         {/* Description Text */}
-        <p className="text-gray-300 text-sm sm:text-base text-center max-w-md leading-relaxed mb-8">
+        <p className="text-white text-sm sm:text-base text-center max-w-md leading-relaxed mb-8 font-bold">
           Enough with mediocre sex. Learn for real how to give your woman intense and pleasurable orgasms!
         </p>
 
@@ -55,31 +55,31 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           
           <div className="space-y-3">
             <div className="flex items-start gap-2">
-              <span className="text-green-400 mt-0.5">☑️</span>
+              <span className="text-green-400 mt-0.5">✅</span>
               <p className="text-white text-sm text-center flex-1">23 detailed video lessons teaching advanced techniques to make any woman SQUIRT</p>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-green-400 mt-0.5">☑️</span>
+              <span className="text-green-400 mt-0.5">✅</span>
               <p className="text-white text-sm text-center flex-1">Video lessons recorded with Real Models</p>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-green-400 mt-0.5">☑️</span>
+              <span className="text-green-400 mt-0.5">✅</span>
               <p className="text-white text-sm text-center flex-1">Practical secrets to bring your partner to orgasm and squirting</p>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-green-400 mt-0.5">☑️</span>
+              <span className="text-green-400 mt-0.5">✅</span>
               <p className="text-white text-sm text-center flex-1">Step-by-step with real examples so you can apply the techniques from today</p>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-green-400 mt-0.5">☑️</span>
+              <span className="text-green-400 mt-0.5">✅</span>
               <p className="text-white text-sm text-center flex-1">Techniques to make your woman excited without even touching her</p>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-green-400 mt-0.5">☑️</span>
+              <span className="text-green-400 mt-0.5">✅</span>
               <p className="text-white text-sm text-center flex-1">Content constantly updated, ensuring you always have access to the best techniques</p>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-green-400 mt-0.5">☑️</span>
+              <span className="text-green-400 mt-0.5">✅</span>
               <p className="text-white text-sm text-center flex-1">Lifetime access</p>
             </div>
           </div>
