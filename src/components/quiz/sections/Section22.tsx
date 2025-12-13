@@ -232,6 +232,48 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             </div>
           </div>
         </div>
+
+        {/* Part 7 - Don't Worry + Product Showcase */}
+        <div className="w-full max-w-md mt-6">
+          {/* Don't Worry Text */}
+          <div className="text-center mb-4">
+            <p className="text-[#ef4444] text-lg font-bold mb-2">DON'T WORRY!</p>
+            <p className="text-white text-sm leading-relaxed px-2">
+              The amount of <span className="text-[#ef4444] underline">$19.90 USD</span> will be automatically converted to your country's currency when you click the button below!
+            </p>
+          </div>
+
+          {/* Green Price Banner */}
+          <div className="bg-[#16a34a] rounded-lg py-2 px-4 mx-auto w-fit mb-4">
+            <p className="text-white text-lg font-bold">FOR ONLY $19.90</p>
+          </div>
+
+          {/* Main Product + Bonus 1 */}
+          <div className="flex gap-3 mb-4">
+            {/* Main Product */}
+            <div className="flex-1 rounded-xl overflow-hidden border border-[#333]">
+              <img src={offerImage} alt="23 Orgasmic Techniques" className="w-full h-auto" />
+            </div>
+            
+            {/* Bonus 1 */}
+            <div className="w-28 rounded-xl overflow-hidden border border-[#333]">
+              <img src={bonus1} alt="Bonus 1 - The Best Positions" className="w-full h-auto" />
+            </div>
+          </div>
+
+          {/* Bonus 2, 3, 4 */}
+          <div className="grid grid-cols-3 gap-3">
+            <div className="rounded-xl overflow-hidden border border-[#333]">
+              <img src={bonus2} alt="Bonus 2 - The Secret Formula" className="w-full h-auto" />
+            </div>
+            <div className="rounded-xl overflow-hidden border border-[#333]">
+              <img src={bonus3} alt="Bonus 3 - Make Any Woman" className="w-full h-auto" />
+            </div>
+            <div className="rounded-xl overflow-hidden border border-[#333]">
+              <img src={bonus4} alt="Bonus 4 - The Erotic Imagination" className="w-full h-auto" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
