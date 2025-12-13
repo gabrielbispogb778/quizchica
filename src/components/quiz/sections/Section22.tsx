@@ -9,6 +9,7 @@ import bonus4 from "@/assets/secao-22-bonus4.webp";
 import offerImage from "@/assets/secao-22-offer.webp";
 import paymentImage from "@/assets/secao-22-payment.webp";
 import reviewsImage from "@/assets/secao-22-reviews-new.png";
+import guaranteeImage from "@/assets/secao-22-guarantee.jpg";
 interface Section22Props {
   onSelect: () => void;
   onBack: () => void;
@@ -309,6 +310,38 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             >
               ACCESS RIGHT NOW
             </button>
+          </div>
+
+          {/* Part 11 - 7 Day Guarantee */}
+          <div className="w-full max-w-md mt-8">
+            {/* Guarantee Badge */}
+            <div className="flex justify-center mb-4">
+              <img src={guaranteeImage} alt="7 Day Guarantee" className="w-24 h-24 object-contain" />
+            </div>
+
+            {/* Title */}
+            <h3 className="text-white text-xl font-bold text-center mb-4">7 DAY GUARANTEE</h3>
+
+            {/* Refund Box */}
+            <div className="bg-transparent border border-[#444] rounded-lg p-4 mb-4">
+              <p className="text-white text-base font-bold text-center mb-2">We guarantee 100% refund</p>
+              <p className="text-white text-sm text-center leading-relaxed">
+                We believe so much in our program that we are willing to return your money if you don't see results and can prove you followed all the steps of the program. Please check our Refund Policy to understand all requirements.
+              </p>
+            </div>
+
+            {/* Secure Purchase Box */}
+            <div className="bg-transparent border border-[#444] rounded-lg p-4 mb-6">
+              <p className="text-white text-base font-bold text-center mb-2">100% Secure Purchase</p>
+              <p className="text-white text-sm text-center leading-relaxed">
+                All information is encrypted and transmitted safely using a Secure Socket Layer protocol.
+              </p>
+            </div>
+
+            {/* Footer */}
+            <p className="text-gray-400 text-sm text-center italic">
+              Orgasmic Techniques 2025 © All Rights Reserved
+            </p>
           </div>
         </div>
         </div>
