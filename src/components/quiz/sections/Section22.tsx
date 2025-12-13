@@ -45,9 +45,64 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         </div>
 
         {/* Description Text */}
-        <p className="text-gray-300 text-sm sm:text-base text-center max-w-md leading-relaxed">
+        <p className="text-gray-300 text-sm sm:text-base text-center max-w-md leading-relaxed mb-8">
           Enough with mediocre sex. Learn for real how to give your woman intense and pleasurable orgasms!
         </p>
+
+        {/* What Will You Receive Box */}
+        <div className="w-full max-w-md bg-[#D92B27] rounded-lg p-6 mb-8">
+          <h2 className="text-white text-lg font-bold text-center mb-4">WHAT WILL YOU RECEIVE?</h2>
+          
+          <div className="space-y-3">
+            <div className="flex items-start gap-2">
+              <span className="text-green-400 mt-0.5">☑️</span>
+              <p className="text-white text-sm text-center flex-1">23 detailed video lessons teaching advanced techniques to make any woman SQUIRT</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-green-400 mt-0.5">☑️</span>
+              <p className="text-white text-sm text-center flex-1">Video lessons recorded with Real Models</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-green-400 mt-0.5">☑️</span>
+              <p className="text-white text-sm text-center flex-1">Practical secrets to bring your partner to orgasm and squirting</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-green-400 mt-0.5">☑️</span>
+              <p className="text-white text-sm text-center flex-1">Step-by-step with real examples so you can apply the techniques from today</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-green-400 mt-0.5">☑️</span>
+              <p className="text-white text-sm text-center flex-1">Techniques to make your woman excited without even touching her</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-green-400 mt-0.5">☑️</span>
+              <p className="text-white text-sm text-center flex-1">Content constantly updated, ensuring you always have access to the best techniques</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-green-400 mt-0.5">☑️</span>
+              <p className="text-white text-sm text-center flex-1">Lifetime access</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Students Reviews Section */}
+        <p className="text-white text-base font-semibold text-center mb-4">
+          Look at what our students say 👇
+        </p>
+
+        {/* Reviews Card */}
+        <div className="w-full max-w-md bg-gradient-to-b from-gray-100 to-gray-200 rounded-lg p-6 mb-8">
+          <div className="flex justify-center gap-1 mb-2">
+            <span className="text-2xl">⭐</span>
+            <span className="text-2xl">⭐</span>
+            <span className="text-2xl">⭐</span>
+            <span className="text-2xl">⭐</span>
+            <span className="text-2xl">⭐</span>
+          </div>
+          <p className="text-gray-800 text-4xl font-bold text-center">4.387</p>
+          <p className="text-gray-800 text-xl font-bold text-center">5-Star Reviews</p>
+          <p className="text-gray-500 text-xs text-center mt-1">Based on reviews from men who applied the techniques</p>
+        </div>
       </div>
     </div>
   );
