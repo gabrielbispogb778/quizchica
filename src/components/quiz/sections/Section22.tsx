@@ -271,6 +271,45 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           <div className="mt-6 w-full">
             <img src={reviewsImage} alt="Customer reviews and testimonials" className="w-full h-auto rounded-xl" />
           </div>
+
+          {/* Part 10 - Limited Time Offer + CTA */}
+          <div className="w-full mt-6">
+            {/* Red banner */}
+            <div className="bg-[#dc2626] rounded-t-xl py-3 px-4">
+              <p className="text-white text-sm font-bold text-center tracking-wider">
+                LIMITED TIME OFFER! 👇
+              </p>
+            </div>
+            
+            {/* Black box with offer */}
+            <div className="bg-black border-2 border-[#333] border-t-0 p-5">
+              <div className="flex items-center gap-4">
+                {/* White vertical bar */}
+                <div className="w-1.5 h-24 bg-white rounded-full shrink-0"></div>
+                
+                {/* Text */}
+                <p className="text-white text-xl font-bold italic leading-tight flex-1">
+                  23 Orgasmic Techniques + 4 Exclusive Bonuses! From $99.90
+                </p>
+                
+                {/* Price box */}
+                <div className="bg-[#4a1c1c] rounded-lg px-4 py-3 text-center shrink-0">
+                  <p className="text-white text-[10px] font-medium tracking-wide">FOR ONLY</p>
+                  <p className="text-white text-2xl font-bold">$19,90</p>
+                  <p className="text-white text-[10px] tracking-wide">ONE-TIME</p>
+                  <p className="text-white text-[10px] tracking-wide">PAYMENT</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Green CTA Button */}
+            <button 
+              onClick={onSelect}
+              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-lg font-bold py-4 px-6 rounded-b-xl transition-colors"
+            >
+              ACCESS RIGHT NOW
+            </button>
+          </div>
         </div>
         </div>
       </div>
