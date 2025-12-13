@@ -190,7 +190,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         {/* Part 5 - Attention Banner */}
         <div className="w-full max-w-md bg-[#22c55e] rounded-2xl p-5 mb-3 border-2 border-[#16a34a]">
           <div className="flex items-start gap-3">
-            <span className="text-white text-xl">☑️</span>
+            <span className="text-xl">✅</span>
             <div>
               <p className="text-white text-lg font-bold mb-1">
                 🚨 ATTENTION:
