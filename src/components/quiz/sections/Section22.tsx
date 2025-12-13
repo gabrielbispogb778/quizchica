@@ -188,40 +188,50 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         </div>
 
         {/* Attention Banner */}
-        <div className="w-full max-w-md bg-yellow-400 rounded-lg p-3 mb-2">
-          <p className="text-black text-sm font-bold text-center">
-            ⚠️ ATTENTION
-          </p>
-          <p className="text-black text-xs text-center">
-            This offer will only be available for the next 15 minutes... Access now and get 80% off!
-          </p>
+        <div className="w-full max-w-md bg-green-600 rounded-2xl p-4 mb-2">
+          <div className="flex items-start gap-2">
+            <span className="text-white">☑️</span>
+            <div>
+              <p className="text-white text-sm font-bold">
+                🔔 ATTENTION:
+              </p>
+              <p className="text-white text-sm">
+                This offer will only be available for the next 15 minutes... Access now and get 80% off!
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Limited Time Offer Banner */}
         <div className="w-full max-w-md bg-green-600 rounded-lg p-2 mb-2">
           <p className="text-white text-sm font-bold text-center">
-            LIMITED TIME OFFER! 🎁
+            LIMITED TIME OFFER! 👇
           </p>
         </div>
 
         {/* Offer Box */}
         <div className="w-full max-w-md bg-[#D92B27] rounded-lg p-4 mb-2">
-          <div className="flex items-center justify-between">
-            <p className="text-white text-sm font-bold flex-1">
-              🔥 23 Orgasmic Techniques + 4 Exclusive Bonuses! From $99.90
-            </p>
-            <div className="text-right ml-2">
-              <p className="text-white text-lg font-bold">$19.90</p>
-              <p className="text-white text-[10px]">ONE-TIME PAYMENT</p>
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-start gap-2 flex-1">
+              <span className="text-2xl">🔥</span>
+              <p className="text-white text-base font-bold">
+                23 Orgasmic Techniques + 4 Exclusive Bonuses! From $99.90
+              </p>
+            </div>
+            <div className="bg-green-600 rounded-lg px-3 py-2 text-center shrink-0">
+              <p className="text-white text-[10px]">FOR ONLY</p>
+              <p className="text-white text-xl font-bold">$19.90</p>
+              <p className="text-white text-[8px]">ONE-TIME</p>
+              <p className="text-white text-[8px]">PAYMENT</p>
             </div>
           </div>
         </div>
 
         {/* Don't Worry Section */}
         <div className="w-full max-w-md text-center mb-2">
-          <p className="text-[#D92B27] text-sm font-bold mb-1">DON'T WORRY!</p>
-          <p className="text-gray-400 text-xs">
-            The amount of <span className="text-[#D92B27]">$19.90 USD</span> will be automatically converted to your country's currency when you click the button below!
+          <p className="text-[#D92B27] text-base font-bold mb-1">DON'T WORRY!</p>
+          <p className="text-white text-sm">
+            The amount of <span className="text-[#D92B27] underline">$19.90 USD</span> will be automatically converted to your country's currency when you click the button below!
           </p>
         </div>
 
