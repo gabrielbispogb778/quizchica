@@ -54,7 +54,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         </p>
 
         {/* What Will You Receive Box */}
-        <div className="w-full max-w-md bg-[#D92B27] rounded-lg p-6 mb-4">
+        <div className="w-full max-w-md bg-[#D92B27] rounded-lg p-6 mb-2">
           <h2 className="text-white text-lg font-bold text-center mb-4">WHAT WILL YOU RECEIVE?</h2>
           
           <div className="space-y-3">
@@ -95,7 +95,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         </p>
 
         {/* Reviews Card */}
-        <div className="w-full max-w-md bg-gradient-to-b from-gray-100 to-gray-200 rounded-lg p-6 mb-4">
+        <div className="w-full max-w-md bg-gradient-to-b from-gray-100 to-gray-200 rounded-lg p-6 mb-2">
           <div className="flex justify-center gap-1 mb-2">
             <span className="text-2xl">⭐</span>
             <span className="text-2xl">⭐</span>
@@ -109,7 +109,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         </div>
 
         {/* WhatsApp Chat Screenshot */}
-        <div className="w-full max-w-md mb-4">
+        <div className="w-full max-w-md mb-2">
           <img 
             src={chatImage} 
             alt="Student success message" 
@@ -118,7 +118,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         </div>
 
         {/* Subscribe Banner */}
-        <div className="w-full max-w-md bg-[#D92B27] rounded-lg p-4 mb-4">
+        <div className="w-full max-w-md bg-[#D92B27] rounded-lg p-4 mb-2">
           <p className="text-white text-base font-bold text-center mb-1">
             Subscribe today and receive +4 Gifts!
           </p>
@@ -128,7 +128,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         </div>
 
         {/* Bonus Cards */}
-        <div className="w-full max-w-md space-y-4 mb-4">
+        <div className="w-full max-w-md space-y-2 mb-2">
           {/* Bonus 1 */}
           <div className="bg-black border border-gray-800 rounded-lg p-4 text-center">
             <img src={bonus1} alt="Bonus 1" className="w-24 h-auto mx-auto mb-3" />
