@@ -188,14 +188,14 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         </div>
 
         {/* Attention Banner */}
-        <div className="w-full max-w-md bg-green-600 rounded-2xl p-4 mb-2">
-          <div className="flex items-start gap-2">
-            <span className="text-white">☑️</span>
+        <div className="w-full max-w-md bg-[#22c55e] rounded-2xl p-4 mb-2">
+          <div className="flex items-start gap-3">
+            <span className="text-white text-xl">☑️</span>
             <div>
-              <p className="text-white text-sm font-bold">
-                🔔 ATTENTION:
+              <p className="text-white text-base">
+                <span className="text-yellow-300">🔔</span> <span className="font-bold text-yellow-300">ATTENTION:</span>
               </p>
-              <p className="text-white text-sm">
+              <p className="text-white text-base">
                 This offer will only be available for the next 15 minutes... Access now and get 80% off!
               </p>
             </div>
@@ -203,34 +203,34 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         </div>
 
         {/* Limited Time Offer Banner */}
-        <div className="w-full max-w-md bg-green-600 rounded-lg p-2 mb-2">
-          <p className="text-white text-sm font-bold text-center">
+        <div className="w-full max-w-md bg-[#22c55e] rounded-lg p-3 mb-2">
+          <p className="text-white text-base font-bold text-center tracking-wider">
             LIMITED TIME OFFER! 👇
           </p>
         </div>
 
         {/* Offer Box */}
-        <div className="w-full max-w-md bg-[#D92B27] rounded-lg p-4 mb-2">
-          <div className="flex items-center justify-between gap-3">
-            <div className="flex items-start gap-2 flex-1">
-              <span className="text-2xl">🔥</span>
-              <p className="text-white text-base font-bold">
+        <div className="w-full max-w-md bg-[#D92B27] rounded-lg overflow-hidden mb-2">
+          <div className="flex items-stretch">
+            <div className="w-2 bg-orange-500"></div>
+            <div className="flex-1 p-4 flex items-center justify-between gap-3">
+              <p className="text-white text-lg font-bold leading-tight">
                 23 Orgasmic Techniques + 4 Exclusive Bonuses! From $99.90
               </p>
-            </div>
-            <div className="bg-green-600 rounded-lg px-3 py-2 text-center shrink-0">
-              <p className="text-white text-[10px]">FOR ONLY</p>
-              <p className="text-white text-xl font-bold">$19.90</p>
-              <p className="text-white text-[8px]">ONE-TIME</p>
-              <p className="text-white text-[8px]">PAYMENT</p>
+              <div className="bg-[#22c55e] rounded-lg px-4 py-3 text-center shrink-0">
+                <p className="text-white text-xs">FOR ONLY</p>
+                <p className="text-white text-2xl font-bold">$19,90</p>
+                <p className="text-white text-[10px]">ONE-TIME</p>
+                <p className="text-white text-[10px]">PAYMENT</p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Don't Worry Section */}
-        <div className="w-full max-w-md text-center mb-2">
-          <p className="text-[#D92B27] text-base font-bold mb-1">DON'T WORRY!</p>
-          <p className="text-white text-sm">
+        <div className="w-full max-w-md text-center mb-2 px-4">
+          <p className="text-[#D92B27] text-xl font-bold mb-2">DON'T WORRY!</p>
+          <p className="text-white text-base">
             The amount of <span className="text-[#D92B27] underline">$19.90 USD</span> will be automatically converted to your country's currency when you click the button below!
           </p>
         </div>
