@@ -234,47 +234,6 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             The amount of <span className="text-[#D92B27] underline">$19.90 USD</span> will be automatically converted to your country's currency when you click the button below!
           </p>
         </div>
-
-        {/* Price Highlight */}
-        <p className="text-green-500 text-2xl font-bold text-center mb-2">
-          FOR ONLY $19.90
-        </p>
-
-        {/* Offer Image */}
-        <div className="w-full max-w-md mb-2">
-          <img 
-            src={offerImage} 
-            alt="Complete offer package" 
-            className="w-full rounded-lg"
-          />
-        </div>
-
-        {/* CTA Button */}
-        <button 
-          onClick={onSelect}
-          className="w-full max-w-md bg-green-600 hover:bg-green-700 text-white text-sm font-bold py-4 px-6 rounded-lg mb-2 transition-colors"
-        >
-          ACCESS NOW WITH AN 80% DISCOUNT
-        </button>
-
-        {/* Payment Icons */}
-        <div className="flex justify-center items-center gap-2 mb-4">
-          <div className="bg-white rounded px-2 py-1">
-            <span className="text-blue-800 text-xs font-bold">VISA</span>
-          </div>
-          <div className="bg-white rounded px-2 py-1">
-            <span className="text-red-500 text-xs font-bold">mastercard</span>
-          </div>
-          <div className="bg-yellow-400 rounded px-2 py-1">
-            <span className="text-black text-xs font-bold">elo</span>
-          </div>
-          <div className="bg-white rounded px-2 py-1">
-            <span className="text-blue-600 text-xs font-bold">AMEX</span>
-          </div>
-          <div className="bg-red-600 rounded px-2 py-1">
-            <span className="text-white text-xs font-bold">Hipercard</span>
-          </div>
-        </div>
       </div>
     </div>
   );
