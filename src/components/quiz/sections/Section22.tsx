@@ -237,7 +237,9 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         <div className="w-full max-w-md mt-6">
           {/* Don't Worry Text */}
           <div className="text-center mb-4">
-            <p className="text-[#ef4444] text-lg font-bold mb-2">DON'T WORRY!</p>
+            <div className="bg-[#dc2626] inline-block px-4 py-1 rounded mb-2">
+              <p className="text-white text-lg font-bold">DON'T WORRY!</p>
+            </div>
             <p className="text-white text-sm leading-relaxed px-2">
               The amount of <span className="text-[#ef4444] underline">$19.90 USD</span> will be automatically converted to your country's currency when you click the button below!
             </p>
