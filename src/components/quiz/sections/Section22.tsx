@@ -1,7 +1,7 @@
 import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
 import heroImage from "@/assets/secao-22-hero.webp";
-
+import chatImage from "@/assets/secao-22-chat.webp";
 interface Section22Props {
   onSelect: () => void;
   onBack: () => void;
@@ -102,6 +102,25 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           <p className="text-gray-800 text-4xl font-bold text-center">4.387</p>
           <p className="text-gray-800 text-xl font-bold text-center">5-Star Reviews</p>
           <p className="text-gray-500 text-xs text-center mt-1">Based on reviews from men who applied the techniques</p>
+        </div>
+
+        {/* WhatsApp Chat Screenshot */}
+        <div className="w-full max-w-md mb-8">
+          <img 
+            src={chatImage} 
+            alt="Student success message" 
+            className="w-full rounded-lg"
+          />
+        </div>
+
+        {/* Subscribe Banner */}
+        <div className="w-full max-w-md bg-[#D92B27] rounded-lg p-4 mb-8">
+          <p className="text-white text-base font-bold text-center mb-1">
+            Subscribe today and receive +4 Gifts!
+          </p>
+          <p className="text-white text-xs text-center">
+            By completing your enrollment today, you'll receive immediate access and all these Bonuses 🎁
+          </p>
         </div>
       </div>
     </div>
