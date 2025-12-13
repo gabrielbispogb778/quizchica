@@ -273,7 +273,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           </div>
 
           {/* Part 10 - Limited Time Offer + CTA */}
-          <div className="w-full mt-6">
+          <div className="w-full mt-3">
             {/* Red banner */}
             <div className="bg-[#dc2626] rounded-t-xl py-3 px-4">
               <p className="text-white text-sm font-bold text-center tracking-wider">
