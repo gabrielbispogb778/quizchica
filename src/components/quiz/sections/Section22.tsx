@@ -282,7 +282,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             </div>
             
             {/* Black box with offer */}
-            <div className="bg-black border-2 border-[#333] border-t-0 p-5">
+            <div className="bg-black border-2 border-[#333] border-t-0 rounded-b-xl p-5">
               <div className="flex items-center gap-4">
                 {/* White vertical bar */}
                 <div className="w-1.5 h-24 bg-white rounded-full shrink-0"></div>
@@ -302,10 +302,10 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
               </div>
             </div>
 
-            {/* Green CTA Button */}
+            {/* Green CTA Button - Separate */}
             <button 
               onClick={onSelect}
-              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-lg font-bold py-4 px-6 rounded-b-xl transition-colors"
+              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-lg font-bold py-4 px-6 rounded-xl mt-4 transition-colors"
             >
               ACCESS RIGHT NOW
             </button>
