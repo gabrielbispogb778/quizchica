@@ -9,7 +9,7 @@ import bonus4 from "@/assets/secao-22-bonus4.webp";
 import offerImage from "@/assets/secao-22-offer.webp";
 import paymentImage from "@/assets/secao-22-payment.webp";
 import reviewsImage from "@/assets/secao-22-reviews-new.png";
-import guaranteeImage from "@/assets/secao-22-guarantee.jpg";
+import guaranteeImage from "@/assets/secao-22-guarantee-badge.png";
 interface Section22Props {
   onSelect: () => void;
   onBack: () => void;
