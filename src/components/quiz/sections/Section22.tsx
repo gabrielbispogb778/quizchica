@@ -2,6 +2,10 @@ import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
 import heroImage from "@/assets/secao-22-hero.webp";
 import chatImage from "@/assets/secao-22-chat.webp";
+import bonus1 from "@/assets/secao-22-bonus1.webp";
+import bonus2 from "@/assets/secao-22-bonus2.webp";
+import bonus3 from "@/assets/secao-22-bonus3.webp";
+import bonus4 from "@/assets/secao-22-bonus4.webp";
 interface Section22Props {
   onSelect: () => void;
   onBack: () => void;
@@ -121,6 +125,65 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           <p className="text-white text-xs text-center">
             By completing your enrollment today, you'll receive immediate access and all these Bonuses 🎁
           </p>
+        </div>
+
+        {/* Bonus Cards */}
+        <div className="w-full max-w-md space-y-4 mb-4">
+          {/* Bonus 1 */}
+          <div className="bg-black border border-gray-800 rounded-lg p-4 text-center">
+            <img src={bonus1} alt="Bonus 1" className="w-24 h-auto mx-auto mb-3" />
+            <p className="text-white text-sm italic mb-2">
+              Discover the best positions that facilitate orgasm and increase pleasure and connection with your woman.
+            </p>
+            <p className="text-sm">
+              <span className="text-[#D92B27]">From </span>
+              <span className="text-[#D92B27] line-through">$29</span>
+              <span className="text-white"> for </span>
+              <span className="text-green-500 font-bold">$0</span>
+            </p>
+          </div>
+
+          {/* Bonus 2 */}
+          <div className="bg-black border border-gray-800 rounded-lg p-4 text-center">
+            <img src={bonus2} alt="Bonus 2" className="w-24 h-auto mx-auto mb-3" />
+            <p className="text-white text-sm italic mb-2">
+              Boost your game with the power of Seduction. Attract and conquer any woman with this Secret Formula!
+            </p>
+            <p className="text-sm">
+              <span className="text-[#D92B27]">From </span>
+              <span className="text-[#D92B27] line-through">$29</span>
+              <span className="text-white"> for </span>
+              <span className="text-green-500 font-bold">$0</span>
+            </p>
+          </div>
+
+          {/* Bonus 3 */}
+          <div className="bg-black border border-gray-800 rounded-lg p-4 text-center">
+            <img src={bonus3} alt="Bonus 3" className="w-24 h-auto mx-auto mb-3" />
+            <p className="text-white text-sm italic mb-2">
+              Learn how to awaken the wild side of any shy woman, with these foolproof techniques.
+            </p>
+            <p className="text-sm">
+              <span className="text-[#D92B27]">From </span>
+              <span className="text-[#D92B27] line-through">$29</span>
+              <span className="text-white"> for </span>
+              <span className="text-green-500 font-bold">$0</span>
+            </p>
+          </div>
+
+          {/* Bonus 4 */}
+          <div className="bg-black border border-gray-800 rounded-lg p-4 text-center">
+            <img src={bonus4} alt="Bonus 4" className="w-24 h-auto mx-auto mb-3" />
+            <p className="text-white text-sm italic mb-2">
+              Understand how the female mind works and use that knowledge to conquer any woman.
+            </p>
+            <p className="text-sm">
+              <span className="text-[#D92B27]">From </span>
+              <span className="text-[#D92B27] line-through">$29</span>
+              <span className="text-white"> for </span>
+              <span className="text-green-500 font-bold">$0</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
