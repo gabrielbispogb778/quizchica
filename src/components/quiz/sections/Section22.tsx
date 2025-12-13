@@ -243,35 +243,9 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             </p>
           </div>
 
-          {/* Green Price Banner */}
-          <div className="bg-[#16a34a] rounded-lg py-2 px-4 mx-auto w-fit mb-4">
-            <p className="text-white text-lg font-bold">FOR ONLY $19.90</p>
-          </div>
-
-          {/* Main Product + Bonus 1 */}
-          <div className="flex gap-3 mb-4">
-            {/* Main Product */}
-            <div className="flex-1 rounded-xl overflow-hidden border border-[#333]">
-              <img src={offerImage} alt="23 Orgasmic Techniques" className="w-full h-auto" />
-            </div>
-            
-            {/* Bonus 1 */}
-            <div className="w-28 rounded-xl overflow-hidden border border-[#333]">
-              <img src={bonus1} alt="Bonus 1 - The Best Positions" className="w-full h-auto" />
-            </div>
-          </div>
-
-          {/* Bonus 2, 3, 4 */}
-          <div className="grid grid-cols-3 gap-3">
-            <div className="rounded-xl overflow-hidden border border-[#333]">
-              <img src={bonus2} alt="Bonus 2 - The Secret Formula" className="w-full h-auto" />
-            </div>
-            <div className="rounded-xl overflow-hidden border border-[#333]">
-              <img src={bonus3} alt="Bonus 3 - Make Any Woman" className="w-full h-auto" />
-            </div>
-            <div className="rounded-xl overflow-hidden border border-[#333]">
-              <img src={bonus4} alt="Bonus 4 - The Erotic Imagination" className="w-full h-auto" />
-            </div>
+          {/* Offer Image with Bonuses */}
+          <div className="rounded-xl overflow-hidden">
+            <img src={offerImage} alt="23 Orgasmic Techniques + Bonuses" className="w-full h-auto" />
           </div>
         </div>
       </div>
