@@ -7,6 +7,7 @@ import bonus2 from "@/assets/secao-22-bonus2.webp";
 import bonus3 from "@/assets/secao-22-bonus3.webp";
 import bonus4 from "@/assets/secao-22-bonus4.webp";
 import offerImage from "@/assets/secao-22-offer.webp";
+import paymentImage from "@/assets/secao-22-payment.webp";
 interface Section22Props {
   onSelect: () => void;
   onBack: () => void;
@@ -248,6 +249,22 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           {/* Offer Image with Bonuses */}
           <div className="rounded-xl overflow-hidden">
             <img src={offerImage} alt="23 Orgasmic Techniques + Bonuses" className="w-full h-auto" />
+          </div>
+
+          {/* Part 8 - CTA Button + Payment Methods */}
+          <div className="mt-6 w-full">
+            {/* Green CTA Button */}
+            <button 
+              onClick={onSelect}
+              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-lg font-bold py-4 px-6 rounded-xl transition-colors"
+            >
+              ACCESS NOW WITH AN 80% DISCOUNT
+            </button>
+
+            {/* Payment Methods */}
+            <div className="mt-4 flex justify-center">
+              <img src={paymentImage} alt="Payment methods: Visa, Mastercard, Elo, American Express, Hipercard" className="h-10 object-contain" />
+            </div>
           </div>
         </div>
       </div>
