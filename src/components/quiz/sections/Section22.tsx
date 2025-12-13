@@ -8,6 +8,7 @@ import bonus3 from "@/assets/secao-22-bonus3.webp";
 import bonus4 from "@/assets/secao-22-bonus4.webp";
 import offerImage from "@/assets/secao-22-offer.webp";
 import paymentImage from "@/assets/secao-22-payment.webp";
+import reviewsImage from "@/assets/secao-22-reviews.webp";
 interface Section22Props {
   onSelect: () => void;
   onBack: () => void;
@@ -264,8 +265,13 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             {/* Payment Methods */}
             <div className="mt-4 flex justify-center">
               <img src={paymentImage} alt="Payment methods: Visa, Mastercard, Elo, American Express, Hipercard" className="h-10 object-contain" />
-            </div>
           </div>
+
+          {/* Part 9 - Reviews/Testimonials */}
+          <div className="mt-6 w-full">
+            <img src={reviewsImage} alt="Customer reviews and testimonials" className="w-full h-auto rounded-xl" />
+          </div>
+        </div>
         </div>
       </div>
     </div>
