@@ -6,6 +6,7 @@ import bonus1 from "@/assets/secao-22-bonus1.webp";
 import bonus2 from "@/assets/secao-22-bonus2.webp";
 import bonus3 from "@/assets/secao-22-bonus3.webp";
 import bonus4 from "@/assets/secao-22-bonus4.webp";
+import offerImage from "@/assets/secao-22-offer.webp";
 interface Section22Props {
   onSelect: () => void;
   onBack: () => void;
@@ -183,6 +184,85 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
               <span className="text-white"> for </span>
               <span className="text-green-500 font-bold">$0</span>
             </p>
+          </div>
+        </div>
+
+        {/* Attention Banner */}
+        <div className="w-full max-w-md bg-yellow-400 rounded-lg p-3 mb-2">
+          <p className="text-black text-sm font-bold text-center">
+            ⚠️ ATTENTION
+          </p>
+          <p className="text-black text-xs text-center">
+            This offer will only be available for the next 15 minutes... Access now and get 80% off!
+          </p>
+        </div>
+
+        {/* Limited Time Offer Banner */}
+        <div className="w-full max-w-md bg-green-600 rounded-lg p-2 mb-2">
+          <p className="text-white text-sm font-bold text-center">
+            LIMITED TIME OFFER! 🎁
+          </p>
+        </div>
+
+        {/* Offer Box */}
+        <div className="w-full max-w-md bg-[#D92B27] rounded-lg p-4 mb-2">
+          <div className="flex items-center justify-between">
+            <p className="text-white text-sm font-bold flex-1">
+              🔥 23 Orgasmic Techniques + 4 Exclusive Bonuses! From $99.90
+            </p>
+            <div className="text-right ml-2">
+              <p className="text-white text-lg font-bold">$19.90</p>
+              <p className="text-white text-[10px]">ONE-TIME PAYMENT</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Don't Worry Section */}
+        <div className="w-full max-w-md text-center mb-2">
+          <p className="text-[#D92B27] text-sm font-bold mb-1">DON'T WORRY!</p>
+          <p className="text-gray-400 text-xs">
+            The amount of <span className="text-[#D92B27]">$19.90 USD</span> will be automatically converted to your country's currency when you click the button below!
+          </p>
+        </div>
+
+        {/* Price Highlight */}
+        <p className="text-green-500 text-2xl font-bold text-center mb-2">
+          FOR ONLY $19.90
+        </p>
+
+        {/* Offer Image */}
+        <div className="w-full max-w-md mb-2">
+          <img 
+            src={offerImage} 
+            alt="Complete offer package" 
+            className="w-full rounded-lg"
+          />
+        </div>
+
+        {/* CTA Button */}
+        <button 
+          onClick={onSelect}
+          className="w-full max-w-md bg-green-600 hover:bg-green-700 text-white text-sm font-bold py-4 px-6 rounded-lg mb-2 transition-colors"
+        >
+          ACCESS NOW WITH AN 80% DISCOUNT
+        </button>
+
+        {/* Payment Icons */}
+        <div className="flex justify-center items-center gap-2 mb-4">
+          <div className="bg-white rounded px-2 py-1">
+            <span className="text-blue-800 text-xs font-bold">VISA</span>
+          </div>
+          <div className="bg-white rounded px-2 py-1">
+            <span className="text-red-500 text-xs font-bold">mastercard</span>
+          </div>
+          <div className="bg-yellow-400 rounded px-2 py-1">
+            <span className="text-black text-xs font-bold">elo</span>
+          </div>
+          <div className="bg-white rounded px-2 py-1">
+            <span className="text-blue-600 text-xs font-bold">AMEX</span>
+          </div>
+          <div className="bg-red-600 rounded px-2 py-1">
+            <span className="text-white text-xs font-bold">Hipercard</span>
           </div>
         </div>
       </div>
