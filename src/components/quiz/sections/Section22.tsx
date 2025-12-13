@@ -201,6 +201,37 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             </div>
           </div>
         </div>
+
+        {/* Part 6 - Limited Time Offer */}
+        <div className="w-full max-w-md">
+          {/* Red banner */}
+          <div className="bg-[#dc2626] rounded-t-xl py-3 px-4">
+            <p className="text-white text-sm font-bold text-center tracking-wider">
+              LIMITED TIME OFFER! 👇
+            </p>
+          </div>
+          
+          {/* Black box with offer */}
+          <div className="bg-black border-2 border-[#333] rounded-b-xl p-5">
+            <div className="flex items-center gap-4">
+              {/* White vertical bar */}
+              <div className="w-1.5 h-24 bg-white rounded-full shrink-0"></div>
+              
+              {/* Text */}
+              <p className="text-white text-xl font-bold italic leading-tight flex-1">
+                23 Orgasmic Techniques + 4 Exclusive Bonuses! From $99.90
+              </p>
+              
+              {/* Price box */}
+              <div className="bg-[#4a1c1c] rounded-lg px-4 py-3 text-center shrink-0">
+                <p className="text-white text-[10px] font-medium tracking-wide">FOR ONLY</p>
+                <p className="text-white text-2xl font-bold">$19,90</p>
+                <p className="text-white text-[10px] tracking-wide">ONE-TIME</p>
+                <p className="text-white text-[10px] tracking-wide">PAYMENT</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
