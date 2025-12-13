@@ -305,7 +305,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             {/* Green CTA Button - Separate */}
             <button 
               onClick={onSelect}
-              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-lg font-bold py-4 px-6 rounded-xl mt-4 transition-colors"
+              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-lg font-bold py-4 px-6 rounded-xl mt-2 transition-colors"
             >
               ACCESS RIGHT NOW
             </button>
