@@ -48,20 +48,20 @@ export const Section20 = ({ onSelect, onBack }: Section20Props) => {
         </h2>
 
         {/* Options - Two Buttons Stacked */}
-        <div className="flex flex-col gap-4 w-full max-w-md">
+        <div className="flex flex-col gap-3 sm:gap-4 w-full max-w-md">
           <button
             onClick={onSelect}
-            className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
+            className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
           >
-            <span className="text-lg">Yes</span>
-            <img src={emoji1} alt="emoji" className="w-12 h-12 object-contain" />
+            <span className="text-sm sm:text-lg">Yes</span>
+            <img src={emoji1} alt="emoji" className="w-9 h-9 sm:w-12 sm:h-12 object-contain" />
           </button>
           <button
             onClick={onSelect}
-            className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
+            className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
           >
-            <span className="text-lg">Certainly!</span>
-            <img src={emoji2} alt="emoji" className="w-12 h-12 object-contain" />
+            <span className="text-sm sm:text-lg">Certainly!</span>
+            <img src={emoji2} alt="emoji" className="w-9 h-9 sm:w-12 sm:h-12 object-contain" />
           </button>
         </div>
       </div>

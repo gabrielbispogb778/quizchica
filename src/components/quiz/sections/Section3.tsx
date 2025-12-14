@@ -53,10 +53,10 @@ export const Section3 = ({ onSelect, onBack }: Section3Props) => {
             <button
               key={option.id}
               onClick={onSelect}
-              className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-3 sm:py-4 px-4 rounded-lg transition-all duration-200 flex items-center justify-between active:scale-[0.98] text-sm sm:text-base"
+              className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-3 sm:px-4 rounded-lg transition-all duration-200 flex items-center justify-between active:scale-[0.98] text-xs sm:text-base"
             >
               <span>{option.label}</span>
-              <span className="text-lg sm:text-xl">{option.emoji}</span>
+              <span className="text-base sm:text-xl">{option.emoji}</span>
             </button>
           ))}
         </div>

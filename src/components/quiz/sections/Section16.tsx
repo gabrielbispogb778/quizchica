@@ -46,16 +46,16 @@ export const Section16 = ({ onSelect, onBack }: Section16Props) => {
         </p>
 
         {/* Options */}
-        <div className="flex gap-4 w-full max-w-md">
+        <div className="flex gap-3 sm:gap-4 w-full max-w-md">
           <button
             onClick={onSelect}
-            className="flex-1 bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-6 rounded-lg transition-all duration-200 text-left"
+            className="flex-1 bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 text-left text-xs sm:text-base"
           >
             Yes
           </button>
           <button
             onClick={onSelect}
-            className="flex-1 bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-6 rounded-lg transition-all duration-200 text-left"
+            className="flex-1 bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 text-left text-xs sm:text-base"
           >
             No
           </button>
