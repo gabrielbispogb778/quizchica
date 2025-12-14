@@ -28,7 +28,7 @@ export const Section21 = ({ onSelect, onBack }: Section21Props) => {
   }, [onSelect]);
 
   return (
-    <div className="min-h-screen bg-[#000000] flex flex-col relative">
+    <div className="min-h-screen bg-[#000000] flex flex-col">
       {/* Back Button */}
       <button
         onClick={onBack}

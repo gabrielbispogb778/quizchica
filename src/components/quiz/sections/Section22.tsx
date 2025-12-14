@@ -17,7 +17,7 @@ interface Section22Props {
 
 export const Section22 = ({ onSelect, onBack }: Section22Props) => {
   return (
-    <div className="min-h-screen bg-black flex flex-col relative overflow-y-auto">
+    <div className="min-h-screen bg-black flex flex-col overflow-y-auto">
       {/* Back Button */}
       <button
         onClick={onBack}
