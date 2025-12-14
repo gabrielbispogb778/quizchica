@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { QuizLayout } from "./QuizLayout";
+import { useImagePreload } from "@/hooks/useImagePreload";
 import { Section1 } from "./sections/Section1";
 import { Section2 } from "./sections/Section2";
 import { Section3 } from "./sections/Section3";
@@ -26,6 +27,7 @@ import { Section22 } from "./sections/Section22";
 const TOTAL_SECTIONS = 22;
 
 export const Quiz = () => {
+  useImagePreload();
   const [currentSection, setCurrentSection] = useState(1);
 
   const handleNext = () => {

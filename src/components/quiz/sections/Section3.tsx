@@ -67,7 +67,6 @@ export const Section3 = ({ onSelect, onBack }: Section3Props) => {
             src={sectionImage} 
             alt="Section illustration" 
             className="w-full h-auto object-contain"
-            loading="lazy"
           />
         </div>
       </div>

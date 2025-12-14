@@ -50,7 +50,6 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             src={heroImage} 
             alt="23 Orgasmic Techniques" 
             className="w-full"
-            loading="lazy"
           />
         </div>
 
@@ -120,7 +119,6 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             src={chatImage} 
             alt="Student success message" 
             className="w-full rounded-lg"
-            loading="lazy"
           />
         </div>
 
@@ -138,7 +136,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         <div className="w-full max-w-xs sm:max-w-md space-y-2 mb-2">
           {/* Bonus 1 */}
           <div className="bg-black border border-gray-800 rounded-lg p-3 sm:p-4 text-center">
-            <img src={bonus1} alt="Bonus 1" className="w-20 sm:w-24 h-auto mx-auto mb-2 sm:mb-3" loading="lazy" />
+            <img src={bonus1} alt="Bonus 1" className="w-20 sm:w-24 h-auto mx-auto mb-2 sm:mb-3" />
             <p className="text-white text-xs sm:text-sm italic mb-2">
               Discover the best positions that facilitate orgasm and increase pleasure and connection with your woman.
             </p>
@@ -152,7 +150,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
 
           {/* Bonus 2 */}
           <div className="bg-black border border-gray-800 rounded-lg p-3 sm:p-4 text-center">
-            <img src={bonus2} alt="Bonus 2" className="w-20 sm:w-24 h-auto mx-auto mb-2 sm:mb-3" loading="lazy" />
+            <img src={bonus2} alt="Bonus 2" className="w-20 sm:w-24 h-auto mx-auto mb-2 sm:mb-3" />
             <p className="text-white text-xs sm:text-sm italic mb-2">
               Boost your game with the power of Seduction. Attract and conquer any woman with this Secret Formula!
             </p>
@@ -166,7 +164,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
 
           {/* Bonus 3 */}
           <div className="bg-black border border-gray-800 rounded-lg p-3 sm:p-4 text-center">
-            <img src={bonus3} alt="Bonus 3" className="w-20 sm:w-24 h-auto mx-auto mb-2 sm:mb-3" loading="lazy" />
+            <img src={bonus3} alt="Bonus 3" className="w-20 sm:w-24 h-auto mx-auto mb-2 sm:mb-3" />
             <p className="text-white text-xs sm:text-sm italic mb-2">
               Learn how to awaken the wild side of any shy woman, with these foolproof techniques.
             </p>
@@ -180,7 +178,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
 
           {/* Bonus 4 */}
           <div className="bg-black border border-gray-800 rounded-lg p-3 sm:p-4 text-center">
-            <img src={bonus4} alt="Bonus 4" className="w-20 sm:w-24 h-auto mx-auto mb-2 sm:mb-3" loading="lazy" />
+            <img src={bonus4} alt="Bonus 4" className="w-20 sm:w-24 h-auto mx-auto mb-2 sm:mb-3" />
             <p className="text-white text-xs sm:text-sm italic mb-2">
               Understand how the female mind works and use that knowledge to conquer any woman.
             </p>
@@ -253,7 +251,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
 
           {/* Offer Image with Bonuses */}
           <div className="rounded-xl overflow-hidden">
-            <img src={offerImage} alt="23 Orgasmic Techniques + Bonuses" className="w-full h-auto" loading="lazy" />
+            <img src={offerImage} alt="23 Orgasmic Techniques + Bonuses" className="w-full h-auto" />
           </div>
 
           {/* Part 8 - CTA Button + Payment Methods */}
@@ -275,7 +273,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
 
           {/* Part 9 - Reviews/Testimonials */}
           <div className="mt-1 w-full flex justify-center">
-            <img src={reviewsImage} alt="Customer reviews and testimonials" className="max-w-xs sm:max-w-md w-full h-auto rounded-xl" loading="lazy" />
+            <img src={reviewsImage} alt="Customer reviews and testimonials" className="max-w-xs sm:max-w-md w-full h-auto rounded-xl" />
           </div>
 
           {/* Part 10 - Limited Time Offer + CTA */}
