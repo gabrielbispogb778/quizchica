@@ -51,12 +51,12 @@ export const Section8 = ({ onSelect, onBack }: Section8Props) => {
             <button
               key={index}
               onClick={onSelect}
-              className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-4 rounded-lg transition-all duration-200 flex items-center justify-between gap-2 active:scale-[0.98] text-sm sm:text-base text-left"
+              className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-3 sm:px-4 rounded-lg transition-all duration-200 flex items-center justify-between gap-2 active:scale-[0.98] text-xs sm:text-base text-left"
             >
               <span>{option.label}</span>
-              <div className="flex items-center gap-2 flex-shrink-0">
-                <ArrowRight className="w-5 h-5" />
-                <span className="text-xl">{option.emoji}</span>
+              <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-lg sm:text-xl">{option.emoji}</span>
               </div>
             </button>
           ))}

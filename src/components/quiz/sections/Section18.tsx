@@ -41,20 +41,20 @@ export const Section18 = ({ onSelect, onBack }: Section18Props) => {
         </h1>
 
         {/* Options - Two Cards Side by Side */}
-        <div className="grid grid-cols-2 gap-4 w-full max-w-md">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full max-w-md">
           <button
             onClick={onSelect}
-            className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-6 px-4 rounded-lg transition-all duration-200 flex flex-col items-center justify-center gap-3"
+            className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 sm:py-6 px-3 sm:px-4 rounded-lg transition-all duration-200 flex flex-col items-center justify-center gap-2 sm:gap-3"
           >
-            <img src={emojiHappy} alt="Happy emoji" className="w-20 h-20 object-contain" />
-            <span className="text-center text-sm sm:text-base">She'd be impressed and happy</span>
+            <img src={emojiHappy} alt="Happy emoji" className="w-14 h-14 sm:w-20 sm:h-20 object-contain" />
+            <span className="text-center text-xs sm:text-base">She'd be impressed and happy</span>
           </button>
           <button
             onClick={onSelect}
-            className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-6 px-4 rounded-lg transition-all duration-200 flex flex-col items-center justify-center gap-3"
+            className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 sm:py-6 px-3 sm:px-4 rounded-lg transition-all duration-200 flex flex-col items-center justify-center gap-2 sm:gap-3"
           >
-            <span className="text-3xl">😈</span>
-            <span className="text-center text-sm sm:text-base">She'd go crazy with desire!</span>
+            <span className="text-2xl sm:text-3xl">😈</span>
+            <span className="text-center text-xs sm:text-base">She'd go crazy with desire!</span>
           </button>
         </div>
       </div>

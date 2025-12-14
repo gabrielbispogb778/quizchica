@@ -51,9 +51,9 @@ export const Section11 = ({ onSelect, onBack }: Section11Props) => {
             <button
               key={index}
               onClick={onSelect}
-              className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-4 rounded-lg transition-all duration-200 flex items-center gap-4 active:scale-[0.98] text-sm sm:text-base text-left"
+              className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-3 sm:px-4 rounded-lg transition-all duration-200 flex items-center gap-3 sm:gap-4 active:scale-[0.98] text-xs sm:text-base text-left"
             >
-              <span className="text-xl flex-shrink-0">{option.emoji}</span>
+              <span className="text-lg sm:text-xl flex-shrink-0">{option.emoji}</span>
               <span>{option.label}</span>
             </button>
           ))}
