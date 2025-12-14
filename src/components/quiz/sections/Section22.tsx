@@ -21,9 +21,10 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
       {/* Back Button */}
       <button
         onClick={onBack}
-        className="fixed top-4 left-4 flex items-center justify-center w-10 h-10 border border-white/30 rounded-md text-white hover:text-white/80 hover:border-white/50 transition-colors z-50"
+        className="absolute top-4 left-4 flex items-center gap-1 text-white hover:text-white/80 transition-colors z-10 text-sm font-medium"
       >
-        <ChevronLeft className="w-5 h-5" />
+        <ChevronLeft className="w-4 h-4" />
+        Back
       </button>
 
       {/* Content */}
