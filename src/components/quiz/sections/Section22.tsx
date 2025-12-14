@@ -31,7 +31,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
       <div className="flex-1 flex flex-col items-center px-3 pt-6 pb-8 sm:px-4 sm:pt-8">
         {/* Lips Icon */}
         <div className="mb-3 sm:mb-4">
-          <img src={lipsIcon} alt="Lips icon" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+          <img src={lipsIcon} alt="Lips icon" className="w-20 h-20 object-contain" />
         </div>
 
         {/* Progress Bar - Full (100%) */}
