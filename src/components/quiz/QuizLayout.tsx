@@ -14,14 +14,6 @@ export const QuizLayout = ({ children, currentSection, totalSections }: QuizLayo
       <div className="w-full max-w-lg animate-fade-in">
         {children}
       </div>
-      
-      {/* Progress Bar */}
-      <div className="progress-bar">
-        <div 
-          className="progress-fill"
-          style={{ width: `${progressPercentage}%` }}
-        />
-      </div>
     </div>
   );
 };
