@@ -259,12 +259,14 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           {/* Part 8 - CTA Button + Payment Methods */}
           <div className="mt-4 sm:mt-6 w-full">
             {/* Green CTA Button */}
-            <button 
-              onClick={onSelect}
-              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98]"
+            <a 
+              href="https://go.centerpag.com/PPU38CQ4NDP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98] block text-center"
             >
               ACCESS NOW WITH AN 80% DISCOUNT
-            </button>
+            </a>
 
             {/* Payment Methods */}
             <div className="mt-3 sm:mt-4 flex justify-center">
@@ -307,12 +309,14 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             </div>
 
             {/* Green CTA Button - Separate */}
-            <button 
-              onClick={onSelect}
-              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl mt-2 transition-colors active:scale-[0.98]"
+            <a 
+              href="https://go.centerpag.com/PPU38CQ4NDP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl mt-2 transition-colors active:scale-[0.98] block text-center"
             >
               ACCESS RIGHT NOW
-            </button>
+            </a>
           </div>
 
           {/* Part 11 - 7 Day Guarantee */}
