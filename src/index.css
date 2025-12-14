@@ -70,21 +70,31 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 }
 
 @layer components {
   .quiz-button {
     @apply bg-primary text-primary-foreground font-bold uppercase tracking-wide 
-           py-4 px-8 rounded-lg transition-all duration-200 
-           hover:bg-[hsl(var(--quiz-red-hover))] active:scale-[0.98];
+           py-3 px-6 rounded-lg transition-all duration-200 
+           hover:bg-[hsl(var(--quiz-red-hover))] active:scale-[0.98]
+           text-sm sm:text-base sm:py-4 sm:px-8;
   }
 
   .quiz-card {
-    @apply border border-foreground/30 rounded-xl px-8 py-6 text-center;
+    @apply border border-foreground/30 rounded-xl px-4 py-4 text-center
+           sm:px-8 sm:py-6;
   }
 
   .progress-bar {
@@ -93,5 +103,58 @@
 
   .progress-fill {
     @apply h-full bg-primary transition-all duration-500 ease-out;
+  }
+
+  /* Quiz section container - optimized for mobile and desktop */
+  .quiz-section {
+    @apply min-h-screen min-h-[100dvh] bg-background flex flex-col;
+  }
+
+  /* Quiz content area - proper spacing for mobile and desktop */
+  .quiz-content {
+    @apply flex-1 flex flex-col items-center px-4 pt-6 pb-20
+           sm:px-6 sm:pt-8 sm:pb-24
+           lg:pt-12;
+  }
+
+  /* Quiz title - responsive sizing */
+  .quiz-title {
+    @apply text-foreground text-lg font-bold text-center mb-4 max-w-md
+           sm:text-xl sm:mb-6
+           md:text-2xl md:mb-8;
+  }
+
+  /* Quiz options container */
+  .quiz-options {
+    @apply w-full max-w-md space-y-3
+           sm:space-y-4;
+  }
+
+  /* Quiz option button */
+  .quiz-option-btn {
+    @apply w-full bg-primary hover:bg-[hsl(var(--quiz-red-hover))] text-primary-foreground 
+           font-bold py-3 px-4 rounded-lg transition-all duration-200 
+           flex items-center justify-between active:scale-[0.98] 
+           text-sm sm:text-base sm:py-4;
+  }
+
+  /* Back button positioning */
+  .quiz-back-btn {
+    @apply absolute top-3 left-3 flex items-center gap-1 text-foreground 
+           hover:text-foreground/80 transition-colors z-10 text-xs font-medium
+           sm:top-4 sm:left-4 sm:text-sm;
+  }
+
+  /* Progress bar container in sections */
+  .quiz-progress-container {
+    @apply w-full max-w-sm mb-4 px-2
+           sm:max-w-md sm:mb-6 sm:px-0
+           md:mb-8;
+  }
+
+  /* Lips icon sizing */
+  .quiz-lips-icon {
+    @apply w-16 h-16 object-contain mb-3
+           sm:w-20 sm:h-20 sm:mb-4;
   }
 }
