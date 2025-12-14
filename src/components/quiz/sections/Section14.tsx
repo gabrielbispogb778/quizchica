@@ -11,14 +11,13 @@ export const Section14 = ({ onSelect, onBack }: Section14Props) => {
   useEffect(() => {
     // Load the vturb player script
     const script = document.createElement("script");
-    script.src = "https://scripts.converteai.net//players//player.js";
+    script.src = "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/693b5d9d82cba8290aaee973/v4/player.js";
     script.async = true;
-    script.id = "scr_";
     document.head.appendChild(script);
 
     return () => {
       // Cleanup script on unmount
-      const existingScript = document.getElementById("scr_");
+      const existingScript = document.querySelector(`script[src="${script.src}"]`);
       if (existingScript) {
         existingScript.remove();
       }
@@ -68,35 +67,10 @@ export const Section14 = ({ onSelect, onBack }: Section14Props) => {
         <div className="w-full max-w-lg mb-6">
           <div className="bg-[#D92B27] rounded-lg p-4">
             <div 
-              id="vid_" 
-              style={{ position: 'relative', width: '100%', padding: '56.25% 0 0' }}
-            >
-              <img 
-                id="thumb_" 
-                src="https://images.converteai.net//players//thumbnail.jpg" 
-                style={{ 
-                  position: 'absolute', 
-                  top: 0, 
-                  left: 0, 
-                  width: '100%', 
-                  height: '100%', 
-                  objectFit: 'cover', 
-                  display: 'block' 
-                }} 
-                alt="thumbnail" 
-              />
-              <div 
-                id="backdrop_" 
-                style={{ 
-                  WebkitBackdropFilter: 'blur(5px)', 
-                  backdropFilter: 'blur(5px)', 
-                  position: 'absolute', 
-                  top: 0, 
-                  height: '100%', 
-                  width: '100%' 
-                }} 
-              />
-            </div>
+              dangerouslySetInnerHTML={{
+                __html: `<vturb-smartplayer id="vid-693b5d9d82cba8290aaee973" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>`
+              }}
+            />
           </div>
         </div>
 
