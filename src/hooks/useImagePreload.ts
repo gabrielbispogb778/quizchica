@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 // Import all section images for preloading
 import lipsIcon from "@/assets/lips-icon.png";
 import secao3Image from "@/assets/secao-3-imagem.png";
@@ -34,10 +32,19 @@ import secao22Payment from "@/assets/secao-22-payment.webp";
 import secao22Reviews from "@/assets/secao-22-reviews-new.png";
 import secao22Guarantee from "@/assets/secao-22-guarantee-badge.png";
 
-const allImages = [
+// Critical images (first sections - load with high priority)
+const criticalImages = [
   lipsIcon,
   secao3Image,
   secao4Casal,
+  quadrinho1,
+  quadrinho2,
+  quadrinho3,
+  quadrinho4,
+];
+
+// Secondary images (later sections)
+const secondaryImages = [
   secao6Gif,
   secao7Image,
   secao9Mulheres,
@@ -51,10 +58,10 @@ const allImages = [
   emojiHappy,
   emoji20_1,
   emoji20_2,
-  quadrinho1,
-  quadrinho2,
-  quadrinho3,
-  quadrinho4,
+];
+
+// Section 22 images (checkout page)
+const section22Images = [
   secao22Hero,
   secao22Chat,
   secao22Bonus1,
@@ -67,11 +74,44 @@ const allImages = [
   secao22Guarantee,
 ];
 
+// Preload function that loads images immediately
+const preloadImage = (src: string): Promise<void> => {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve();
+    img.onerror = () => resolve(); // Don't block on errors
+    img.src = src;
+  });
+};
+
+// Start preloading critical images immediately when module loads
+const preloadCritical = () => {
+  criticalImages.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
+
+// Execute immediately
+preloadCritical();
+
+// Preload remaining images after a short delay
+setTimeout(() => {
+  secondaryImages.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}, 100);
+
+setTimeout(() => {
+  section22Images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}, 500);
+
+// Hook still available for compatibility
 export const useImagePreload = () => {
-  useEffect(() => {
-    allImages.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, []);
+  // Images are already preloading from module load
+  // This hook is kept for backward compatibility
 };
