@@ -4,7 +4,7 @@ import chatImage from "@/assets/secao-12-chat.webp";
 import shushEmoji from "@/assets/emoji-shush.png";
 
 interface Section12Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -58,7 +58,7 @@ export const Section12 = ({ onSelect, onBack }: Section12Props) => {
 
         {/* Continue Button */}
         <button
-          onClick={onSelect}
+          onClick={(e) => onSelect(e)}
           className="w-full max-w-md bg-[#D92B27] hover:bg-[#b82522] text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
         >
           Continue

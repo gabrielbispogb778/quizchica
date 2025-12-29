@@ -3,7 +3,7 @@ import lipsIcon from "@/assets/lips-icon.png";
 import sectionImage from "@/assets/secao-13-imagem.png";
 
 interface Section13Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -60,13 +60,13 @@ export const Section13 = ({ onSelect, onBack }: Section13Props) => {
           {/* Options */}
           <div className="flex flex-col gap-4 w-full sm:w-auto">
             <button
-              onClick={onSelect}
+              onClick={(e) => onSelect(e)}
               className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-12 rounded-lg transition-all duration-200 text-left min-w-[160px]"
             >
               Yes
             </button>
             <button
-              onClick={onSelect}
+              onClick={(e) => onSelect(e)}
               className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-12 rounded-lg transition-all duration-200 text-left min-w-[160px]"
             >
               No

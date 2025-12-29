@@ -4,7 +4,7 @@ import emoji1 from "@/assets/emoji-secao20-1.png";
 import emoji2 from "@/assets/emoji-secao20-2.png";
 
 interface Section20Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -50,14 +50,14 @@ export const Section20 = ({ onSelect, onBack }: Section20Props) => {
         {/* Options - Two Buttons Stacked */}
         <div className="flex flex-col gap-3 sm:gap-4 w-full max-w-md">
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
           >
             <span className="text-sm sm:text-lg">Yes</span>
             <img src={emoji1} alt="emoji" className="w-9 h-9 sm:w-12 sm:h-12 object-contain" />
           </button>
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
           >
             <span className="text-sm sm:text-lg">Certainly!</span>

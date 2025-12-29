@@ -3,7 +3,7 @@ import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
 
 interface Section14Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -87,14 +87,14 @@ export const Section14 = ({ onSelect, onBack }: Section14Props) => {
         {/* Options */}
         <div className="flex flex-col gap-3 sm:gap-4 w-full max-w-xs sm:max-w-sm">
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 flex items-center justify-between text-sm sm:text-base active:scale-[0.98]"
           >
             <span>Very good</span>
             <span className="text-lg sm:text-xl">🔥</span>
           </button>
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 flex items-center justify-between text-sm sm:text-base active:scale-[0.98]"
           >
             <span>I'm going to apply it right now!</span>

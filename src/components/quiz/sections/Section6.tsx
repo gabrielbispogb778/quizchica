@@ -3,7 +3,7 @@ import lipsIcon from "@/assets/lips-icon.png";
 import sectionGif from "@/assets/secao-6-gif.gif";
 
 interface Section6Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -60,7 +60,7 @@ export const Section6 = ({ onSelect, onBack }: Section6Props) => {
           {options.map((option, index) => (
             <button
               key={index}
-              onClick={onSelect}
+              onClick={(e) => onSelect(e)}
               className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 sm:py-6 px-3 sm:px-4 rounded-lg transition-all duration-200 flex flex-col items-center justify-center gap-1.5 sm:gap-2 active:scale-[0.98] text-xs sm:text-base"
             >
               <span className="text-xl sm:text-2xl">{option.emoji}</span>

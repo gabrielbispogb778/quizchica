@@ -11,7 +11,7 @@ import paymentImage from "@/assets/secao-22-payment.webp";
 import reviewsImage from "@/assets/secao-22-reviews-new.png";
 import guaranteeImage from "@/assets/secao-22-guarantee-badge.png";
 interface Section22Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 

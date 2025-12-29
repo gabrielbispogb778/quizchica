@@ -3,7 +3,7 @@ import lipsIcon from "@/assets/lips-icon.png";
 import secao19Imagem from "@/assets/secao-19-imagem.png";
 
 interface Section19Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -58,14 +58,14 @@ export const Section19 = ({ onSelect, onBack }: Section19Props) => {
         {/* Options - Two Buttons Side by Side */}
         <div className="grid grid-cols-2 gap-4 w-full max-w-md">
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
           >
             <span className="text-2xl">🔥</span>
             <span className="text-center text-sm sm:text-base">Yes, of course</span>
           </button>
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
           >
             <span className="text-2xl">😈</span>

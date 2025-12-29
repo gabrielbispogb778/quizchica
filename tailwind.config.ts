@@ -81,6 +81,20 @@ export default {
           "0%, 100%": { boxShadow: "0 0 20px hsl(var(--primary) / 0.4)" },
           "50%": { boxShadow: "0 0 30px hsl(var(--primary) / 0.6)" },
         },
+        "coin-fly": {
+          "0%": { 
+            opacity: "1", 
+            transform: "translate(0, 0) scale(1)" 
+          },
+          "50%": { 
+            opacity: "1", 
+            transform: "translate(calc(var(--target-x) * 0.5), calc(var(--target-y) * 0.3 - 50px)) scale(1.2)" 
+          },
+          "100%": { 
+            opacity: "0", 
+            transform: "translate(var(--target-x), var(--target-y)) scale(0.5)" 
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -88,6 +102,7 @@ export default {
         "fade-in": "fade-in 0.4s ease-out",
         "scale-in": "scale-in 0.3s ease-out",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "coin-fly": "coin-fly 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards",
       },
     },
   },

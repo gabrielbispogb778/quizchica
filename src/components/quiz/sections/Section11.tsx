@@ -2,7 +2,7 @@ import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
 
 interface Section11Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -50,7 +50,7 @@ export const Section11 = ({ onSelect, onBack }: Section11Props) => {
           {options.map((option, index) => (
             <button
               key={index}
-              onClick={onSelect}
+              onClick={(e) => onSelect(e)}
               className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-3 sm:px-4 rounded-lg transition-all duration-200 flex items-center gap-3 sm:gap-4 active:scale-[0.98] text-xs sm:text-base text-left"
             >
               <span className="text-lg sm:text-xl flex-shrink-0">{option.emoji}</span>

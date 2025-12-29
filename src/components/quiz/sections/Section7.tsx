@@ -3,7 +3,7 @@ import lipsIcon from "@/assets/lips-icon.png";
 import sectionImage from "@/assets/secao-7-imagem.png";
 
 interface Section7Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -63,7 +63,7 @@ export const Section7 = ({ onSelect, onBack }: Section7Props) => {
             {options.map((option, index) => (
               <button
                 key={index}
-                onClick={onSelect}
+                onClick={(e) => onSelect(e)}
                 className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-4 rounded-lg transition-all duration-200 flex items-center justify-between gap-2 active:scale-[0.98] text-sm text-left"
               >
                 <span>{option}</span>
