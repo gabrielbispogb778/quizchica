@@ -57,10 +57,11 @@ export const Quiz = () => {
   const [currentSection, setCurrentSection] = useState(1);
   const [credits, setCredits] = useState(0);
 
-  // Calcula os créditos acumulados até a seção atual
-  const calculateCredits = (section: number) => {
+  // Calcula os créditos acumulados (ganha ao sair da seção, não ao entrar)
+  const calculateCredits = (currentSec: number) => {
     let total = 0;
-    for (let i = 2; i <= section; i++) {
+    // Ganha créditos das seções anteriores (2 até currentSec-1)
+    for (let i = 2; i < currentSec; i++) {
       total += CREDITS_PER_SECTION[i] || 0;
     }
     return total;
@@ -69,8 +70,9 @@ export const Quiz = () => {
   const handleNext = () => {
     if (currentSection < TOTAL_SECTIONS) {
       const nextSection = currentSection + 1;
+      // Ao avançar, ganha os créditos da seção atual
+      setCredits(prev => prev + (CREDITS_PER_SECTION[currentSection] || 0));
       setCurrentSection(nextSection);
-      setCredits(calculateCredits(nextSection));
     }
   };
 
