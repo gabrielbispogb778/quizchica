@@ -7,7 +7,7 @@ import quadrinho4 from "@/assets/quadrinho-4.png";
 import { OptionCard } from "../OptionCard";
 
 interface Section2Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -66,7 +66,7 @@ export const Section2 = ({ onSelect, onBack }: Section2Props) => {
             key={option.id}
             label={option.label}
             image={option.image}
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
           />
         ))}
       </div>

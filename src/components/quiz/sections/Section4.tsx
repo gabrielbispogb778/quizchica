@@ -3,7 +3,7 @@ import lipsIcon from "@/assets/lips-icon.png";
 import coupleImage from "@/assets/secao-4-casal.png";
 
 interface Section4Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -63,7 +63,7 @@ export const Section4 = ({ onSelect, onBack }: Section4Props) => {
             {options.map((option, index) => (
               <button
                 key={index}
-                onClick={onSelect}
+                onClick={(e) => onSelect(e)}
                 className="bg-[#D92B27] hover:bg-[#b82422] text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-between transition-colors"
               >
                 <span className="text-left text-sm sm:text-base">{option}</span>

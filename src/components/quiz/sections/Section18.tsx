@@ -2,7 +2,7 @@ import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
 import emojiHappy from "@/assets/emoji-happy.png";
 interface Section18Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -43,14 +43,14 @@ export const Section18 = ({ onSelect, onBack }: Section18Props) => {
         {/* Options - Two Cards Side by Side */}
         <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full max-w-md">
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 sm:py-6 px-3 sm:px-4 rounded-lg transition-all duration-200 flex flex-col items-center justify-center gap-2 sm:gap-3"
           >
             <img src={emojiHappy} alt="Happy emoji" className="w-14 h-14 sm:w-20 sm:h-20 object-contain" />
             <span className="text-center text-xs sm:text-base">She'd be impressed and happy</span>
           </button>
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 sm:py-6 px-3 sm:px-4 rounded-lg transition-all duration-200 flex flex-col items-center justify-center gap-2 sm:gap-3"
           >
             <span className="text-2xl sm:text-3xl">😈</span>

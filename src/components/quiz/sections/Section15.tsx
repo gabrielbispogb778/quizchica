@@ -3,7 +3,7 @@ import lipsIcon from "@/assets/lips-icon.png";
 import secao15Imagem from "@/assets/secao-15-imagem.png";
 
 interface Section15Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -52,7 +52,7 @@ export const Section15 = ({ onSelect, onBack }: Section15Props) => {
 
         {/* Continue Button */}
         <button
-          onClick={onSelect}
+          onClick={(e) => onSelect(e)}
           className="w-full max-w-sm bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-6 rounded-lg transition-all duration-200"
         >
           Continue

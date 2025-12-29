@@ -2,7 +2,7 @@ import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
 
 interface Section16Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -48,13 +48,13 @@ export const Section16 = ({ onSelect, onBack }: Section16Props) => {
         {/* Options */}
         <div className="flex gap-3 sm:gap-4 w-full max-w-md">
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="flex-1 bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 text-left text-xs sm:text-base"
           >
             Yes
           </button>
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="flex-1 bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-2.5 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 text-left text-xs sm:text-base"
           >
             No

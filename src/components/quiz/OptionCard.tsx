@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 interface OptionCardProps {
   label: string;
   image: string;
-  onClick: () => void;
+  onClick: (e: React.MouseEvent) => void;
   className?: string;
 }
 

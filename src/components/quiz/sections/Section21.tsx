@@ -3,7 +3,7 @@ import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
 
 interface Section21Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 

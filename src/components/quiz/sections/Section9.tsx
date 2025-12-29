@@ -3,7 +3,7 @@ import lipsIcon from "@/assets/lips-icon.png";
 import womenImage from "@/assets/secao-9-mulheres.png";
 
 interface Section9Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -57,7 +57,7 @@ export const Section9 = ({ onSelect, onBack }: Section9Props) => {
 
         {/* Continue Button */}
         <button
-          onClick={onSelect}
+          onClick={(e) => onSelect(e)}
           className="w-full max-w-md bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 active:scale-[0.98]"
         >
           Continue

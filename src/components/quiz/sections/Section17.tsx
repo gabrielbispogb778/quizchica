@@ -4,7 +4,7 @@ import secao17Imagem from "@/assets/secao-17-imagem.png";
 import emojiStars from "@/assets/emoji-stars.png";
 
 interface Section17Props {
-  onSelect: () => void;
+  onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -45,7 +45,7 @@ export const Section17 = ({ onSelect, onBack }: Section17Props) => {
         {/* Options */}
         <div className="flex flex-col gap-4 w-full max-w-md mb-6">
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
           >
             <div className="flex items-center gap-3">
@@ -55,7 +55,7 @@ export const Section17 = ({ onSelect, onBack }: Section17Props) => {
             <ChevronRight className="w-5 h-5" />
           </button>
           <button
-            onClick={onSelect}
+            onClick={(e) => onSelect(e)}
             className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-between"
           >
             <div className="flex items-center gap-3">
