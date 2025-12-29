@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { QuizLayout } from "./QuizLayout";
 import { useImagePreload } from "@/hooks/useImagePreload";
+import { CreditsDisplay } from "./CreditsDisplay";
 import { Section1 } from "./sections/Section1";
 import { Section2 } from "./sections/Section2";
 import { Section3 } from "./sections/Section3";
@@ -26,19 +27,58 @@ import { Section22 } from "./sections/Section22";
 
 const TOTAL_SECTIONS = 22;
 
+// Créditos por seção (seção 2 até 22 = 21 seções, totalizando 1000)
+const CREDITS_PER_SECTION: Record<number, number> = {
+  2: 40,
+  3: 45,
+  4: 50,
+  5: 45,
+  6: 55,
+  7: 45,
+  8: 50,
+  9: 40,
+  10: 55,
+  11: 45,
+  12: 50,
+  13: 40,
+  14: 55,
+  15: 45,
+  16: 50,
+  17: 55,
+  18: 45,
+  19: 50,
+  20: 55,
+  21: 45,
+  22: 40,
+};
+
 export const Quiz = () => {
   useImagePreload();
   const [currentSection, setCurrentSection] = useState(1);
+  const [credits, setCredits] = useState(0);
+
+  // Calcula os créditos acumulados até a seção atual
+  const calculateCredits = (section: number) => {
+    let total = 0;
+    for (let i = 2; i <= section; i++) {
+      total += CREDITS_PER_SECTION[i] || 0;
+    }
+    return total;
+  };
 
   const handleNext = () => {
     if (currentSection < TOTAL_SECTIONS) {
-      setCurrentSection(prev => prev + 1);
+      const nextSection = currentSection + 1;
+      setCurrentSection(nextSection);
+      setCredits(calculateCredits(nextSection));
     }
   };
 
   const handleBack = () => {
     if (currentSection > 1) {
-      setCurrentSection(prev => prev - 1);
+      const prevSection = currentSection - 1;
+      setCurrentSection(prevSection);
+      setCredits(calculateCredits(prevSection));
     }
   };
 
@@ -111,6 +151,7 @@ export const Quiz = () => {
 
   return (
     <QuizLayout currentSection={currentSection} totalSections={TOTAL_SECTIONS}>
+      {currentSection >= 2 && <CreditsDisplay credits={credits} />}
       {renderSection()}
     </QuizLayout>
   );
