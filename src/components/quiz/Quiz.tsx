@@ -28,29 +28,28 @@ import { Section22 } from "./sections/Section22";
 
 const TOTAL_SECTIONS = 22;
 
-// Créditos por seção (seção 2 até 22 = 21 seções, totalizando 1000)
+// Créditos por seção (seção 2 até 21 = 20 seções, totalizando 1000 ao chegar na seção 22)
 const CREDITS_PER_SECTION: Record<number, number> = {
-  2: 40,
-  3: 45,
-  4: 50,
+  2: 45,
+  3: 50,
+  4: 55,
   5: 45,
-  6: 55,
-  7: 45,
-  8: 50,
-  9: 40,
+  6: 50,
+  7: 55,
+  8: 45,
+  9: 50,
   10: 55,
   11: 45,
   12: 50,
-  13: 40,
-  14: 55,
-  15: 45,
-  16: 50,
-  17: 55,
-  18: 45,
-  19: 50,
-  20: 55,
-  21: 45,
-  22: 40,
+  13: 55,
+  14: 45,
+  15: 50,
+  16: 55,
+  17: 45,
+  18: 50,
+  19: 55,
+  20: 50,
+  21: 50,
 };
 
 export const Quiz = () => {
