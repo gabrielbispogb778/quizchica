@@ -2,7 +2,6 @@ import { useState } from "react";
 import { QuizLayout } from "./QuizLayout";
 import { useImagePreload } from "@/hooks/useImagePreload";
 import { CreditsDisplay } from "./CreditsDisplay";
-import { CoinAnimation } from "./CoinAnimation";
 import { Section1 } from "./sections/Section1";
 import { Section2 } from "./sections/Section2";
 import { Section3 } from "./sections/Section3";
@@ -56,8 +55,6 @@ export const Quiz = () => {
   useImagePreload();
   const [currentSection, setCurrentSection] = useState(1);
   const [credits, setCredits] = useState(0);
-  const [coinTrigger, setCoinTrigger] = useState(0);
-  const [clickOrigin, setClickOrigin] = useState<{ x: number; y: number } | null>(null);
 
   // Calcula os créditos acumulados (ganha ao sair da seção, não ao entrar)
   const calculateCredits = (currentSec: number) => {
@@ -69,19 +66,9 @@ export const Quiz = () => {
     return total;
   };
 
-  const handleNext = (e?: React.MouseEvent) => {
+  const handleNext = () => {
     if (currentSection < TOTAL_SECTIONS) {
       const nextSection = currentSection + 1;
-      
-      // Trigger coin animation if gaining credits
-      if (CREDITS_PER_SECTION[currentSection]) {
-        if (e) {
-          setClickOrigin({ x: e.clientX, y: e.clientY });
-        } else {
-          setClickOrigin({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
-        }
-        setCoinTrigger(prev => prev + 1);
-      }
       
       // Ao avançar, ganha os créditos da seção atual
       setCredits(prev => prev + (CREDITS_PER_SECTION[currentSection] || 0));
@@ -166,7 +153,6 @@ export const Quiz = () => {
 
   return (
     <QuizLayout currentSection={currentSection} totalSections={TOTAL_SECTIONS}>
-      <CoinAnimation trigger={coinTrigger} originRef={clickOrigin} />
       {currentSection >= 2 && <CreditsDisplay credits={credits} />}
       {renderSection()}
     </QuizLayout>

@@ -10,7 +10,7 @@ export const CreditsDisplay = ({ credits }: CreditsDisplayProps) => {
 
   return (
     <div 
-      className="fixed top-4 right-4 z-50 flex items-center gap-2 rounded-lg px-3 py-2 transition-all duration-500"
+      className="fixed top-2 right-2 md:top-4 md:right-4 z-50 flex items-center gap-1 md:gap-2 rounded-md md:rounded-lg px-2 py-1 md:px-3 md:py-2 transition-all duration-500"
       style={{
         backgroundColor: bgColor,
         border: `1px solid ${color}80`,
@@ -18,7 +18,7 @@ export const CreditsDisplay = ({ credits }: CreditsDisplayProps) => {
       }}
     >
       <span 
-        className="text-sm font-medium transition-all duration-500"
+        className="text-xs md:text-sm font-medium transition-all duration-500"
         style={{ 
           color: color,
           textShadow: `0 0 4px ${color}CC`,
@@ -27,15 +27,15 @@ export const CreditsDisplay = ({ credits }: CreditsDisplayProps) => {
         Credits
       </span>
       <div 
-        className="flex items-center gap-1 rounded px-2 py-1 transition-all duration-500"
+        className="flex items-center gap-0.5 md:gap-1 rounded px-1 py-0.5 md:px-2 md:py-1 transition-all duration-500"
         style={{
           backgroundColor: innerBgColor,
           border: `1px solid ${color}4D`,
         }}
       >
-        <span className="text-base">🪙</span>
+        <span className="text-sm md:text-base">🪙</span>
         <span 
-          className="font-bold text-sm transition-all duration-500"
+          className="font-bold text-xs md:text-sm transition-all duration-500"
           style={{ 
             color: color,
             textShadow: `0 0 4px ${color}CC`,
