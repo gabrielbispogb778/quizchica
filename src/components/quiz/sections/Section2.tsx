@@ -28,7 +28,7 @@ const options = [{
   id: 4,
   image: quadrinho4,
   label: "Provide Multiple Orgasms! 💦",
-  subtitle: "xxxxxx"
+  subtitle: "Take her pleasure to the next level"
 }];
 export const Section2 = ({
   onSelect,
