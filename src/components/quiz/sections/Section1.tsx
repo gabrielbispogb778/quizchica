@@ -24,8 +24,7 @@ export const Section1 = ({ onConfirm }: Section1Props) => {
           You must be 18 years or older to continue!
         </h1>
         <div className="flex justify-center gap-2 text-2xl">
-          <span>😈</span>
-          <span>🔥</span>
+          <span>🚨</span>
         </div>
       </QuizCard>
 
