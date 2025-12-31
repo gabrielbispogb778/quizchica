@@ -12,7 +12,7 @@ import paymentImage from "@/assets/secao-22-payment.webp";
 import guaranteeImage from "@/assets/secao-22-guarantee-badge.png";
 
 // Review images
-const reviewImages = ["/PS-0.png", "/PS-1.png", "/PS-1.2.png", "/PS-2.png", "/PS-3.png", "/ps%203.2.png", "/PS-5.png", "/PS-6.png", "/PS-7.png", "/Ps8.png", "/PS%209.png"];
+const reviewImages = ["/PS-1.png", "/PS-2.png", "/PS-3.png", "/PS-4.png", "/PS-5.png", "/PS-6.png", "/PS-7.png", "/PS-8.png", "/PS-9.png", "/PS-10.png", "/PS-11.png"];
 interface Section22Props {
   onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
