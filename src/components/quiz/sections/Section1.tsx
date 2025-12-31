@@ -20,10 +20,8 @@ export const Section1 = ({ onConfirm }: Section1Props) => {
 
       {/* Age Verification Card */}
       <QuizCard className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
-        <h1 className="text-xl md:text-2xl font-bold text-foreground mb-2 flex items-center justify-center gap-2">
-          <span className="text-2xl">🚨</span>
-          <span>You must be 18 years or older to continue!</span>
-          <span className="text-2xl">🚨</span>
+        <h1 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+          You must be 18 years or older to continue! 🚨
         </h1>
       </QuizCard>
 
