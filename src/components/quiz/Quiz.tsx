@@ -91,6 +91,7 @@ export const Quiz = () => {
   };
 
   const handleSection7No = () => {
+    console.log("handleSection7No called - setting showSection7B to true");
     setShowSection7B(true);
   };
 
