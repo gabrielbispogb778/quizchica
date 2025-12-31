@@ -13,7 +13,7 @@ const options = [{
   id: 1,
   image: quadrinho1,
   label: "Make any Woman Squirt!",
-  subtitle: "xxxxxx"
+  subtitle: "Master the ultimate pleasure technique"
 }, {
   id: 2,
   image: quadrinho2,
