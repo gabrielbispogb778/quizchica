@@ -17,15 +17,18 @@ const options = [{
 }, {
   id: 2,
   image: quadrinho2,
-  label: "Learn the 23 Orgasmic Techniques!"
+  label: "Learn the 23 Orgasmic Techniques!",
+  subtitle: "xxxxxx"
 }, {
   id: 3,
   image: quadrinho3,
-  label: "Be a Good Man in Bed! 🥰"
+  label: "Be a Good Man in Bed! 🥰",
+  subtitle: "xxxxxx"
 }, {
   id: 4,
   image: quadrinho4,
-  label: "Provide Multiple Orgasms! 💦"
+  label: "Provide Multiple Orgasms! 💦",
+  subtitle: "xxxxxx"
 }];
 export const Section2 = ({
   onSelect,
