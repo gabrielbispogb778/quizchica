@@ -1,4 +1,5 @@
 import { ChevronLeft } from "lucide-react";
+import { useEffect, useState } from "react";
 import lipsIcon from "@/assets/lips-icon.png";
 import heroImage from "@/assets/secao-22-hero.webp";
 import chatImage from "@/assets/secao-22-chat.webp";
@@ -8,14 +9,37 @@ import bonus3 from "@/assets/secao-22-bonus3.webp";
 import bonus4 from "@/assets/secao-22-bonus4.webp";
 import offerImage from "@/assets/secao-22-offer.webp";
 import paymentImage from "@/assets/secao-22-payment.webp";
-import reviewsImage from "@/assets/secao-22-reviews-new.png";
 import guaranteeImage from "@/assets/secao-22-guarantee-badge.png";
+
+// Review images
+const reviewImages = [
+  "/PS-0.png",
+  "/PS-1.png",
+  "/PS-1.2.png",
+  "/PS-2.png",
+  "/PS-3.png",
+  "/ps 3.2.png",
+  "/PS-5.png",
+  "/PS-6.png",
+  "/PS-7.png",
+  "/Ps8.png",
+  "/PS 9.png",
+];
 interface Section22Props {
   onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
 export const Section22 = ({ onSelect, onBack }: Section22Props) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % reviewImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen min-h-[100dvh] bg-black flex flex-col overflow-y-auto">
       {/* Back Button */}
@@ -271,9 +295,34 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
               <img src={paymentImage} alt="Payment methods: Visa, Mastercard, Elo, American Express, Hipercard" className="h-8 sm:h-10 object-contain" />
           </div>
 
-          {/* Part 9 - Reviews/Testimonials */}
-          <div className="mt-1 w-full flex justify-center">
-            <img src={reviewsImage} alt="Customer reviews and testimonials" className="max-w-xs sm:max-w-md w-full h-auto rounded-xl" />
+          {/* Part 9 - Reviews Carousel */}
+          <div className="mt-4 w-full max-w-xs sm:max-w-md overflow-hidden">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {reviewImages.map((img, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <img 
+                    src={img} 
+                    alt={`Review ${index + 1}`} 
+                    className="w-full h-auto rounded-xl"
+                  />
+                </div>
+              ))}
+            </div>
+            {/* Dots indicator */}
+            <div className="flex justify-center gap-1.5 mt-3">
+              {reviewImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    currentSlide === index ? "bg-[#D92B27]" : "bg-gray-600"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
 
           {/* Part 10 - Limited Time Offer + CTA */}
