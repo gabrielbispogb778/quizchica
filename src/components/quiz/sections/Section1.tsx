@@ -28,7 +28,7 @@ export const Section1 = ({ onConfirm }: Section1Props) => {
       {/* Confirmation Button */}
       <div className="w-full animate-fade-in" style={{ animationDelay: "0.2s" }}>
         <QuizButton onClick={onConfirm}>
-          I AM 18 YEARS OLD OR OLDER!
+          YES, I'M 18+ AND READY TO UNLOCK SECRETS! 🔥
         </QuizButton>
       </div>
     </div>
