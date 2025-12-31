@@ -4,16 +4,17 @@ import sectionImage from "@/assets/secao-7-imagem.png";
 
 interface Section7Props {
   onSelect: (e?: React.MouseEvent) => void;
+  onSelectNo: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
 const options = [
-  "Yes, I always wonder about it",
-  "Yes, but I don't know where to start",
-  "I had never thought about it before",
+  { text: "Yes, I always wonder about it", goesToNo: false },
+  { text: "Yes, but I don't know where to start", goesToNo: false },
+  { text: "No, I've never heard about it", goesToNo: true },
 ];
 
-export const Section7 = ({ onSelect, onBack }: Section7Props) => {
+export const Section7 = ({ onSelect, onSelectNo, onBack }: Section7Props) => {
   return (
     <div className="min-h-screen bg-[#000000] flex flex-col">
       {/* Back Button */}
@@ -63,10 +64,10 @@ export const Section7 = ({ onSelect, onBack }: Section7Props) => {
             {options.map((option, index) => (
               <button
                 key={index}
-                onClick={(e) => onSelect(e)}
+                onClick={(e) => option.goesToNo ? onSelectNo(e) : onSelect(e)}
                 className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-4 rounded-lg transition-all duration-200 flex items-center justify-between gap-2 active:scale-[0.98] text-sm text-left"
               >
-                <span>{option}</span>
+                <span>{option.text}</span>
                 <ArrowRight className="w-5 h-5 flex-shrink-0" />
               </button>
             ))}

@@ -9,6 +9,7 @@ import { Section4 } from "./sections/Section4";
 import { Section5 } from "./sections/Section5";
 import { Section6 } from "./sections/Section6";
 import { Section7 } from "./sections/Section7";
+import { Section7B } from "./sections/Section7B";
 import { Section8 } from "./sections/Section8";
 import { Section9 } from "./sections/Section9";
 import { Section10 } from "./sections/Section10";
@@ -54,6 +55,7 @@ const CREDITS_PER_SECTION: Record<number, number> = {
 export const Quiz = () => {
   useImagePreload();
   const [currentSection, setCurrentSection] = useState(1);
+  const [showSection7B, setShowSection7B] = useState(false);
   const [credits, setCredits] = useState(0);
 
   // Calcula os créditos acumulados (ganha ao sair da seção, não ao entrar)
@@ -77,11 +79,25 @@ export const Quiz = () => {
   };
 
   const handleBack = () => {
+    if (showSection7B) {
+      setShowSection7B(false);
+      return;
+    }
     if (currentSection > 1) {
       const prevSection = currentSection - 1;
       setCurrentSection(prevSection);
       setCredits(calculateCredits(prevSection));
     }
+  };
+
+  const handleSection7No = () => {
+    setShowSection7B(true);
+  };
+
+  const handleSection7BNext = () => {
+    setShowSection7B(false);
+    setCredits(prev => prev + (CREDITS_PER_SECTION[7] || 0));
+    setCurrentSection(8);
   };
 
   const renderSection = () => {
@@ -99,7 +115,10 @@ export const Quiz = () => {
       case 6:
         return <Section6 onSelect={handleNext} onBack={handleBack} />;
       case 7:
-        return <Section7 onSelect={handleNext} onBack={handleBack} />;
+        if (showSection7B) {
+          return <Section7B onSelect={handleSection7BNext} onBack={handleBack} />;
+        }
+        return <Section7 onSelect={handleNext} onSelectNo={handleSection7No} onBack={handleBack} />;
       case 8:
         return <Section8 onSelect={handleNext} onBack={handleBack} />;
       case 9:
