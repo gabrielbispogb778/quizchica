@@ -12,25 +12,15 @@ import paymentImage from "@/assets/secao-22-payment.webp";
 import guaranteeImage from "@/assets/secao-22-guarantee-badge.png";
 
 // Review images
-const reviewImages = [
-  "/PS-0.png",
-  "/PS-1.png",
-  "/PS-1.2.png",
-  "/PS-2.png",
-  "/PS-3.png",
-  "/ps 3.2.png",
-  "/PS-5.png",
-  "/PS-6.png",
-  "/PS-7.png",
-  "/Ps8.png",
-  "/PS 9.png",
-];
+const reviewImages = ["/PS-0.png", "/PS-1.png", "/PS-1.2.png", "/PS-2.png", "/PS-3.png", "/ps 3.2.png", "/PS-5.png", "/PS-6.png", "/PS-7.png", "/Ps8.png", "/PS 9.png"];
 interface Section22Props {
   onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
-
-export const Section22 = ({ onSelect, onBack }: Section22Props) => {
+export const Section22 = ({
+  onSelect,
+  onBack
+}: Section22Props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showBanner, setShowBanner] = useState(false);
   const [spotsLeft, setSpotsLeft] = useState(50);
@@ -39,35 +29,31 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
   // Auto-scroll carousel
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % reviewImages.length);
+      setCurrentSlide(prev => (prev + 1) % reviewImages.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   // Intersection Observer for the offer section
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShowBanner(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setShowBanner(true);
+      }
+    }, {
+      threshold: 0.3
+    });
     if (offerRef.current) {
       observer.observe(offerRef.current);
     }
-
     return () => observer.disconnect();
   }, []);
 
   // Countdown for spots
   useEffect(() => {
     if (!showBanner) return;
-    
     const interval = setInterval(() => {
-      setSpotsLeft((prev) => {
+      setSpotsLeft(prev => {
         if (prev <= 3) return 3; // Never goes below 3
         // Random decrease between 1-2 spots every 8-15 seconds
         const decrease = Math.random() > 0.6 ? 2 : 1;
@@ -77,27 +63,18 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
 
     return () => clearInterval(interval);
   }, [showBanner]);
-
-  return (
-    <div className="min-h-screen min-h-[100dvh] bg-black flex flex-col overflow-y-auto">
+  return <div className="min-h-screen min-h-[100dvh] bg-black flex flex-col overflow-y-auto">
       {/* Fixed Red Banner */}
-      {showBanner && (
-        <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-1.5 px-1.5 sm:py-2 sm:px-3 md:py-3 md:px-4 shadow-lg animate-fade-in">
+      {showBanner && <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-1.5 px-1.5 sm:py-2 sm:px-3 md:py-3 md:px-4 shadow-lg animate-fade-in">
           <p className="text-white text-[11px] sm:text-xs md:text-base font-black text-center tracking-wide sm:tracking-widest leading-tight uppercase animate-[pulse_1.5s_ease-in-out_infinite] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] sm:drop-shadow-none">
             ⚠️ ONLY <span className={`text-yellow-300 underline decoration-2 font-black ${spotsLeft <= 10 ? 'animate-[pulse_0.5s_ease-in-out_infinite]' : ''}`}>{spotsLeft} SPOTS</span> LEFT! ⚠️
           </p>
-          {spotsLeft <= 10 && (
-            <p className="text-black text-[6px] sm:text-[8px] md:text-xs text-center mt-0.5 sm:mt-1 font-medium leading-tight">
+          {spotsLeft <= 10 && <p className="text-black text-[6px] sm:text-[8px] md:text-xs text-center mt-0.5 sm:mt-1 font-medium leading-tight">
               when vacancies end price returns to $99,90
-            </p>
-          )}
-        </div>
-      )}
+            </p>}
+        </div>}
       {/* Back Button */}
-      <button
-        onClick={onBack}
-        className="absolute top-3 left-3 flex items-center gap-1 text-white hover:text-white/80 transition-colors z-10 text-xs font-medium sm:top-4 sm:left-4 sm:text-sm"
-      >
+      <button onClick={onBack} className="absolute top-3 left-3 flex items-center gap-1 text-white hover:text-white/80 transition-colors z-10 text-xs font-medium sm:top-4 sm:left-4 sm:text-sm">
         <ChevronLeft className="w-4 h-4" />
         Back
       </button>
@@ -121,11 +98,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
 
         {/* Hero Image */}
         <div className="w-full max-w-xs sm:max-w-md mb-4 sm:mb-6">
-          <img 
-            src={heroImage} 
-            alt="23 Orgasmic Techniques" 
-            className="w-full"
-          />
+          <img src={heroImage} alt="23 Orgasmic Techniques" className="w-full" />
         </div>
 
         {/* Description Text */}
@@ -140,7 +113,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           <div className="space-y-2 sm:space-y-3">
             <div className="flex items-start gap-2">
               <span className="text-green-400 mt-0.5 text-sm sm:text-base">✅</span>
-              <p className="text-white text-xs sm:text-sm text-center flex-1">23 detailed video lessons teaching advanced techniques to make any woman SQUIRT</p>
+              <p className="text-white text-xs sm:text-sm text-center flex-1"> detailed video lessons teaching advanced techniques to make any woman SQUIRT</p>
             </div>
             <div className="flex items-start gap-2">
               <span className="text-green-400 mt-0.5 text-sm sm:text-base">✅</span>
@@ -190,11 +163,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
 
         {/* WhatsApp Chat Screenshot */}
         <div className="w-full max-w-xs sm:max-w-md mb-2">
-          <img 
-            src={chatImage} 
-            alt="Student success message" 
-            className="w-full rounded-lg"
-          />
+          <img src={chatImage} alt="Student success message" className="w-full rounded-lg" />
         </div>
 
         {/* Subscribe Banner */}
@@ -318,12 +287,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           {/* Part 8 - CTA Button + Payment Methods */}
           <div className="mt-4 sm:mt-6 w-full">
             {/* Green CTA Button */}
-            <a 
-              href="https://go.centerpag.com/PPU38CQ4NDP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98] block text-center"
-            >
+            <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98] block text-center">
               ACCESS NOW WITH AN 80% DISCOUNT
             </a>
 
@@ -335,50 +299,27 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           {/* Part 9 - Reviews Carousel */}
           <div className="mt-4 w-full max-w-[320px] sm:max-w-sm mx-auto relative">
             {/* Left Arrow */}
-            <button
-              onClick={() => setCurrentSlide((prev) => (prev === 0 ? reviewImages.length - 1 : prev - 1))}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors"
-              aria-label="Anterior"
-            >
+            <button onClick={() => setCurrentSlide(prev => prev === 0 ? reviewImages.length - 1 : prev - 1)} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors" aria-label="Anterior">
               <ChevronLeft className="w-5 h-5" />
             </button>
             
             {/* Right Arrow */}
-            <button
-              onClick={() => setCurrentSlide((prev) => (prev === reviewImages.length - 1 ? 0 : prev + 1))}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors"
-              aria-label="Próximo"
-            >
+            <button onClick={() => setCurrentSlide(prev => prev === reviewImages.length - 1 ? 0 : prev + 1)} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors" aria-label="Próximo">
               <ChevronRight className="w-5 h-5" />
             </button>
 
             <div className="overflow-hidden px-8">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
-                {reviewImages.map((img, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-2">
-                    <img 
-                      src={img} 
-                      alt={`Review ${index + 1}`} 
-                      className="w-full h-auto rounded-xl"
-                    />
-                  </div>
-                ))}
+              <div className="flex transition-transform duration-500 ease-in-out" style={{
+                transform: `translateX(-${currentSlide * 100}%)`
+              }}>
+                {reviewImages.map((img, index) => <div key={index} className="w-full flex-shrink-0 px-2">
+                    <img src={img} alt={`Review ${index + 1}`} className="w-full h-auto rounded-xl" />
+                  </div>)}
               </div>
             </div>
             {/* Dots indicator */}
             <div className="flex justify-center gap-1.5 mt-3">
-              {reviewImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    currentSlide === index ? "bg-[#D92B27]" : "bg-gray-600"
-                  }`}
-                />
-              ))}
+              {reviewImages.map((_, index) => <button key={index} onClick={() => setCurrentSlide(index)} className={`w-2 h-2 rounded-full transition-colors ${currentSlide === index ? "bg-[#D92B27]" : "bg-gray-600"}`} />)}
             </div>
           </div>
 
@@ -413,12 +354,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
             </div>
 
             {/* Green CTA Button - Separate */}
-            <a 
-              href="https://go.centerpag.com/PPU38CQ4NDP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl mt-2 transition-colors active:scale-[0.98] block text-center"
-            >
+            <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl mt-2 transition-colors active:scale-[0.98] block text-center">
               ACCESS RIGHT NOW
             </a>
           </div>
@@ -457,6 +393,5 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
         </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
