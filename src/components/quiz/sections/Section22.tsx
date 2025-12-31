@@ -215,20 +215,6 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           </div>
         </div>
 
-        {/* Part 5 - Attention Banner */}
-        <div className="w-full max-w-xs sm:max-w-md bg-[#22c55e] rounded-2xl p-4 sm:p-5 mb-3 border-2 border-[#16a34a]">
-          <div className="flex items-start gap-2 sm:gap-3">
-            <span className="text-lg sm:text-xl">✅</span>
-            <div>
-              <p className="text-white text-base sm:text-lg font-bold mb-1">
-                🚨 ATTENTION:
-              </p>
-              <p className="text-white text-sm sm:text-base leading-relaxed">
-                This offer will only be available for the next 15 minutes... Access now and get 80% off!
-              </p>
-            </div>
-          </div>
-        </div>
 
         {/* Part 6 - Limited Time Offer */}
         <div className="w-full max-w-xs sm:max-w-md">
