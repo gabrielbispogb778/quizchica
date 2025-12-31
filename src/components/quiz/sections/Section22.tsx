@@ -7,7 +7,7 @@ import bonus1 from "@/assets/secao-22-bonus1.webp";
 import bonus2 from "@/assets/secao-22-bonus2.webp";
 import bonus3 from "@/assets/secao-22-bonus3.webp";
 import bonus4 from "@/assets/secao-22-bonus4.webp";
-import offerImage from "@/assets/secao-22-offer.webp";
+import offerImage from "@/assets/secao-22-offer-new.webp";
 import paymentImage from "@/assets/secao-22-payment.webp";
 import guaranteeImage from "@/assets/secao-22-guarantee-badge.png";
 
