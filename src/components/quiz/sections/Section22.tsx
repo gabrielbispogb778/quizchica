@@ -296,7 +296,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           </div>
 
           {/* Part 9 - Reviews Carousel */}
-          <div className="mt-4 w-full overflow-hidden">
+          <div className="mt-4 w-full max-w-[280px] sm:max-w-sm mx-auto overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
