@@ -82,8 +82,8 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
     <div className="min-h-screen min-h-[100dvh] bg-black flex flex-col overflow-y-auto">
       {/* Fixed Red Banner */}
       {showBanner && (
-        <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-1 px-1.5 sm:py-2 sm:px-3 md:py-3 md:px-4 shadow-lg animate-fade-in">
-          <p className="text-white text-[8px] sm:text-xs md:text-base font-black text-center tracking-wide sm:tracking-widest leading-tight uppercase animate-[pulse_1.5s_ease-in-out_infinite]">
+        <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-1.5 px-1.5 sm:py-2 sm:px-3 md:py-3 md:px-4 shadow-lg animate-fade-in">
+          <p className="text-white text-[11px] sm:text-xs md:text-base font-black text-center tracking-wide sm:tracking-widest leading-tight uppercase animate-[pulse_1.5s_ease-in-out_infinite] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] sm:drop-shadow-none">
             ⚠️ ONLY <span className={`text-yellow-300 underline decoration-2 font-black ${spotsLeft <= 10 ? 'animate-[pulse_0.5s_ease-in-out_infinite]' : ''}`}>{spotsLeft} SPOTS</span> LEFT! ⚠️
           </p>
           {spotsLeft <= 10 && (
