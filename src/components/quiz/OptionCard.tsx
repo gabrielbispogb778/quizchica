@@ -26,7 +26,7 @@ export const OptionCard = ({ label, subtitle, image, onClick, className }: Optio
           {label}
         </p>
         {subtitle && (
-          <p className="text-black text-[8px] sm:text-xs text-center leading-tight mt-0.5">
+          <p className="text-black text-[8px] sm:text-xs text-center leading-tight mt-0.5 whitespace-nowrap">
             {subtitle}
           </p>
         )}
