@@ -1,20 +1,17 @@
 import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
 import sectionImage from "@/assets/secao-13-imagem.png";
-
 interface Section13Props {
   onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
-
-export const Section13 = ({ onSelect, onBack }: Section13Props) => {
-  return (
-    <div className="min-h-screen bg-[#000000] flex flex-col">
+export const Section13 = ({
+  onSelect,
+  onBack
+}: Section13Props) => {
+  return <div className="min-h-screen bg-[#000000] flex flex-col">
       {/* Back Button */}
-      <button
-        onClick={onBack}
-        className="absolute top-4 left-4 flex items-center gap-1 text-white hover:text-white/80 transition-colors z-10 text-sm font-medium"
-      >
+      <button onClick={onBack} className="absolute top-4 left-4 flex items-center gap-1 text-white hover:text-white/80 transition-colors z-10 text-sm font-medium">
         <ChevronLeft className="w-4 h-4" />
         Back
       </button>
@@ -29,10 +26,9 @@ export const Section13 = ({ onSelect, onBack }: Section13Props) => {
         {/* Progress Bar */}
         <div className="w-full max-w-md mb-6">
           <div className="h-2 bg-white rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-[#D92B27] transition-all duration-300"
-              style={{ width: `${(13 / 22) * 100}%` }}
-            />
+            <div className="h-full bg-[#D92B27] transition-all duration-300" style={{
+            width: `${13 / 22 * 100}%`
+          }} />
           </div>
         </div>
 
@@ -50,30 +46,19 @@ export const Section13 = ({ onSelect, onBack }: Section13Props) => {
         <div className="w-full max-w-lg flex flex-col sm:flex-row items-center justify-center gap-6">
           {/* Image */}
           <div className="w-48 sm:w-56">
-            <img 
-              src={sectionImage} 
-              alt="Technique illustration" 
-              className="w-full object-contain"
-            />
+            <img src={sectionImage} alt="Technique illustration" className="w-full object-contain" />
           </div>
 
           {/* Options */}
           <div className="flex flex-col gap-4 w-full sm:w-auto">
-            <button
-              onClick={(e) => onSelect(e)}
-              className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-12 rounded-lg transition-all duration-200 text-left min-w-[160px]"
-            >
-              Yes
+            <button onClick={e => onSelect(e)} className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-12 rounded-lg transition-all duration-200 text-left min-w-[160px]">
+              Yes, I’m ready!
             </button>
-            <button
-              onClick={(e) => onSelect(e)}
-              className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-12 rounded-lg transition-all duration-200 text-left min-w-[160px]"
-            >
-              No
+            <button onClick={e => onSelect(e)} className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-12 rounded-lg transition-all duration-200 text-left min-w-[160px]">
+              No, maybe later
             </button>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
