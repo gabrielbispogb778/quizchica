@@ -17,7 +17,7 @@ export const CreditsDisplay = ({ credits }: CreditsDisplayProps) => {
         boxShadow: `0 0 10px ${color}4D`,
       }}
     >
-      <span className="text-[8px] md:text-sm">🪙</span>
+      <span className="text-xs md:text-sm">🪙</span>
       <span 
         className="font-bold text-[8px] md:text-xs transition-all duration-500"
         style={{ 
