@@ -2,12 +2,13 @@ import { cn } from "@/lib/utils";
 
 interface OptionCardProps {
   label: string;
+  subtitle?: string;
   image: string;
   onClick: (e: React.MouseEvent) => void;
   className?: string;
 }
 
-export const OptionCard = ({ label, image, onClick, className }: OptionCardProps) => {
+export const OptionCard = ({ label, subtitle, image, onClick, className }: OptionCardProps) => {
   return (
     <button
       onClick={onClick}
@@ -20,10 +21,15 @@ export const OptionCard = ({ label, image, onClick, className }: OptionCardProps
       )}
     >
       {/* Red Header - Fixed Height */}
-      <div className="h-10 sm:h-14 md:h-16 bg-primary flex items-center justify-center px-2 sm:px-4">
+      <div className="h-12 sm:h-16 md:h-20 bg-primary flex flex-col items-center justify-center px-2 sm:px-4">
         <p className="text-foreground text-[10px] sm:text-sm md:text-base font-bold text-center leading-tight line-clamp-2">
           {label}
         </p>
+        {subtitle && (
+          <p className="text-black text-[8px] sm:text-xs text-center leading-tight mt-0.5">
+            {subtitle}
+          </p>
+        )}
       </div>
       
       {/* Image Area - Aspect Ratio */}
