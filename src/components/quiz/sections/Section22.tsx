@@ -296,13 +296,13 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           </div>
 
           {/* Part 9 - Reviews Carousel */}
-          <div className="mt-4 w-full max-w-xs sm:max-w-md overflow-hidden">
+          <div className="mt-4 w-full overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {reviewImages.map((img, index) => (
-                <div key={index} className="w-full flex-shrink-0">
+                <div key={index} className="w-full flex-shrink-0 px-2">
                   <img 
                     src={img} 
                     alt={`Review ${index + 1}`} 
