@@ -84,7 +84,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
       {showBanner && (
         <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-2.5 px-3 sm:py-3 sm:px-4 shadow-lg animate-fade-in">
           <p className="text-white text-[11px] sm:text-sm md:text-base font-black text-center tracking-widest leading-tight uppercase animate-[pulse_1.5s_ease-in-out_infinite]">
-            ⚠️ ATENÇÃO: APENAS <span className="text-yellow-300 underline decoration-2 font-black">{spotsLeft} VAGAS</span> RESTANTES NESTE PREÇO! ⚠️
+            ⚠️ ATTENTION: ONLY <span className="text-yellow-300 underline decoration-2 font-black">{spotsLeft} SPOTS</span> LEFT AT THIS PRICE! ⚠️
           </p>
         </div>
       )}
