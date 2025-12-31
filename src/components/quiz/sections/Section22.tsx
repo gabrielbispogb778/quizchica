@@ -36,7 +36,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % reviewImages.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
