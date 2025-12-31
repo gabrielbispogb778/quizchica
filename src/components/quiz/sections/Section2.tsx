@@ -23,7 +23,7 @@ const options = [{
   id: 3,
   image: quadrinho3,
   label: "Be a Good Man in Bed! 🥰",
-  subtitle: "xxxxxx"
+  subtitle: "Boost your confidence and skills"
 }, {
   id: 4,
   image: quadrinho4,
