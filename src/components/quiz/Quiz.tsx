@@ -54,8 +54,8 @@ const CREDITS_PER_SECTION: Record<number, number> = {
 
 export const Quiz = () => {
   useImagePreload();
+  const SECTION_7B = 700;
   const [currentSection, setCurrentSection] = useState(1);
-  const [showSection7B, setShowSection7B] = useState(false);
   const [credits, setCredits] = useState(0);
 
   // Calcula os créditos acumulados (ganha ao sair da seção, não ao entrar)
@@ -79,8 +79,8 @@ export const Quiz = () => {
   };
 
   const handleBack = () => {
-    if (showSection7B) {
-      setShowSection7B(false);
+    if (currentSection === SECTION_7B) {
+      setCurrentSection(7);
       return;
     }
     if (currentSection > 1) {
@@ -92,11 +92,11 @@ export const Quiz = () => {
 
   const handleSection7No = () => {
     // Interstitial explicando “Squirt” antes de seguir
-    setShowSection7B(true);
+    setCurrentSection(SECTION_7B);
   };
 
   const handleSection7BNext = () => {
-    setShowSection7B(false);
+    // Obs: esta seção (7B) não dá créditos; aqui só estamos contabilizando a seção 7 antes de seguir.
     setCredits(prev => prev + (CREDITS_PER_SECTION[7] || 0));
     setCurrentSection(8);
   };
@@ -116,10 +116,9 @@ export const Quiz = () => {
       case 6:
         return <Section6 onSelect={handleNext} onBack={handleBack} />;
       case 7:
-        if (showSection7B) {
-          return <Section7B onSelect={handleSection7BNext} onBack={handleBack} />;
-        }
         return <Section7 onSelect={handleNext} onSelectNo={handleSection7No} onBack={handleBack} />;
+      case SECTION_7B:
+        return <Section7B onSelect={handleSection7BNext} onBack={handleBack} />;
       case 8:
         return <Section8 onSelect={handleNext} onBack={handleBack} />;
       case 9:
