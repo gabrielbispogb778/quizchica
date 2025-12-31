@@ -1,4 +1,4 @@
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import lipsIcon from "@/assets/lips-icon.png";
 import heroImage from "@/assets/secao-22-hero.webp";
@@ -296,20 +296,40 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
           </div>
 
           {/* Part 9 - Reviews Carousel */}
-          <div className="mt-4 w-full max-w-[280px] sm:max-w-sm mx-auto overflow-hidden">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          <div className="mt-4 w-full max-w-[320px] sm:max-w-sm mx-auto relative">
+            {/* Left Arrow */}
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev === 0 ? reviewImages.length - 1 : prev - 1))}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors"
+              aria-label="Anterior"
             >
-              {reviewImages.map((img, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-2">
-                  <img 
-                    src={img} 
-                    alt={`Review ${index + 1}`} 
-                    className="w-full h-auto rounded-xl"
-                  />
-                </div>
-              ))}
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            
+            {/* Right Arrow */}
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev === reviewImages.length - 1 ? 0 : prev + 1))}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors"
+              aria-label="Próximo"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+
+            <div className="overflow-hidden px-8">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {reviewImages.map((img, index) => (
+                  <div key={index} className="w-full flex-shrink-0 px-2">
+                    <img 
+                      src={img} 
+                      alt={`Review ${index + 1}`} 
+                      className="w-full h-auto rounded-xl"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
             {/* Dots indicator */}
             <div className="flex justify-center gap-1.5 mt-3">
