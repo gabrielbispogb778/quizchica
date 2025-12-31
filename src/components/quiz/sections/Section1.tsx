@@ -36,9 +36,9 @@ export const Section1 = ({ onConfirm }: Section1Props) => {
       <div className="w-full animate-fade-in" style={{ animationDelay: "0.3s" }}>
         <button
           onClick={() => window.location.href = 'https://google.com'}
-          className="w-full bg-transparent border-2 border-white/30 hover:border-white/50 text-white/70 hover:text-white font-semibold py-3 md:py-4 px-4 md:px-6 rounded-lg transition-all duration-200 text-sm md:text-base"
+          className="w-full bg-white/10 border-2 border-white/40 hover:bg-white/20 hover:border-white/60 text-white font-semibold py-3 md:py-4 px-4 md:px-6 rounded-lg transition-all duration-200 text-sm md:text-base"
         >
-          No, I am under 18 years old ❌
+          NO, I AM UNDER 18 YEARS OLD ❌
         </button>
       </div>
     </div>
