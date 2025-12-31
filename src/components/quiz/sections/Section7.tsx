@@ -8,11 +8,12 @@ interface Section7Props {
   onBack: () => void;
 }
 
-const options = [
-  { text: "Yes, I always wonder about it", goesToNo: false },
-  { text: "Yes, but I don't know where to start", goesToNo: false },
-  { text: "No, I've never heard about it", goesToNo: true },
+const yesOptions = [
+  "Yes, I always wonder about it",
+  "Yes, but I don't know where to start",
 ];
+
+const noOption = "No, I've never heard about it";
 
 export const Section7 = ({ onSelect, onSelectNo, onBack }: Section7Props) => {
   return (
@@ -61,16 +62,24 @@ export const Section7 = ({ onSelect, onSelectNo, onBack }: Section7Props) => {
 
           {/* Options */}
           <div className="flex-1 w-full space-y-3">
-            {options.map((option, index) => (
+            {yesOptions.map((option, index) => (
               <button
                 key={index}
-                onClick={(e) => option.goesToNo ? onSelectNo(e) : onSelect(e)}
+                onClick={(e) => onSelect(e)}
                 className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-4 rounded-lg transition-all duration-200 flex items-center justify-between gap-2 active:scale-[0.98] text-sm text-left"
               >
-                <span>{option.text}</span>
+                <span>{option}</span>
                 <ArrowRight className="w-5 h-5 flex-shrink-0" />
               </button>
             ))}
+
+            <button
+              onClick={(e) => onSelectNo(e)}
+              className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-4 rounded-lg transition-all duration-200 flex items-center justify-between gap-2 active:scale-[0.98] text-sm text-left"
+            >
+              <span>{noOption}</span>
+              <ArrowRight className="w-5 h-5 flex-shrink-0" />
+            </button>
           </div>
         </div>
       </div>

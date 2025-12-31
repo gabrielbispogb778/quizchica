@@ -91,7 +91,7 @@ export const Quiz = () => {
   };
 
   const handleSection7No = () => {
-    console.log("handleSection7No called - setting showSection7B to true");
+    // Interstitial explicando “Squirt” antes de seguir
     setShowSection7B(true);
   };
 
