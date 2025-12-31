@@ -10,40 +10,23 @@ export const CreditsDisplay = ({ credits }: CreditsDisplayProps) => {
 
   return (
     <div 
-      className="fixed top-1 right-1 md:top-2 md:right-2 z-50 flex flex-col md:flex-row items-center gap-0.5 md:gap-1 rounded md:rounded-md px-1.5 py-1 md:px-2 md:py-1 transition-all duration-500"
+      className="fixed top-0.5 right-0.5 md:top-2 md:right-2 z-50 flex items-center gap-0.5 md:gap-1 rounded px-1 py-0.5 md:px-2 md:py-1 transition-all duration-500"
       style={{
         backgroundColor: bgColor,
         border: `1px solid ${color}80`,
         boxShadow: `0 0 10px ${color}4D`,
       }}
     >
+      <span className="text-[8px] md:text-sm">🪙</span>
       <span 
-        className="text-[8px] md:text-xs font-medium transition-all duration-500"
+        className="font-bold text-[8px] md:text-xs transition-all duration-500"
         style={{ 
           color: color,
           textShadow: `0 0 4px ${color}CC`,
         }}
       >
-        Credits
+        {credits.toLocaleString()}
       </span>
-      <div 
-        className="flex items-center gap-0.5 rounded px-1 py-0.5 md:px-1.5 transition-all duration-500"
-        style={{
-          backgroundColor: innerBgColor,
-          border: `1px solid ${color}4D`,
-        }}
-      >
-        <span className="text-xs md:text-sm">🪙</span>
-        <span 
-          className="font-bold text-[10px] md:text-xs transition-all duration-500"
-          style={{ 
-            color: color,
-            textShadow: `0 0 4px ${color}CC`,
-          }}
-        >
-          {credits.toLocaleString()}
-        </span>
-      </div>
     </div>
   );
 };
