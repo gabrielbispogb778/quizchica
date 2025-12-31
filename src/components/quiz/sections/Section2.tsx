@@ -12,7 +12,8 @@ interface Section2Props {
 const options = [{
   id: 1,
   image: quadrinho1,
-  label: "Make any Woman Squirt!"
+  label: "Make any Woman Squirt!",
+  subtitle: "xxxxxx"
 }, {
   id: 2,
   image: quadrinho2,
@@ -61,7 +62,7 @@ export const Section2 = ({
 
       {/* Options Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl animate-fade-in justify-items-center">
-        {options.map(option => <OptionCard key={option.id} label={option.label} image={option.image} onClick={e => onSelect(e)} />)}
+        {options.map(option => <OptionCard key={option.id} label={option.label} subtitle={option.subtitle} image={option.image} onClick={e => onSelect(e)} />)}
       </div>
     </div>;
 };
