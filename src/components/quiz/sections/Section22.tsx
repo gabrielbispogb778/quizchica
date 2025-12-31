@@ -7,7 +7,7 @@ import bonus1 from "@/assets/secao-22-bonus1.webp";
 import bonus2 from "@/assets/secao-22-bonus2.webp";
 import bonus3 from "@/assets/secao-22-bonus3.webp";
 import bonus4 from "@/assets/secao-22-bonus4.webp";
-import offerImage from "@/assets/secao-22-offer-new.webp";
+import offerImage from "@/assets/secao-22-offer.webp";
 import paymentImage from "@/assets/secao-22-payment.webp";
 import guaranteeImage from "@/assets/secao-22-guarantee-badge.png";
 
@@ -367,14 +367,13 @@ export const Section22 = ({
             </div>
 
             {/* Title */}
-            <h3 className="text-white text-lg sm:text-xl font-bold text-center mb-3 sm:mb-4">7 DAY GUARANTEE</h3>
+            <h3 className="text-white text-lg sm:text-xl font-bold text-center mb-3 sm:mb-4">    60 DAY GUARANTEE</h3>
 
             {/* Refund Box */}
             <div className="bg-transparent border border-[#444] rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
               <p className="text-white text-sm sm:text-base font-bold text-center mb-2">We guarantee 100% refund</p>
-              <p className="text-white text-xs sm:text-sm text-center leading-relaxed">
-                We believe so much in our program that we are willing to return your money if you don't see results and can prove you followed all the steps of the program. Please check our Refund Policy to understand all requirements.
-              </p>
+              <p className="text-white text-xs sm:text-sm text-center leading-relaxed">100% Money Back Guarantee, No Questions Asked. If you are not completely satisfied with
+For any reason, please email us within 60 days and we will refund every penny. You have ZERO risk</p>
             </div>
 
             {/* Secure Purchase Box */}
