@@ -80,7 +80,7 @@ export const Quiz = () => {
 
   const handleBack = () => {
     if (currentSection === SECTION_7B) {
-      setCurrentSection(7);
+      setCurrentSection(6);
       return;
     }
     if (currentSection > 1) {
@@ -90,15 +90,15 @@ export const Quiz = () => {
     }
   };
 
-  const handleSection7No = () => {
+  const handleSection6No = () => {
     // Interstitial explicando “Squirt” antes de seguir
     setCurrentSection(SECTION_7B);
   };
 
   const handleSection7BNext = () => {
-    // Obs: esta seção (7B) não dá créditos; aqui só estamos contabilizando a seção 7 antes de seguir.
-    setCredits(prev => prev + (CREDITS_PER_SECTION[7] || 0));
-    setCurrentSection(8);
+    // Obs: esta seção (7B) não dá créditos; aqui só estamos contabilizando a seção 6 antes de seguir.
+    setCredits(prev => prev + (CREDITS_PER_SECTION[6] || 0));
+    setCurrentSection(7);
   };
 
   const renderSection = () => {
@@ -114,11 +114,11 @@ export const Quiz = () => {
       case 5:
         return <Section5 onSelect={handleNext} onBack={handleBack} />;
       case 6:
-        return <Section6 onSelect={handleNext} onBack={handleBack} />;
-      case 7:
-        return <Section7 onSelect={handleNext} onSelectNo={handleSection7No} onBack={handleBack} />;
+        return <Section6 onSelect={handleNext} onSelectNo={handleSection6No} onBack={handleBack} />;
       case SECTION_7B:
         return <Section7B onSelect={handleSection7BNext} onBack={handleBack} />;
+      case 7:
+        return <Section7 onSelect={handleNext} onBack={handleBack} />;
       case 8:
         return <Section8 onSelect={handleNext} onBack={handleBack} />;
       case 9:
