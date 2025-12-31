@@ -23,7 +23,7 @@ export const Section22 = ({
 }: Section22Props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showBanner, setShowBanner] = useState(false);
-  const [spotsLeft, setSpotsLeft] = useState(50);
+  const [spotsLeft, setSpotsLeft] = useState(40);
   const offerRef = useRef<HTMLDivElement>(null);
 
   // Auto-scroll carousel
