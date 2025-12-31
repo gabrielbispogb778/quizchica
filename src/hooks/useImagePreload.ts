@@ -4,6 +4,7 @@ import secao3Image from "@/assets/secao-3-imagem.png";
 import secao4Casal from "@/assets/secao-4-casal.png";
 import secao6Gif from "@/assets/secao-6-gif.gif";
 import secao7Image from "@/assets/secao-7-imagem.png";
+import secao7bImage from "@/assets/secao-7b-imagem.jpg";
 import secao9Mulheres from "@/assets/secao-9-mulheres.png";
 import secao12Chat from "@/assets/secao-12-chat.webp";
 import secao13Image from "@/assets/secao-13-imagem.png";
@@ -47,6 +48,7 @@ const criticalImages = [
 const secondaryImages = [
   secao6Gif,
   secao7Image,
+  secao7bImage,
   secao9Mulheres,
   secao12Chat,
   secao13Image,
