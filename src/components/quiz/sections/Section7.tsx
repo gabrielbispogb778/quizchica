@@ -4,18 +4,16 @@ import sectionImage from "@/assets/secao-7-imagem.png";
 
 interface Section7Props {
   onSelect: (e?: React.MouseEvent) => void;
-  onSelectNo: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
-const yesOptions = [
+const options = [
   "Yes, I always wonder about it",
   "Yes, but I don't know where to start",
+  "I had never thought about it before",
 ];
 
-const noOption = "No, I've never heard about it";
-
-export const Section7 = ({ onSelect, onSelectNo, onBack }: Section7Props) => {
+export const Section7 = ({ onSelect, onBack }: Section7Props) => {
   return (
     <div className="min-h-screen bg-[#000000] flex flex-col">
       {/* Back Button */}
@@ -62,7 +60,7 @@ export const Section7 = ({ onSelect, onSelectNo, onBack }: Section7Props) => {
 
           {/* Options */}
           <div className="flex-1 w-full space-y-3">
-            {yesOptions.map((option, index) => (
+            {options.map((option, index) => (
               <button
                 key={index}
                 onClick={(e) => onSelect(e)}
@@ -72,14 +70,6 @@ export const Section7 = ({ onSelect, onSelectNo, onBack }: Section7Props) => {
                 <ArrowRight className="w-5 h-5 flex-shrink-0" />
               </button>
             ))}
-
-            <button
-              onClick={(e) => onSelectNo(e)}
-              className="w-full bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-4 rounded-lg transition-all duration-200 flex items-center justify-between gap-2 active:scale-[0.98] text-sm text-left"
-            >
-              <span>{noOption}</span>
-              <ArrowRight className="w-5 h-5 flex-shrink-0" />
-            </button>
           </div>
         </div>
       </div>

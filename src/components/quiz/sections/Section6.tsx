@@ -4,6 +4,7 @@ import sectionGif from "@/assets/secao-6-gif.gif";
 
 interface Section6Props {
   onSelect: (e?: React.MouseEvent) => void;
+  onSelectNo: (e?: React.MouseEvent) => void;
   onBack: () => void;
 }
 
@@ -12,7 +13,7 @@ const options = [
   { label: "No, I've never heard about it", emoji: "🤔" },
 ];
 
-export const Section6 = ({ onSelect, onBack }: Section6Props) => {
+export const Section6 = ({ onSelect, onSelectNo, onBack }: Section6Props) => {
   return (
     <div className="min-h-screen bg-[#000000] flex flex-col">
       {/* Back Button */}
@@ -60,7 +61,7 @@ export const Section6 = ({ onSelect, onBack }: Section6Props) => {
           {options.map((option, index) => (
             <button
               key={index}
-              onClick={(e) => onSelect(e)}
+              onClick={(e) => (index === 1 ? onSelectNo(e) : onSelect(e))}
               className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 sm:py-6 px-3 sm:px-4 rounded-lg transition-all duration-200 flex flex-col items-center justify-center gap-1.5 sm:gap-2 active:scale-[0.98] text-xs sm:text-base"
             >
               <span className="text-xl sm:text-2xl">{option.emoji}</span>

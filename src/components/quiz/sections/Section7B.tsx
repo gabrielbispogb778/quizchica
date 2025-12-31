@@ -31,7 +31,7 @@ export const Section7B = ({ onSelect, onBack }: Section7BProps) => {
           <div className="h-2 bg-white rounded-full overflow-hidden">
             <div 
               className="h-full bg-[#D92B27] transition-all duration-300"
-              style={{ width: `${(7.5 / 22) * 100}%` }}
+              style={{ width: `${(6.5 / 22) * 100}%` }}
             />
           </div>
         </div>
