@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import lipsIcon from "@/assets/lips-icon.png";
 import heroImage from "@/assets/secao-22-hero.webp";
 import chatImage from "@/assets/secao-22-chat.webp";
@@ -32,7 +32,11 @@ interface Section22Props {
 
 export const Section22 = ({ onSelect, onBack }: Section22Props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showBanner, setShowBanner] = useState(false);
+  const [spotsLeft, setSpotsLeft] = useState(50);
+  const offerRef = useRef<HTMLDivElement>(null);
 
+  // Auto-scroll carousel
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % reviewImages.length);
@@ -40,8 +44,50 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
     return () => clearInterval(interval);
   }, []);
 
+  // Intersection Observer for the offer section
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowBanner(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (offerRef.current) {
+      observer.observe(offerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Countdown for spots
+  useEffect(() => {
+    if (!showBanner) return;
+    
+    const interval = setInterval(() => {
+      setSpotsLeft((prev) => {
+        if (prev <= 3) return 3; // Never goes below 3
+        // Random decrease between 1-2 spots every 8-15 seconds
+        const decrease = Math.random() > 0.6 ? 2 : 1;
+        return prev - decrease;
+      });
+    }, Math.random() * 7000 + 8000); // Random interval between 8-15 seconds
+
+    return () => clearInterval(interval);
+  }, [showBanner]);
+
   return (
     <div className="min-h-screen min-h-[100dvh] bg-black flex flex-col overflow-y-auto">
+      {/* Fixed Red Banner */}
+      {showBanner && (
+        <div className="fixed top-0 left-0 right-0 z-50 bg-[#dc2626] py-2.5 sm:py-3 px-4 shadow-lg animate-fade-in">
+          <p className="text-white text-xs sm:text-sm font-bold text-center tracking-wide">
+            ⚠️ Attention: Only <span className="text-yellow-300 underline">{spotsLeft} spots</span> left at this price! ⚠️
+          </p>
+        </div>
+      )}
       {/* Back Button */}
       <button
         onClick={onBack}
@@ -217,7 +263,7 @@ export const Section22 = ({ onSelect, onBack }: Section22Props) => {
 
 
         {/* Part 6 - Limited Time Offer */}
-        <div className="w-full max-w-xs sm:max-w-md">
+        <div ref={offerRef} className="w-full max-w-xs sm:max-w-md">
           {/* Red banner */}
           <div className="bg-[#dc2626] rounded-t-xl py-2 sm:py-3 px-3 sm:px-4">
             <p className="text-white text-xs sm:text-sm font-bold text-center tracking-wider">
