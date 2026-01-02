@@ -34,6 +34,7 @@ const videoTestimonials = [
   "vid-69575eb996807c66f23bd578",
   "vid-69575ea296807c66f23bd55c",
   "vid-69575ea7b937dc415ffa984d",
+  "vid-69575ebfcfe8523273771ead",
 ];
 interface Section22Props {
   onSelect: (e?: React.MouseEvent) => void;
@@ -94,6 +95,7 @@ export const Section22 = ({
       { id: "vturb-script-69575eb996807c66f23bd578", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575eb996807c66f23bd578/v4/player.js" },
       { id: "vturb-script-69575ea296807c66f23bd55c", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea296807c66f23bd55c/v4/player.js" },
       { id: "vturb-script-69575ea7b937dc415ffa984d", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea7b937dc415ffa984d/v4/player.js" },
+      { id: "vturb-script-69575ebfcfe8523273771ead", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ebfcfe8523273771ead/v4/player.js" },
     ];
     
     scripts.forEach(({ id, src }) => {
