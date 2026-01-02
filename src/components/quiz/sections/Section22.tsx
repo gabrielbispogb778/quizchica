@@ -15,26 +15,18 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-// Declare custom element for TypeScript
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'vturb-smartplayer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & { id: string }, HTMLElement>;
-    }
-  }
-}
+import { VturbPlayer } from "@/components/quiz/VturbPlayer";
 
 // Review images
 const reviewImages = ["/PS-1.png", "/PS-2.png", "/PS-3.png", "/PS-4.png", "/PS-5.png", "/PS-6.png", "/PS-7.png", "/PS-8.png", "/PS-9.png", "/PS-10.png", "/PS-11.png"];
 
-// Video testimonials
+// Video testimonials with their script sources
 const videoTestimonials = [
-  "vid-69575e9ebfcaaae23ccbacdc",
-  "vid-69575eb996807c66f23bd578",
-  "vid-69575ea296807c66f23bd55c",
-  "vid-69575ea7b937dc415ffa984d",
-  "vid-69575ebfcfe8523273771ead",
+  { id: "vid-69575e9ebfcaaae23ccbacdc", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js" },
+  { id: "vid-69575eb996807c66f23bd578", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575eb996807c66f23bd578/v4/player.js" },
+  { id: "vid-69575ea296807c66f23bd55c", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea296807c66f23bd55c/v4/player.js" },
+  { id: "vid-69575ea7b937dc415ffa984d", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea7b937dc415ffa984d/v4/player.js" },
+  { id: "vid-69575ebfcfe8523273771ead", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ebfcfe8523273771ead/v4/player.js" },
 ];
 interface Section22Props {
   onSelect: (e?: React.MouseEvent) => void;
@@ -88,26 +80,6 @@ export const Section22 = ({
     return () => clearInterval(interval);
   }, [showBanner]);
 
-  // Load VTURB scripts
-  useEffect(() => {
-    const scripts = [
-      { id: "vturb-script-69575e9ebfcaaae23ccbacdc", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js" },
-      { id: "vturb-script-69575eb996807c66f23bd578", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575eb996807c66f23bd578/v4/player.js" },
-      { id: "vturb-script-69575ea296807c66f23bd55c", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea296807c66f23bd55c/v4/player.js" },
-      { id: "vturb-script-69575ea7b937dc415ffa984d", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea7b937dc415ffa984d/v4/player.js" },
-      { id: "vturb-script-69575ebfcfe8523273771ead", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ebfcfe8523273771ead/v4/player.js" },
-    ];
-    
-    scripts.forEach(({ id, src }) => {
-      if (!document.getElementById(id)) {
-        const s = document.createElement("script");
-        s.id = id;
-        s.src = src;
-        s.async = true;
-        document.head.appendChild(s);
-      }
-    });
-  }, []);
 
   return <div className="min-h-screen min-h-[100dvh] bg-black flex flex-col overflow-y-auto">
       {/* Fixed Red Banner */}
@@ -232,9 +204,9 @@ export const Section22 = ({
               className="flex transition-transform duration-500 ease-in-out" 
               style={{ transform: `translateX(-${currentVideoSlide * 100}%)` }}
             >
-              {videoTestimonials.map((videoId, index) => (
-                <div key={videoId} className="w-full flex-shrink-0 px-2">
-                  <vturb-smartplayer id={videoId} style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
+              {videoTestimonials.map((video, index) => (
+                <div key={video.id} className="w-full flex-shrink-0 px-2">
+                  <VturbPlayer videoId={video.id} scriptSrc={video.src} />
                 </div>
               ))}
             </div>
