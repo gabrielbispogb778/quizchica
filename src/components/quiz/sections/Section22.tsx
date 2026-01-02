@@ -720,6 +720,16 @@ For any reason, please email us within 60 days and we will refund every penny. Y
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
+
+              {/* CTA Button after FAQ */}
+              <a 
+                href="https://go.centerpag.com/PPU38CQ4NDP" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-4 sm:py-5 px-4 sm:px-6 rounded-xl mt-8 transition-colors active:scale-[0.98] block text-center shadow-lg"
+              >
+                👉 YES, I'M READY – GIVE ME INSTANT ACCESS NOW
+              </a>
             </div>
 
             {/* Footer */}
