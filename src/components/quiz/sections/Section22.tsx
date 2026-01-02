@@ -78,16 +78,22 @@ export const Section22 = ({
     return () => clearInterval(interval);
   }, [showBanner]);
 
-  // Load VTURB script
+  // Load VTURB scripts
   useEffect(() => {
-    const scriptId = "vturb-script-69575e9ebfcaaae23ccbacdc";
-    if (!document.getElementById(scriptId)) {
-      const s = document.createElement("script");
-      s.id = scriptId;
-      s.src = "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js";
-      s.async = true;
-      document.head.appendChild(s);
-    }
+    const scripts = [
+      { id: "vturb-script-69575e9ebfcaaae23ccbacdc", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js" },
+      { id: "vturb-script-69575eb996807c66f23bd578", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575eb996807c66f23bd578/v4/player.js" },
+    ];
+    
+    scripts.forEach(({ id, src }) => {
+      if (!document.getElementById(id)) {
+        const s = document.createElement("script");
+        s.id = id;
+        s.src = src;
+        s.async = true;
+        document.head.appendChild(s);
+      }
+    });
   }, []);
 
   return <div className="min-h-screen min-h-[100dvh] bg-black flex flex-col overflow-y-auto">
@@ -189,8 +195,9 @@ export const Section22 = ({
         </div>
 
         {/* Video Testimonials Section */}
-        <div className="w-full max-w-xs sm:max-w-md mb-4">
+        <div className="w-full max-w-xs sm:max-w-md mb-4 space-y-4">
           <vturb-smartplayer id="vid-69575e9ebfcaaae23ccbacdc" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
+          <vturb-smartplayer id="vid-69575eb996807c66f23bd578" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
         </div>
 
         {/* WhatsApp Chat Screenshot */}
