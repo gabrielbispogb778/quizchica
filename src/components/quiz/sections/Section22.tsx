@@ -27,6 +27,13 @@ declare global {
 
 // Review images
 const reviewImages = ["/PS-1.png", "/PS-2.png", "/PS-3.png", "/PS-4.png", "/PS-5.png", "/PS-6.png", "/PS-7.png", "/PS-8.png", "/PS-9.png", "/PS-10.png", "/PS-11.png"];
+
+// Video testimonials
+const videoTestimonials = [
+  "vid-69575e9ebfcaaae23ccbacdc",
+  "vid-69575eb996807c66f23bd578",
+  "vid-69575ea296807c66f23bd55c",
+];
 interface Section22Props {
   onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
@@ -36,6 +43,7 @@ export const Section22 = ({
   onBack
 }: Section22Props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentVideoSlide, setCurrentVideoSlide] = useState(0);
   const [showBanner, setShowBanner] = useState(false);
   const [spotsLeft, setSpotsLeft] = useState(40);
   const offerRef = useRef<HTMLDivElement>(null);
@@ -83,6 +91,7 @@ export const Section22 = ({
     const scripts = [
       { id: "vturb-script-69575e9ebfcaaae23ccbacdc", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js" },
       { id: "vturb-script-69575eb996807c66f23bd578", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575eb996807c66f23bd578/v4/player.js" },
+      { id: "vturb-script-69575ea296807c66f23bd55c", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea296807c66f23bd55c/v4/player.js" },
     ];
     
     scripts.forEach(({ id, src }) => {
@@ -194,10 +203,49 @@ export const Section22 = ({
           <p className="text-gray-500 text-[10px] sm:text-xs text-center mt-1">Based on reviews from men who applied the techniques</p>
         </div>
 
-        {/* Video Testimonials Section */}
-        <div className="w-full max-w-xs sm:max-w-md mb-4 space-y-4">
-          <vturb-smartplayer id="vid-69575e9ebfcaaae23ccbacdc" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
-          <vturb-smartplayer id="vid-69575eb996807c66f23bd578" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
+        {/* Video Testimonials Carousel */}
+        <div className="w-full max-w-xs sm:max-w-md mb-4 relative">
+          {/* Left Arrow */}
+          <button 
+            onClick={() => setCurrentVideoSlide(prev => prev === 0 ? videoTestimonials.length - 1 : prev - 1)} 
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors" 
+            aria-label="Vídeo anterior"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          
+          {/* Right Arrow */}
+          <button 
+            onClick={() => setCurrentVideoSlide(prev => prev === videoTestimonials.length - 1 ? 0 : prev + 1)} 
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors" 
+            aria-label="Próximo vídeo"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          <div className="overflow-hidden px-8">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out" 
+              style={{ transform: `translateX(-${currentVideoSlide * 100}%)` }}
+            >
+              {videoTestimonials.map((videoId, index) => (
+                <div key={videoId} className="w-full flex-shrink-0 px-2">
+                  <vturb-smartplayer id={videoId} style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Dots indicator */}
+          <div className="flex justify-center gap-1.5 mt-3">
+            {videoTestimonials.map((_, index) => (
+              <button 
+                key={index} 
+                onClick={() => setCurrentVideoSlide(index)} 
+                className={`w-2 h-2 rounded-full transition-colors ${currentVideoSlide === index ? "bg-[#D92B27]" : "bg-gray-600"}`} 
+              />
+            ))}
+          </div>
         </div>
 
         {/* WhatsApp Chat Screenshot */}
