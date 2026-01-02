@@ -166,6 +166,20 @@ export const Section22 = ({
           <p className="text-gray-500 text-[10px] sm:text-xs text-center mt-1">Based on reviews from men who applied the techniques</p>
         </div>
 
+        {/* Video Testimonials Section */}
+        <div className="w-full max-w-xs sm:max-w-md mb-4">
+          <div 
+            dangerouslySetInnerHTML={{
+              __html: `
+                <vturb-smartplayer id="vid-69575e9ebfcaaae23ccbacdc" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+                <script type="text/javascript">
+                  var s=document.createElement("script"); s.src="https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js", s.async=!0,document.head.appendChild(s);
+                </script>
+              `
+            }}
+          />
+        </div>
+
         {/* WhatsApp Chat Screenshot */}
         <div className="w-full max-w-xs sm:max-w-md mb-2">
           <img src={chatImage} alt="Student success message" className="w-full rounded-lg" />
