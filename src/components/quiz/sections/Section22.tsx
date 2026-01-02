@@ -5,8 +5,6 @@ import heroImage from "@/assets/secao-22-hero.webp";
 import chatImage from "@/assets/secao-22-chat.webp";
 import bonus1 from "@/assets/secao-22-bonus1.webp";
 import bonus2 from "@/assets/secao-22-bonus2.webp";
-import bonus3 from "@/assets/secao-22-bonus3.webp";
-import bonus4 from "@/assets/secao-22-bonus4.webp";
 import offerImage from "@/assets/secao-22-offer-new.png";
 import paymentImage from "@/assets/secao-22-payment.webp";
 import guaranteeImage from "@/assets/secao-22-guarantee-badge.png";
@@ -206,33 +204,6 @@ export const Section22 = ({
             </p>
           </div>
 
-          {/* Bonus 3 */}
-          <div className="bg-black border border-gray-800 rounded-lg p-3 sm:p-4 text-center">
-            <img src={bonus3} alt="Bonus 3" className="w-20 sm:w-24 h-auto mx-auto mb-2 sm:mb-3" />
-            <p className="text-white text-xs sm:text-sm italic mb-2">
-              Learn how to awaken the wild side of any shy woman, with these foolproof techniques.
-            </p>
-            <p className="text-xs sm:text-sm">
-              <span className="text-[#D92B27]">From </span>
-              <span className="text-[#D92B27] line-through">$29</span>
-              <span className="text-white"> for </span>
-              <span className="text-green-500 font-bold">$0</span>
-            </p>
-          </div>
-
-          {/* Bonus 4 */}
-          <div className="bg-black border border-gray-800 rounded-lg p-3 sm:p-4 text-center">
-            <img src={bonus4} alt="Bonus 4" className="w-20 sm:w-24 h-auto mx-auto mb-2 sm:mb-3" />
-            <p className="text-white text-xs sm:text-sm italic mb-2">
-              Understand how the female mind works and use that knowledge to conquer any woman.
-            </p>
-            <p className="text-xs sm:text-sm">
-              <span className="text-[#D92B27]">From </span>
-              <span className="text-[#D92B27] line-through">$29</span>
-              <span className="text-white"> for </span>
-              <span className="text-green-500 font-bold">$0</span>
-            </p>
-          </div>
         </div>
 
 
