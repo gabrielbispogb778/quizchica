@@ -8,6 +8,7 @@ import bonus2 from "@/assets/secao-22-bonus2.webp";
 import offerImage from "@/assets/secao-22-offer-new.png";
 import paymentImage from "@/assets/secao-22-payment.webp";
 import guaranteeImage from "@/assets/secao-22-guarantee-60days.png";
+import secureBadge from "@/assets/secao-22-secure-badge.png";
 
 // Review images
 const reviewImages = ["/PS-1.png", "/PS-2.png", "/PS-3.png", "/PS-4.png", "/PS-5.png", "/PS-6.png", "/PS-7.png", "/PS-8.png", "/PS-9.png", "/PS-10.png", "/PS-11.png"];
@@ -349,6 +350,9 @@ For any reason, please email us within 60 days and we will refund every penny. Y
 
             {/* Secure Purchase Box */}
             <div className="bg-transparent border border-[#444] rounded-lg p-3 sm:p-4 mb-4 sm:mb-6">
+              <div className="flex justify-center mb-3">
+                <img src={secureBadge} alt="100% Secure" className="h-10 sm:h-12 object-contain" />
+              </div>
               <p className="text-white text-sm sm:text-base font-bold text-center mb-2">100% Secure Purchase</p>
               <p className="text-white text-xs sm:text-sm text-center leading-relaxed">
                 All information is encrypted and transmitted safely using a Secure Socket Layer protocol.
