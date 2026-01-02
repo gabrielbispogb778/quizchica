@@ -7,7 +7,7 @@ import bonus1 from "@/assets/secao-22-bonus1.webp";
 import bonus2 from "@/assets/secao-22-bonus2.webp";
 import offerImage from "@/assets/secao-22-offer-new.png";
 import paymentImage from "@/assets/secao-22-payment.webp";
-import guaranteeImage from "@/assets/secao-22-guarantee-badge.png";
+import guaranteeImage from "@/assets/secao-22-guarantee-60days.png";
 
 // Review images
 const reviewImages = ["/PS-1.png", "/PS-2.png", "/PS-3.png", "/PS-4.png", "/PS-5.png", "/PS-6.png", "/PS-7.png", "/PS-8.png", "/PS-9.png", "/PS-10.png", "/PS-11.png"];
