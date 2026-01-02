@@ -351,7 +351,7 @@ For any reason, please email us within 60 days and we will refund every penny. Y
             {/* Secure Purchase Box */}
             <div className="bg-transparent border border-[#444] rounded-lg p-3 sm:p-4 mb-4 sm:mb-6">
               <div className="flex justify-center mb-3">
-                <img src={secureBadge} alt="100% Secure" className="h-10 sm:h-12 object-contain" />
+                <img src={secureBadge} alt="100% Secure" className="h-16 sm:h-20 object-contain" />
               </div>
               <p className="text-white text-sm sm:text-base font-bold text-center mb-2">100% Secure Purchase</p>
               <p className="text-white text-xs sm:text-sm text-center leading-relaxed">
