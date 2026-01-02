@@ -199,17 +199,15 @@ export const Section22 = ({
             <ChevronRight className="w-5 h-5" />
           </button>
 
-          <div className="overflow-hidden px-8">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out" 
-              style={{ transform: `translateX(-${currentVideoSlide * 100}%)` }}
-            >
-              {videoTestimonials.map((video, index) => (
-                <div key={video.id} className="w-full flex-shrink-0 px-2">
-                  <VturbPlayer videoId={video.id} scriptSrc={video.src} />
+          <div className="px-8">
+            {(() => {
+              const currentVideo = videoTestimonials[currentVideoSlide];
+              return (
+                <div className="animate-fade-in">
+                  <VturbPlayer key={currentVideo.id} videoId={currentVideo.id} scriptSrc={currentVideo.src} />
                 </div>
-              ))}
-            </div>
+              );
+            })()}
           </div>
 
           {/* Dots indicator */}

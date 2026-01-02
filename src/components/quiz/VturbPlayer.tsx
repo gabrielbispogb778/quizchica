@@ -9,10 +9,11 @@ interface VturbPlayerProps {
 export const VturbPlayer = ({ videoId, scriptSrc }: VturbPlayerProps) => {
   const rootRef = useRef<HTMLDivElement>(null);
   const [isReady, setIsReady] = useState(false);
+  const [overlayVisible, setOverlayVisible] = useState(true);
 
   const playerHtml = useMemo(
     () =>
-      `<vturb-smartplayer id="${videoId}" style="display:block;margin:0 auto;width:100%;max-width:400px;"></vturb-smartplayer>`,
+      `<vturb-smartplayer id="${videoId}" style="display:block;margin:0 auto;width:100%;height:100%;max-width:400px;"></vturb-smartplayer>`,
     [videoId]
   );
 
@@ -35,13 +36,14 @@ export const VturbPlayer = ({ videoId, scriptSrc }: VturbPlayerProps) => {
       console.debug("VTURB script already present:", { videoId, scriptSrc });
     }
 
-    // Detect when the player injects its iframe, then remove placeholder
+    // Detect when the player injects content, then switch copy/state.
     const el = rootRef.current;
     if (!el) return;
 
     const checkReady = () => {
       const hasIframe = !!el.querySelector("iframe");
-      if (hasIframe) setIsReady(true);
+      const hasAnyChild = el.querySelector("vturb-smartplayer")?.children?.length;
+      if (hasIframe || hasAnyChild) setIsReady(true);
     };
 
     checkReady();
@@ -49,7 +51,7 @@ export const VturbPlayer = ({ videoId, scriptSrc }: VturbPlayerProps) => {
     const obs = new MutationObserver(() => checkReady());
     obs.observe(el, { childList: true, subtree: true });
 
-    const timeout = window.setTimeout(() => checkReady(), 2500);
+    const timeout = window.setTimeout(() => checkReady(), 3500);
 
     return () => {
       obs.disconnect();
@@ -58,23 +60,32 @@ export const VturbPlayer = ({ videoId, scriptSrc }: VturbPlayerProps) => {
   }, [videoId, scriptSrc]);
 
   return (
-    <div className="relative w-full" style={{ maxWidth: 400, margin: "0 auto" }}>
-      {!isReady && (
-        <div
-          className="absolute inset-0 rounded-lg flex flex-col items-center justify-center z-10 bg-black/70 animate-fade-in"
-          style={{ aspectRatio: "9/16" }}
-        >
-          <div className="w-14 h-14 rounded-full flex items-center justify-center mb-2 bg-black/60 border border-white/20">
-            <Play className="w-7 h-7 text-white ml-0.5" />
-          </div>
-          <p className="text-white text-xs sm:text-sm font-semibold text-center px-4">
-            Toque para assistir (carregando vídeo)
-          </p>
-        </div>
-      )}
+    <div className="w-full" style={{ maxWidth: 400, margin: "0 auto" }}>
+      <div className="relative w-full overflow-hidden rounded-lg bg-black">
+        {/* Height spacer (9:16) */}
+        <div className="w-full pt-[177.78%]" />
 
-      <div ref={rootRef} className="w-full">
-        <div dangerouslySetInnerHTML={{ __html: playerHtml }} />
+        {/* Player mount */}
+        <div ref={rootRef} className="absolute inset-0">
+          <div className="w-full h-full" dangerouslySetInnerHTML={{ __html: playerHtml }} />
+        </div>
+
+        {/* Poster/Overlay */}
+        {overlayVisible && (
+          <button
+            type="button"
+            onClick={() => setOverlayVisible(false)}
+            className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/60 backdrop-blur-[1px] animate-fade-in"
+            aria-label="Assistir depoimento"
+          >
+            <div className="w-14 h-14 rounded-full flex items-center justify-center mb-2 bg-black/60 border border-white/20">
+              <Play className="w-7 h-7 text-white ml-0.5" />
+            </div>
+            <p className="text-white text-xs sm:text-sm font-semibold text-center px-4">
+              {isReady ? "Toque para assistir" : "Carregando vídeo…"}
+            </p>
+          </button>
+        )}
       </div>
     </div>
   );
