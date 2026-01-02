@@ -74,7 +74,14 @@ export const VturbPlayer = ({ videoId, scriptSrc }: VturbPlayerProps) => {
         {overlayVisible && (
           <button
             type="button"
-            onClick={() => setOverlayVisible(false)}
+            onClick={() => {
+              setOverlayVisible(false);
+              // Try to forward the first click to the VTurb player so it starts playing.
+              requestAnimationFrame(() => {
+                const player = rootRef.current?.querySelector("vturb-smartplayer") as HTMLElement | null;
+                if (player) player.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+              });
+            }}
             className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/60 backdrop-blur-[1px] animate-fade-in"
             aria-label="Assistir depoimento"
           >
