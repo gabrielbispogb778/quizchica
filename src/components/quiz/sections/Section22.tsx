@@ -16,6 +16,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+// Declare custom element for TypeScript
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'vturb-smartplayer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & { id: string }, HTMLElement>;
+    }
+  }
+}
+
 // Review images
 const reviewImages = ["/PS-1.png", "/PS-2.png", "/PS-3.png", "/PS-4.png", "/PS-5.png", "/PS-6.png", "/PS-7.png", "/PS-8.png", "/PS-9.png", "/PS-10.png", "/PS-11.png"];
 interface Section22Props {
@@ -68,6 +77,19 @@ export const Section22 = ({
 
     return () => clearInterval(interval);
   }, [showBanner]);
+
+  // Load VTURB script
+  useEffect(() => {
+    const scriptId = "vturb-script-69575e9ebfcaaae23ccbacdc";
+    if (!document.getElementById(scriptId)) {
+      const s = document.createElement("script");
+      s.id = scriptId;
+      s.src = "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js";
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  }, []);
+
   return <div className="min-h-screen min-h-[100dvh] bg-black flex flex-col overflow-y-auto">
       {/* Fixed Red Banner */}
       {showBanner && <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-2 px-2 sm:py-2 sm:px-3 md:py-3 md:px-4 shadow-lg animate-fade-in">
@@ -168,16 +190,7 @@ export const Section22 = ({
 
         {/* Video Testimonials Section */}
         <div className="w-full max-w-xs sm:max-w-md mb-4">
-          <div 
-            dangerouslySetInnerHTML={{
-              __html: `
-                <vturb-smartplayer id="vid-69575e9ebfcaaae23ccbacdc" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
-                <script type="text/javascript">
-                  var s=document.createElement("script"); s.src="https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js", s.async=!0,document.head.appendChild(s);
-                </script>
-              `
-            }}
-          />
+          <vturb-smartplayer id="vid-69575e9ebfcaaae23ccbacdc" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
         </div>
 
         {/* WhatsApp Chat Screenshot */}
