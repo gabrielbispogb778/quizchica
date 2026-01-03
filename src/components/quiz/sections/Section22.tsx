@@ -270,9 +270,7 @@ export const Section22 = ({
               <div className="w-1 sm:w-1.5 h-20 sm:h-24 bg-white rounded-full shrink-0"></div>
               
               {/* Text */}
-              <p className="text-white text-sm sm:text-xl font-bold italic leading-tight flex-1">
-                23 Orgasmic Techniques + 4 Exclusive Bonuses! From $99.90
-              </p>
+              <p className="text-white text-sm sm:text-xl font-bold italic leading-tight flex-1">23 Orgasmic Techniques + 2 Exclusive Bonuses! From $99.90</p>
               
               {/* Price box */}
               <div className="bg-[#4a1c1c] rounded-lg px-2 sm:px-4 py-2 sm:py-3 text-center shrink-0">
@@ -357,9 +355,7 @@ export const Section22 = ({
                 <div className="w-1 sm:w-1.5 h-20 sm:h-24 bg-white rounded-full shrink-0"></div>
                 
                 {/* Text */}
-                <p className="text-white text-sm sm:text-xl font-bold italic leading-tight flex-1">
-                  23 Orgasmic Techniques + 4 Exclusive Bonuses! From $99.90
-                </p>
+                <p className="text-white text-sm sm:text-xl font-bold italic leading-tight flex-1">23 Orgasmic Techniques + 2 Exclusive Bonuses! From $99.90</p>
                 
                 {/* Price box */}
                 <div className="bg-[#4a1c1c] rounded-lg px-2 sm:px-4 py-2 sm:py-3 text-center shrink-0">
