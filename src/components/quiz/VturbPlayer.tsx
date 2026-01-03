@@ -106,7 +106,7 @@ export const VturbPlayer = ({ videoId, scriptSrc }: VturbPlayerProps) => {
               <Play className="w-7 h-7 text-white ml-0.5" />
             </div>
             <p className="text-white text-xs sm:text-sm font-semibold text-center px-4">
-              {isReady ? "Toque para assistir" : "Carregando vídeo…"}
+              {isReady ? "Tap to watch" : "Loading video…"}
             </p>
           </button>
         )}
