@@ -9,25 +9,29 @@ import offerImage from "@/assets/secao-22-offer-new.png";
 import paymentImage from "@/assets/secao-22-payment.webp";
 import guaranteeImage from "@/assets/secao-22-guarantee-60days.png";
 import secureBadge from "@/assets/secao-22-secure-badge.png";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { VturbPlayer } from "@/components/quiz/VturbPlayer";
 
 // Review images
 const reviewImages = ["/PS-1.png", "/PS-2.png", "/PS-3.png", "/PS-4.png", "/PS-5.png", "/PS-6.png", "/PS-7.png", "/PS-8.png", "/PS-9.png", "/PS-10.png", "/PS-11.png"];
 
 // Video testimonials with their script sources
-const videoTestimonials = [
-  { id: "vid-69575ebfcfe8523273771ead", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ebfcfe8523273771ead/v4/player.js" },
-  { id: "vid-69575ea7b937dc415ffa984d", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea7b937dc415ffa984d/v4/player.js" },
-  { id: "vid-69575ea296807c66f23bd55c", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea296807c66f23bd55c/v4/player.js" },
-  { id: "vid-69575eb996807c66f23bd578", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575eb996807c66f23bd578/v4/player.js" },
-  { id: "vid-69575e9ebfcaaae23ccbacdc", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js" },
-];
+const videoTestimonials = [{
+  id: "vid-69575ebfcfe8523273771ead",
+  src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ebfcfe8523273771ead/v4/player.js"
+}, {
+  id: "vid-69575ea7b937dc415ffa984d",
+  src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea7b937dc415ffa984d/v4/player.js"
+}, {
+  id: "vid-69575ea296807c66f23bd55c",
+  src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea296807c66f23bd55c/v4/player.js"
+}, {
+  id: "vid-69575eb996807c66f23bd578",
+  src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575eb996807c66f23bd578/v4/player.js"
+}, {
+  id: "vid-69575e9ebfcaaae23ccbacdc",
+  src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js"
+}];
 interface Section22Props {
   onSelect: (e?: React.MouseEvent) => void;
   onBack: () => void;
@@ -79,8 +83,6 @@ export const Section22 = ({
 
     return () => clearInterval(interval);
   }, [showBanner]);
-
-
   return <div className="min-h-screen min-h-[100dvh] bg-black flex flex-col overflow-y-auto">
       {/* Fixed Red Banner */}
       {showBanner && <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-2 px-2 sm:py-2 sm:px-3 md:py-3 md:px-4 shadow-lg animate-fade-in">
@@ -182,43 +184,27 @@ export const Section22 = ({
         {/* Video Testimonials Carousel */}
         <div className="w-full max-w-xs sm:max-w-md mb-4 relative">
           {/* Left Arrow */}
-          <button 
-            onClick={() => setCurrentVideoSlide(prev => prev === 0 ? videoTestimonials.length - 1 : prev - 1)} 
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors" 
-            aria-label="Vídeo anterior"
-          >
+          <button onClick={() => setCurrentVideoSlide(prev => prev === 0 ? videoTestimonials.length - 1 : prev - 1)} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors" aria-label="Vídeo anterior">
             <ChevronLeft className="w-5 h-5" />
           </button>
           
           {/* Right Arrow */}
-          <button 
-            onClick={() => setCurrentVideoSlide(prev => prev === videoTestimonials.length - 1 ? 0 : prev + 1)} 
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors" 
-            aria-label="Próximo vídeo"
-          >
+          <button onClick={() => setCurrentVideoSlide(prev => prev === videoTestimonials.length - 1 ? 0 : prev + 1)} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition-colors" aria-label="Próximo vídeo">
             <ChevronRight className="w-5 h-5" />
           </button>
 
           <div className="px-8">
             {(() => {
-              const currentVideo = videoTestimonials[currentVideoSlide];
-              return (
-                <div className="animate-fade-in">
+            const currentVideo = videoTestimonials[currentVideoSlide];
+            return <div className="animate-fade-in">
                   <VturbPlayer key={currentVideo.id} videoId={currentVideo.id} scriptSrc={currentVideo.src} />
-                </div>
-              );
-            })()}
+                </div>;
+          })()}
           </div>
 
           {/* Dots indicator */}
           <div className="flex justify-center gap-1.5 mt-3">
-            {videoTestimonials.map((_, index) => (
-              <button 
-                key={index} 
-                onClick={() => setCurrentVideoSlide(index)} 
-                className={`w-2 h-2 rounded-full transition-colors ${currentVideoSlide === index ? "bg-[#D92B27]" : "bg-gray-600"}`} 
-              />
-            ))}
+            {videoTestimonials.map((_, index) => <button key={index} onClick={() => setCurrentVideoSlide(index)} className={`w-2 h-2 rounded-full transition-colors ${currentVideoSlide === index ? "bg-[#D92B27]" : "bg-gray-600"}`} />)}
           </div>
         </div>
 
@@ -229,9 +215,7 @@ export const Section22 = ({
 
         {/* Subscribe Banner */}
         <div className="w-full max-w-xs sm:max-w-md bg-[#D92B27] rounded-lg p-3 sm:p-4 mb-2">
-          <p className="text-white text-sm sm:text-base font-bold text-center mb-1">
-            Subscribe today and receive +4 Gifts!
-          </p>
+          <p className="text-white text-sm sm:text-base font-bold text-center mb-1">Subscribe today and receive + 2 Gifts!</p>
           <p className="text-white text-[10px] sm:text-xs text-center">
             By completing your enrollment today, you'll receive immediate access and all these Bonuses 🎁
           </p>
@@ -778,12 +762,7 @@ For any reason, please email us within 60 days and we will refund every penny. Y
               </Accordion>
 
               {/* CTA Button after FAQ */}
-              <a 
-                href="https://go.centerpag.com/PPU38CQ4NDP" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-xs sm:text-base font-bold py-3 sm:py-4 px-3 sm:px-4 rounded-xl mt-6 transition-colors active:scale-[0.98] block text-center"
-              >
+              <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-xs sm:text-base font-bold py-3 sm:py-4 px-3 sm:px-4 rounded-xl mt-6 transition-colors active:scale-[0.98] block text-center">
                 👉 YES, I'M READY – GIVE ME INSTANT ACCESS NOW
               </a>
             </div>
