@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
 
 interface VturbPlayerProps {
@@ -7,49 +7,67 @@ interface VturbPlayerProps {
 }
 
 export const VturbPlayer = ({ videoId, scriptSrc }: VturbPlayerProps) => {
-  const rootRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isReady, setIsReady] = useState(false);
   const [overlayVisible, setOverlayVisible] = useState(true);
+  const [mountKey, setMountKey] = useState(0);
 
-  const playerHtml = useMemo(
-    () =>
-      `<vturb-smartplayer id="${videoId}" style="display:block;margin:0 auto;width:100%;height:100%;max-width:400px;"></vturb-smartplayer>`,
-    [videoId]
-  );
+  // Force remount when component mounts to ensure fresh player
+  useEffect(() => {
+    setMountKey(prev => prev + 1);
+    setIsReady(false);
+    setOverlayVisible(true);
+  }, [videoId]);
 
   useEffect(() => {
-    const scriptId = `vturb-script-${videoId.replace("vid-", "")}`;
+    const container = containerRef.current;
+    if (!container) return;
 
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement("script");
-      script.id = scriptId;
-      script.src = scriptSrc;
-      script.async = true;
-      script.onload = () => {
-        console.debug("VTURB script loaded:", { videoId, scriptSrc });
-      };
-      script.onerror = () => {
-        console.error("VTURB script failed to load:", { videoId, scriptSrc });
-      };
-      document.head.appendChild(script);
-    } else {
-      console.debug("VTURB script already present:", { videoId, scriptSrc });
+    // Clear previous player content
+    const playerContainer = container.querySelector('.vturb-mount');
+    if (playerContainer) {
+      playerContainer.innerHTML = '';
     }
 
-    // Detect when the player injects content, then switch copy/state.
-    const el = rootRef.current;
-    if (!el) return;
+    // Create player element
+    const playerEl = document.createElement('vturb-smartplayer');
+    playerEl.id = videoId;
+    playerEl.style.cssText = 'display:block;margin:0 auto;width:100%;height:100%;max-width:400px;';
+    
+    const mountPoint = container.querySelector('.vturb-mount');
+    if (mountPoint) {
+      mountPoint.appendChild(playerEl);
+    }
 
+    // Load or reload script
+    const scriptId = `vturb-script-${videoId.replace("vid-", "")}`;
+    const existingScript = document.getElementById(scriptId);
+    
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    const script = document.createElement("script");
+    script.id = scriptId;
+    script.src = scriptSrc;
+    script.async = true;
+    script.onload = () => {
+      console.debug("VTURB script loaded:", { videoId, scriptSrc });
+    };
+    script.onerror = () => {
+      console.error("VTURB script failed to load:", { videoId, scriptSrc });
+    };
+    document.head.appendChild(script);
+
+    // Detect when the player injects content
     const checkReady = () => {
-      const hasIframe = !!el.querySelector("iframe");
-      const hasAnyChild = el.querySelector("vturb-smartplayer")?.children?.length;
+      const hasIframe = !!container.querySelector("iframe");
+      const hasAnyChild = container.querySelector("vturb-smartplayer")?.children?.length;
       if (hasIframe || hasAnyChild) setIsReady(true);
     };
 
-    checkReady();
-
     const obs = new MutationObserver(() => checkReady());
-    obs.observe(el, { childList: true, subtree: true });
+    obs.observe(container, { childList: true, subtree: true });
 
     const timeout = window.setTimeout(() => checkReady(), 3500);
 
@@ -57,7 +75,7 @@ export const VturbPlayer = ({ videoId, scriptSrc }: VturbPlayerProps) => {
       obs.disconnect();
       window.clearTimeout(timeout);
     };
-  }, [videoId, scriptSrc]);
+  }, [videoId, scriptSrc, mountKey]);
 
   return (
     <div className="w-full" style={{ maxWidth: 400, margin: "0 auto" }}>
@@ -66,8 +84,8 @@ export const VturbPlayer = ({ videoId, scriptSrc }: VturbPlayerProps) => {
         <div className="w-full pt-[177.78%]" />
 
         {/* Player mount */}
-        <div ref={rootRef} className="absolute inset-0">
-          <div className="w-full h-full" dangerouslySetInnerHTML={{ __html: playerHtml }} />
+        <div ref={containerRef} className="absolute inset-0">
+          <div className="vturb-mount w-full h-full" />
         </div>
 
         {/* Poster/Overlay */}
@@ -76,9 +94,8 @@ export const VturbPlayer = ({ videoId, scriptSrc }: VturbPlayerProps) => {
             type="button"
             onClick={() => {
               setOverlayVisible(false);
-              // Try to forward the first click to the VTurb player so it starts playing.
               requestAnimationFrame(() => {
-                const player = rootRef.current?.querySelector("vturb-smartplayer") as HTMLElement | null;
+                const player = containerRef.current?.querySelector("vturb-smartplayer") as HTMLElement | null;
                 if (player) player.dispatchEvent(new MouseEvent("click", { bubbles: true }));
               });
             }}
