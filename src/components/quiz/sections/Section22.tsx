@@ -22,11 +22,11 @@ const reviewImages = ["/PS-1.png", "/PS-2.png", "/PS-3.png", "/PS-4.png", "/PS-5
 
 // Video testimonials with their script sources
 const videoTestimonials = [
-  { id: "vid-69575e9ebfcaaae23ccbacdc", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js" },
-  { id: "vid-69575eb996807c66f23bd578", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575eb996807c66f23bd578/v4/player.js" },
-  { id: "vid-69575ea296807c66f23bd55c", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea296807c66f23bd55c/v4/player.js" },
-  { id: "vid-69575ea7b937dc415ffa984d", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea7b937dc415ffa984d/v4/player.js" },
   { id: "vid-69575ebfcfe8523273771ead", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ebfcfe8523273771ead/v4/player.js" },
+  { id: "vid-69575ea7b937dc415ffa984d", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea7b937dc415ffa984d/v4/player.js" },
+  { id: "vid-69575ea296807c66f23bd55c", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575ea296807c66f23bd55c/v4/player.js" },
+  { id: "vid-69575eb996807c66f23bd578", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575eb996807c66f23bd578/v4/player.js" },
+  { id: "vid-69575e9ebfcaaae23ccbacdc", src: "https://scripts.converteai.net/de8b493d-bf00-4ed1-be55-9961440871d6/players/69575e9ebfcaaae23ccbacdc/v4/player.js" },
 ];
 interface Section22Props {
   onSelect: (e?: React.MouseEvent) => void;
