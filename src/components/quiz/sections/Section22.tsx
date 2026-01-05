@@ -377,11 +377,11 @@ export const Section22 = ({
           <div className="w-full max-w-xs sm:max-w-md mt-6 sm:mt-8">
             {/* Guarantee Badge */}
             <div className="flex justify-center mb-3 sm:mb-4">
-              <img src={guaranteeImage} alt="7 Day Guarantee" className="w-20 h-20 sm:w-24 sm:h-24 object-contain" />
+              <img alt="7 Day Guarantee" className="w-20 h-20 sm:w-24 sm:h-24 object-contain" src="/lovable-uploads/e16652dd-9dd4-45bb-8f5f-ef4324af22bf.png" />
             </div>
 
             {/* Title */}
-            <h3 className="text-white text-lg sm:text-xl font-bold text-center mb-3 sm:mb-4">    60 DAY GUARANTEE</h3>
+            <h3 className="text-white text-lg sm:text-xl font-bold text-center mb-3 sm:mb-4">     30 DAY GUARANTEE</h3>
 
             {/* Refund Box */}
             <div className="bg-transparent border border-[#444] rounded-lg p-3 sm:p-4 mb-2">
