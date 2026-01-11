@@ -14,9 +14,10 @@ interface ScarcityNotificationProps {
   spotsLeft: number;
   onPurchase: () => void;
   isActive: boolean;
+  onNotificationShow?: (visible: boolean) => void;
 }
 
-export const ScarcityNotification = ({ spotsLeft, onPurchase, isActive }: ScarcityNotificationProps) => {
+export const ScarcityNotification = ({ spotsLeft, onPurchase, isActive, onNotificationShow }: ScarcityNotificationProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentName, setCurrentName] = useState("");
   const [usedNames, setUsedNames] = useState<string[]>([]);
@@ -42,12 +43,14 @@ export const ScarcityNotification = ({ spotsLeft, onPurchase, isActive }: Scarci
       // Decrease spots immediately when notification appears
       onPurchase();
       
-      // Show notification
+      // Show notification and red banner
       setIsVisible(true);
+      onNotificationShow?.(true);
       
       // Hide after 6 seconds
       setTimeout(() => {
         setIsVisible(false);
+        onNotificationShow?.(false);
       }, 6000);
     };
 
