@@ -85,25 +85,28 @@ export const ScarcityNotification = ({ spotsLeft, onPurchase, isActive }: Scarci
 
   return (
     <div 
-      className={`fixed bottom-4 left-4 right-4 sm:left-4 sm:right-auto sm:max-w-sm z-50 
+      className={`fixed bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-sm z-50 
         transition-all duration-500 ease-out
         ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}
     >
-      <div className="bg-gradient-to-r from-green-600 to-green-500 rounded-xl p-4 shadow-2xl border border-green-400/30">
-        <div className="flex items-start gap-3">
-          <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-            <span className="text-lg">✓</span>
+      <div className="bg-gradient-to-r from-green-600 to-green-500 rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-2xl border border-green-400/30">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-white/20 rounded-full flex items-center justify-center">
+            <span className="text-sm sm:text-lg">✓</span>
           </div>
-          <div className="flex-1">
-            <p className="text-white text-sm sm:text-base font-bold leading-tight">
-              <span className="font-black text-white">{currentName}</span> just purchased the 23 Techniques
+          <div className="flex-1 min-w-0">
+            <p className="text-white text-xs sm:text-base font-bold leading-tight truncate">
+              <span className="font-black">{currentName}</span> just purchased
             </p>
-            <div className="mt-2 bg-yellow-400/20 rounded-md px-2 py-1 inline-block">
-              <p className="text-yellow-300 text-xs sm:text-sm font-bold">
-                🔥 Only <span className="font-black text-yellow-200 text-sm sm:text-base">{spotsLeft}</span> spots left at promotional price!
-              </p>
-            </div>
+            <p className="text-green-100 text-[10px] sm:text-sm leading-tight">
+              the 23 Techniques
+            </p>
           </div>
+        </div>
+        <div className="mt-2 bg-yellow-400/20 rounded-md px-2 py-1">
+          <p className="text-yellow-300 text-[10px] sm:text-sm font-bold text-center">
+            🔥 Only <span className="font-black text-yellow-200">{spotsLeft}</span> spots left at promotional price!
+          </p>
         </div>
       </div>
     </div>
