@@ -39,18 +39,22 @@ export const ScarcityNotification = ({ spotsLeft, onPurchase, isActive }: Scarci
       setCurrentName(randomName);
       setUsedNames(prev => [...prev, randomName]);
       
+      // Decrease spots immediately when notification appears
+      onPurchase();
+      
       // Show notification
       setIsVisible(true);
       
       // Hide after 6 seconds
       setTimeout(() => {
         setIsVisible(false);
-        onPurchase();
       }, 6000);
     };
 
     // Initial delay before first notification (3-8 seconds)
     const initialDelay = Math.random() * 5000 + 3000;
+    
+    let timeoutId: ReturnType<typeof setTimeout>;
     
     const initialTimeout = setTimeout(() => {
       showNotification();
@@ -60,7 +64,7 @@ export const ScarcityNotification = ({ spotsLeft, onPurchase, isActive }: Scarci
         // Variable interval: 8-18 seconds (to feel natural)
         const nextInterval = Math.random() * 10000 + 8000;
         
-        setTimeout(() => {
+        timeoutId = setTimeout(() => {
           if (spotsLeft > 3) {
             showNotification();
             scheduleNext();
@@ -71,7 +75,10 @@ export const ScarcityNotification = ({ spotsLeft, onPurchase, isActive }: Scarci
       scheduleNext();
     }, initialDelay);
 
-    return () => clearTimeout(initialTimeout);
+    return () => {
+      clearTimeout(initialTimeout);
+      clearTimeout(timeoutId);
+    };
   }, [isActive]);
 
   if (!isVisible || !currentName) return null;
@@ -83,12 +90,21 @@ export const ScarcityNotification = ({ spotsLeft, onPurchase, isActive }: Scarci
         ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}
     >
       <div className="bg-gradient-to-r from-green-600 to-green-500 rounded-xl p-4 shadow-2xl border border-green-400/30">
-        <p className="text-white text-sm sm:text-base font-bold">
-          <span className="font-black">{currentName}</span> just purchased the 23 Techniques
-        </p>
-        <p className="text-green-100 text-xs sm:text-sm mt-1">
-          Only <span className="font-bold text-yellow-300">{spotsLeft}</span> spots left at promotional price
-        </p>
+        <div className="flex items-start gap-3">
+          <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+            <span className="text-lg">✓</span>
+          </div>
+          <div className="flex-1">
+            <p className="text-white text-sm sm:text-base font-bold leading-tight">
+              <span className="font-black text-white">{currentName}</span> just purchased the 23 Techniques
+            </p>
+            <div className="mt-2 bg-yellow-400/20 rounded-md px-2 py-1 inline-block">
+              <p className="text-yellow-300 text-xs sm:text-sm font-bold">
+                🔥 Only <span className="font-black text-yellow-200 text-sm sm:text-base">{spotsLeft}</span> spots left at promotional price!
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
