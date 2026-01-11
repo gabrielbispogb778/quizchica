@@ -419,8 +419,7 @@ export const Section22 = ({
             {/* Refund Box */}
             <div className="bg-transparent border border-[#444] rounded-lg p-3 sm:p-4 mb-2">
               <p className="text-white text-sm sm:text-base font-bold text-center mb-2">We guarantee 100% refund</p>
-              <p className="text-white text-xs sm:text-sm text-center leading-relaxed">100% Money Back Guarantee, No Questions Asked. If you are not completely satisfied with
-For any reason, please email us within 60 days and we will refund every penny. You have ZERO risk</p>
+              <p className="text-white text-xs sm:text-sm text-center leading-relaxed">100% Money Back Guarantee, No Questions Asked. If you are not completely satisfied with For any reason, please email us within 30 days and we will refund every penny. You have ZERO risk</p>
             </div>
 
             {/* Secure Purchase Box */}
