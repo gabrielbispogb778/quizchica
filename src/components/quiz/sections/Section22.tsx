@@ -371,6 +371,39 @@ export const Section22 = ({
             <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl mt-2 transition-colors active:scale-[0.98] block text-center">
               ACCESS RIGHT NOW
             </a>
+
+            {/* How It Works - 3 Steps */}
+            <div className="w-full mt-6 space-y-3">
+              {/* Step 1 */}
+              <div className="bg-[#FFF8E7] border-l-4 border-[#D4A574] rounded-r-lg p-4">
+                <h4 className="text-[#8B4513] font-bold text-sm sm:text-base mb-1">
+                  STEP 1: AUTOMATIC DELIVERY 📩
+                </h4>
+                <p className="text-[#5D4037] text-xs sm:text-sm leading-relaxed">
+                  As soon as your registration is confirmed, our system sends the Exclusive Access Link directly to your <span className="font-bold">E-mail and WhatsApp</span>. It's instant.
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="bg-[#FFF8E7] border-l-4 border-[#D4A574] rounded-r-lg p-4">
+                <h4 className="text-[#8B4513] font-bold text-sm sm:text-base mb-1">
+                  STEP 2: SIMPLIFIED LOGIN 🔑
+                </h4>
+                <p className="text-[#5D4037] text-xs sm:text-sm leading-relaxed">
+                  Click the link and enter using only the <span className="font-bold">same e-mail</span> you registered at checkout. No bureaucracy or complicated passwords.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="bg-[#FFF8E7] border-l-4 border-[#D4A574] rounded-r-lg p-4">
+                <h4 className="text-[#8B4513] font-bold text-sm sm:text-base mb-1">
+                  STEP 3: IMMEDIATE PRACTICE 📱
+                </h4>
+                <p className="text-[#5D4037] text-xs sm:text-sm leading-relaxed">
+                  Done! You enter our <span className="font-bold">"Forbidden Netflix"</span> (like the photo) and can watch the video lessons on your phone, tablet, or computer, wherever and whenever you want.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Part 11 - 7 Day Guarantee */}
