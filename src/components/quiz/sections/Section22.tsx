@@ -126,6 +126,64 @@ export const Section22 = ({
           Enough with mediocre sex. Learn for real how to give your woman intense and pleasurable orgasms!
         </p>
 
+        {/* These 23 Techniques Are For You Block */}
+        <div className="w-full max-w-xs sm:max-w-md mb-6 sm:mb-8">
+          <h2 className="text-[#D92B27] text-sm sm:text-base font-bold text-center mb-4 italic underline">
+            THESE 23 TECHNIQUES ARE FOR YOU WHO...
+          </h2>
+          
+          <div className="space-y-2 sm:space-y-3">
+            <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
+              <p className="text-gray-800 text-xs sm:text-sm">
+                <span className="text-[#D92B27] mr-2">☑️</span>
+                <strong>Tired of hearing "Not today":</strong> You can't stand the excuses of <em className="text-[#D92B27]">"headache"</em> or <em className="text-[#D92B27]">"tiredness"</em> every time you try to touch her.
+              </p>
+            </div>
+            
+            <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
+              <p className="text-gray-800 text-xs sm:text-sm">
+                <span className="text-[#D92B27] mr-2">☑️</span>
+                <strong>Lives with fear of failing:</strong> The anxiety of <span className="text-[#D92B27] font-semibold">finishing too fast</span> or losing your erection blocks you before you even start.
+              </p>
+            </div>
+            
+            <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
+              <p className="text-gray-800 text-xs sm:text-sm">
+                <span className="text-[#D92B27] mr-2">☑️</span>
+                <strong>Suspects she fakes it:</strong> You have that terrible feeling that she <em className="text-[#D92B27]">"puts on a show"</em> in bed just so you can finish and she can sleep.
+              </p>
+            </div>
+            
+            <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
+              <p className="text-gray-800 text-xs sm:text-sm">
+                <span className="text-[#D92B27] mr-2">☑️</span>
+                <strong>Feels "inferior" in bed:</strong> The silent fear that she's had better partners in the past and you feel you're lacking.
+              </p>
+            </div>
+            
+            <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
+              <p className="text-gray-800 text-xs sm:text-sm">
+                <span className="text-[#D92B27] mr-2">☑️</span>
+                <strong>Wants to turn the tables:</strong> You want to stop being the man who <span className="text-[#D92B27] font-semibold">asks</span> for sex to be the man she <span className="text-[#D92B27] font-semibold">begs</span> to have.
+              </p>
+            </div>
+            
+            <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
+              <p className="text-gray-800 text-xs sm:text-sm">
+                <span className="text-[#D92B27] mr-2">☑️</span>
+                <strong>Thinks the problem is your "Size":</strong> You feel insecure and believe you'll never truly satisfy her because you're not <em className="text-[#D92B27]">"well endowed"</em> like other guys.
+              </p>
+            </div>
+            
+            <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
+              <p className="text-gray-800 text-xs sm:text-sm">
+                <span className="text-[#D92B27] mr-2">☑️</span>
+                <strong>Tries everything, but nothing works:</strong> You make an effort, go down on her, use your fingers, but she stays <em className="text-[#D92B27]">"dry"</em> or takes forever to get there.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* What Will You Receive Box */}
         <div className="w-full max-w-xs sm:max-w-md bg-[#D92B27] rounded-lg p-4 sm:p-6 mb-2">
           <h2 className="text-white text-base sm:text-lg font-bold text-center mb-3 sm:mb-4">WHAT WILL YOU RECEIVE?</h2>
