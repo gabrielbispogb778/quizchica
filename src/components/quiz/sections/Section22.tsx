@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import lipsIcon from "@/assets/lips-icon.png";
 import heroImage from "@/assets/secao-22-hero.webp";
 import chatImage from "@/assets/secao-22-chat.webp";
@@ -11,6 +11,7 @@ import guaranteeImage from "@/assets/secao-22-guarantee-60days.png";
 import secureBadge from "@/assets/secao-22-secure-badge.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { VturbPlayer } from "@/components/quiz/VturbPlayer";
+import { ScarcityNotification } from "@/components/quiz/ScarcityNotification";
 
 // Review images
 const reviewImages = ["/PS-1.png", "/PS-2.png", "/PS-3.png", "/PS-4.png", "/PS-5.png", "/PS-6.png", "/PS-7.png", "/PS-8.png", "/PS-9.png", "/PS-10.png", "/PS-11.png"];
@@ -43,8 +44,17 @@ export const Section22 = ({
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentVideoSlide, setCurrentVideoSlide] = useState(0);
   const [showBanner, setShowBanner] = useState(false);
-  const [spotsLeft, setSpotsLeft] = useState(40);
+  const [spotsLeft, setSpotsLeft] = useState(30);
   const offerRef = useRef<HTMLDivElement>(null);
+
+  // Handle purchase notification - decreases spots
+  const handlePurchaseNotification = useCallback(() => {
+    setSpotsLeft(prev => {
+      if (prev <= 3) return 3;
+      // Random decrease of 1 spot per notification
+      return prev - 1;
+    });
+  }, []);
 
   // Auto-scroll carousel
   useEffect(() => {
@@ -69,21 +79,15 @@ export const Section22 = ({
     return () => observer.disconnect();
   }, []);
 
-  // Countdown for spots
-  useEffect(() => {
-    if (!showBanner) return;
-    const interval = setInterval(() => {
-      setSpotsLeft(prev => {
-        if (prev <= 3) return 3; // Never goes below 3
-        // Random decrease between 1-2 spots every 8-15 seconds
-        const decrease = Math.random() > 0.6 ? 2 : 1;
-        return prev - decrease;
-      });
-    }, Math.random() * 7000 + 8000); // Random interval between 8-15 seconds
-
-    return () => clearInterval(interval);
-  }, [showBanner]);
+  // Spots are now controlled by ScarcityNotification component
   return <div className="min-h-screen min-h-[100dvh] bg-black flex flex-col overflow-y-auto">
+      {/* Scarcity Notification */}
+      <ScarcityNotification 
+        spotsLeft={spotsLeft} 
+        onPurchase={handlePurchaseNotification} 
+        isActive={showBanner} 
+      />
+      
       {/* Fixed Red Banner */}
       {showBanner && <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-2 px-2 sm:py-2 sm:px-3 md:py-3 md:px-4 shadow-lg animate-fade-in">
           <p className="text-white text-base sm:text-sm md:text-base font-black text-center tracking-wide sm:tracking-widest leading-tight uppercase animate-[pulse_1.5s_ease-in-out_infinite] drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
