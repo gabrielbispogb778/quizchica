@@ -182,14 +182,14 @@ export const Section22 = ({
             
             <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
               <p className="text-gray-800 text-xs sm:text-sm">
-                <span className="text-[#D92B27] mr-2">☑️</span>
+                <span className="text-[#D92B27] mr-2">✅</span>
                 <strong>Thinks the problem is your "Size":</strong> You feel insecure and believe you'll never truly satisfy her because you're not <em className="text-[#D92B27]">"well endowed"</em> like other guys.
               </p>
             </div>
             
             <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
               <p className="text-gray-800 text-xs sm:text-sm">
-                <span className="text-[#D92B27] mr-2">☑️</span>
+                <span className="text-[#D92B27] mr-2">✅</span>
                 <strong>Tries everything, but nothing works:</strong> You make an effort, go down on her, use your fingers, but she stays <em className="text-[#D92B27]">"dry"</em> or takes forever to get there.
               </p>
             </div>
