@@ -331,7 +331,7 @@ export const Section22 = ({
             <img 
               src="/img-front.png" 
               alt="Product preview" 
-              className="w-20 sm:w-28 h-auto object-contain"
+              className="w-28 sm:w-40 h-auto object-contain"
             />
           </div>
           
