@@ -66,14 +66,15 @@ export const Section22 = ({
     return () => clearInterval(interval);
   }, []);
 
-  // Intersection Observer for the offer section
+  // Intersection Observer for the offer section (LIMITED TIME OFFER)
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setShowBanner(true);
       }
     }, {
-      threshold: 0.3
+      threshold: 0.5, // 50% visible before triggering
+      rootMargin: '0px'
     });
     if (offerRef.current) {
       observer.observe(offerRef.current);
