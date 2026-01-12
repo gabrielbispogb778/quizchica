@@ -325,29 +325,41 @@ export const Section22 = ({
 
 
         {/* Part 6 - Limited Time Offer */}
-        <div className="w-full max-w-xs sm:max-w-md">
-          {/* Red banner */}
-          <div className="bg-[#dc2626] rounded-t-xl py-2 sm:py-3 px-3 sm:px-4">
-            <p className="text-white text-xs sm:text-sm font-bold text-center tracking-wider">
-              LIMITED TIME OFFER! 👇
-            </p>
+        <div className="w-full max-w-xs sm:max-w-md flex items-stretch gap-2 sm:gap-3">
+          {/* Image on the left */}
+          <div className="shrink-0 flex items-center">
+            <img 
+              src="/img-front.png" 
+              alt="Product preview" 
+              className="w-20 sm:w-28 h-auto object-contain"
+            />
           </div>
           
-          {/* Black box with offer */}
-          <div className="bg-black border-2 border-[#333] rounded-b-xl p-3 sm:p-5">
-            <div className="flex items-center gap-2 sm:gap-4">
-              {/* White vertical bar */}
-              <div className="w-1 sm:w-1.5 h-20 sm:h-24 bg-white rounded-full shrink-0"></div>
-              
-              {/* Text */}
-              <p className="text-white text-sm sm:text-xl font-bold italic leading-tight flex-1">23 Orgasmic Techniques + 2 Exclusive Bonuses! From $99.90</p>
-              
-              {/* Price box */}
-              <div className="bg-[#4a1c1c] rounded-lg px-2 sm:px-4 py-2 sm:py-3 text-center shrink-0">
-                <p className="text-white text-[8px] sm:text-[10px] font-medium tracking-wide">FOR ONLY</p>
-                <p className="text-white text-lg sm:text-2xl font-bold">$19,90</p>
-                <p className="text-white text-[8px] sm:text-[10px] tracking-wide">ONE-TIME</p>
-                <p className="text-white text-[8px] sm:text-[10px] tracking-wide">PAYMENT</p>
+          {/* Offer box on the right */}
+          <div className="flex-1">
+            {/* Red banner */}
+            <div className="bg-[#dc2626] rounded-t-xl py-2 sm:py-3 px-3 sm:px-4">
+              <p className="text-white text-xs sm:text-sm font-bold text-center tracking-wider">
+                LIMITED TIME OFFER! 👇
+              </p>
+            </div>
+            
+            {/* Black box with offer */}
+            <div className="bg-black border-2 border-[#333] rounded-b-xl p-3 sm:p-5">
+              <div className="flex items-center gap-2 sm:gap-4">
+                {/* White vertical bar */}
+                <div className="w-1 sm:w-1.5 h-20 sm:h-24 bg-white rounded-full shrink-0"></div>
+                
+                {/* Text */}
+                <p className="text-white text-sm sm:text-xl font-bold italic leading-tight flex-1">23 Orgasmic Techniques + 2 Exclusive Bonuses! From $99.90</p>
+                
+                {/* Price box */}
+                <div className="bg-[#4a1c1c] rounded-lg px-2 sm:px-4 py-2 sm:py-3 text-center shrink-0">
+                  <p className="text-white text-[8px] sm:text-[10px] font-medium tracking-wide">FOR ONLY</p>
+                  <p className="text-white text-lg sm:text-2xl font-bold">$19,90</p>
+                  <p className="text-white text-[8px] sm:text-[10px] tracking-wide">ONE-TIME</p>
+                  <p className="text-white text-[8px] sm:text-[10px] tracking-wide">PAYMENT</p>
+                </div>
               </div>
             </div>
           </div>
