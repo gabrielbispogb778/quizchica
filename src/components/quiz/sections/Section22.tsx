@@ -45,6 +45,7 @@ export const Section22 = ({
   const [currentVideoSlide, setCurrentVideoSlide] = useState(0);
   const [showBanner, setShowBanner] = useState(false);
   const [showRedBanner, setShowRedBanner] = useState(false);
+  const [redBannerPermanent, setRedBannerPermanent] = useState(false);
   const [spotsLeft, setSpotsLeft] = useState(30);
   const offerRef = useRef<HTMLDivElement>(null);
 
@@ -87,11 +88,13 @@ export const Section22 = ({
         spotsLeft={spotsLeft} 
         onPurchase={handlePurchaseNotification} 
         isActive={showBanner}
-        onNotificationShow={setShowRedBanner}
+        onNotificationShow={(visible) => {
+          if (visible) setRedBannerPermanent(true);
+        }}
       />
       
-      {/* Fixed Red Banner */}
-      {showRedBanner && <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-2 px-2 sm:py-2 sm:px-3 md:py-3 md:px-4 shadow-lg animate-fade-in">
+      {/* Fixed Red Banner - stays permanently after first notification */}
+      {redBannerPermanent && <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-2 px-2 sm:py-2 sm:px-3 md:py-3 md:px-4 shadow-lg animate-fade-in">
           <p className="text-white text-base sm:text-sm md:text-base font-black text-center tracking-wide sm:tracking-widest leading-tight uppercase animate-[pulse_1.5s_ease-in-out_infinite] drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
             ⚠️ ONLY <span className={`text-yellow-300 underline decoration-2 font-black ${spotsLeft <= 10 ? 'animate-[pulse_0.5s_ease-in-out_infinite]' : ''}`}>{spotsLeft} SPOTS</span> LEFT! ⚠️
           </p>
