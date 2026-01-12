@@ -9,25 +9,25 @@ interface Section9Props {
 
 export const Section9 = ({ onSelect, onBack }: Section9Props) => {
   return (
-    <div className="min-h-screen bg-[#000000] flex flex-col">
+    <div className="min-h-screen min-h-[100dvh] bg-[#000000] flex flex-col">
       {/* Back Button */}
       <button
         onClick={onBack}
-        className="absolute top-4 left-4 flex items-center gap-1 text-white hover:text-white/80 transition-colors z-10 text-sm font-medium"
+        className="absolute top-3 left-3 sm:top-4 sm:left-4 flex items-center gap-1 text-white hover:text-white/80 transition-colors z-10 text-xs sm:text-sm font-medium"
       >
         <ChevronLeft className="w-4 h-4" />
         Back
       </button>
 
       {/* Content */}
-      <div className="flex-1 flex flex-col items-center px-4 pt-8 pb-8">
+      <div className="flex-1 flex flex-col items-center px-3 sm:px-4 pt-6 sm:pt-8 pb-6 sm:pb-8">
         {/* Lips Icon */}
-        <div className="mb-4">
-          <img src={lipsIcon} alt="Lips icon" className="w-20 h-20 object-contain" />
+        <div className="mb-3 sm:mb-4">
+          <img src={lipsIcon} alt="Lips icon" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
         </div>
 
         {/* Progress Bar */}
-        <div className="w-full max-w-md mb-8">
+        <div className="w-full max-w-sm sm:max-w-md mb-6 sm:mb-8">
           <div className="h-2 bg-white rounded-full overflow-hidden">
             <div 
               className="h-full bg-[#D92B27] transition-all duration-300"
@@ -37,28 +37,28 @@ export const Section9 = ({ onSelect, onBack }: Section9Props) => {
         </div>
 
         {/* Title */}
-        <h1 className="text-white text-lg sm:text-xl font-bold text-center mb-8 max-w-md">
+        <h1 className="text-white text-base sm:text-lg md:text-xl font-bold text-center mb-6 sm:mb-8 max-w-xs sm:max-w-md px-2">
           Studies claim that only 1 out of 10 women achieves this type of pleasure (Squirt).
         </h1>
 
         {/* Women Image */}
-        <div className="mb-8">
+        <div className="mb-6 sm:mb-8">
           <img 
             src={womenImage} 
             alt="1 out of 10 women" 
-            className="w-full max-w-sm object-contain"
+            className="w-full max-w-[280px] sm:max-w-sm object-contain"
           />
         </div>
 
         {/* Subtitle */}
-        <p className="text-white text-base sm:text-lg font-bold text-center mb-8 max-w-md">
+        <p className="text-white text-sm sm:text-base md:text-lg font-bold text-center mb-6 sm:mb-8 max-w-xs sm:max-w-md px-2">
           But wait! There are Techniques for this and few men know them!
         </p>
 
         {/* Continue Button */}
         <button
           onClick={(e) => onSelect(e)}
-          className="w-full max-w-md bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 active:scale-[0.98]"
+          className="w-full max-w-xs sm:max-w-md bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-200 active:scale-[0.98] text-sm sm:text-base"
         >
           Continue
         </button>
