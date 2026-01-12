@@ -36,35 +36,35 @@ export const Section2 = ({
 }: Section2Props) => {
   const progressPercentage = 2 / 22 * 100; // ~9%
 
-  return <div className="flex flex-col items-center w-full px-4">
+  return <div className="flex flex-col items-center w-full px-3 sm:px-4">
       {/* Back Button */}
-      <button onClick={onBack} className="absolute top-4 left-4 flex items-center gap-1 text-foreground/70 hover:text-foreground transition-colors text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded">
+      <button onClick={onBack} className="absolute top-3 left-3 sm:top-4 sm:left-4 flex items-center gap-1 text-foreground/70 hover:text-foreground transition-colors text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary rounded">
         <ChevronLeft className="w-4 h-4" />
         Back
       </button>
 
       {/* Lips Icon */}
-      <div className="animate-scale-in mb-4">
-        <img src={lipsIcon} alt="Lips icon" className="w-20 h-20 object-contain" />
+      <div className="animate-scale-in mb-3 sm:mb-4">
+        <img src={lipsIcon} alt="Lips icon" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
       </div>
 
       {/* Progress Bar */}
-      <div className="w-full max-w-2xl h-2 bg-white rounded-full overflow-hidden mb-6">
+      <div className="w-full max-w-sm sm:max-w-2xl h-2 bg-white rounded-full overflow-hidden mb-4 sm:mb-6">
         <div className="h-full bg-primary rounded-full transition-all duration-500" style={{
         width: `${progressPercentage}%`
       }} />
       </div>
 
       {/* Title */}
-      <div className="text-center animate-fade-in mb-7">
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2">
+      <div className="text-center animate-fade-in mb-5 sm:mb-7">
+        <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 px-2">
           What is your Main Objective? 😈
         </h1>
-        <p className="text-sm sm:text-base text-muted-foreground text-center">Choose the desire that drives you. You’ll learn practical secrets with real models!</p>
+        <p className="text-xs sm:text-sm md:text-base text-muted-foreground text-center px-2">Choose the desire that drives you. You'll learn practical secrets with real models!</p>
       </div>
 
       {/* Options Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl animate-fade-in justify-items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-6 w-full max-w-sm sm:max-w-3xl animate-fade-in justify-items-center">
         {options.map(option => <OptionCard key={option.id} label={option.label} subtitle={option.subtitle} image={option.image} onClick={e => onSelect(e)} />)}
       </div>
     </div>;
