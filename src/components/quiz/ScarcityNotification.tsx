@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-// 30 English names from USA, Canada, UK, Australia
+// 30 English names with varied formats (full name, first name + initial, first name only)
 const buyerNames = [
-  "James M.", "Michael R.", "William T.", "David S.", "Robert L.",
-  "John K.", "Thomas H.", "Christopher B.", "Daniel W.", "Matthew P.",
-  "Andrew C.", "Joshua N.", "Ryan F.", "Brandon G.", "Kevin D.",
-  "Jason A.", "Justin E.", "Tyler O.", "Austin I.", "Zachary V.",
-  "Ethan Q.", "Nathan J.", "Samuel X.", "Benjamin U.", "Alexander Y.",
-  "Nicholas Z.", "Jacob W.", "Dylan M.", "Connor S.", "Liam R."
+  "James Mitchell", "Michael R.", "William", "David Sullivan", "Robert L.",
+  "John", "Thomas Henderson", "Christopher B.", "Daniel", "Matthew Parker",
+  "Andrew", "Joshua N.", "Ryan Foster", "Brandon", "Kevin D.",
+  "Jason Anderson", "Justin", "Tyler O.", "Austin", "Zachary",
+  "Ethan Quinn", "Nathan J.", "Samuel", "Benjamin Harris", "Alexander",
+  "Nicholas", "Jacob Wilson", "Dylan M.", "Connor", "Liam"
 ];
 
 interface ScarcityNotificationProps {
