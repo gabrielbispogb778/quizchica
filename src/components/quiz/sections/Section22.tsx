@@ -306,7 +306,7 @@ export const Section22 = ({
           </div>
 
           {/* Bonus 2 */}
-          <div className="bg-black border border-gray-800 rounded-lg p-3 sm:p-4 text-center">
+          <div ref={offerRef} className="bg-black border border-gray-800 rounded-lg p-3 sm:p-4 text-center">
             <img src={bonus2} alt="Bonus 2" className="w-20 sm:w-24 h-auto mx-auto mb-2 sm:mb-3" />
             <p className="text-white text-xs sm:text-sm italic mb-2">
               Boost your game with the power of Seduction. Attract and conquer any woman with this Secret Formula!
@@ -323,7 +323,7 @@ export const Section22 = ({
 
 
         {/* Part 6 - Limited Time Offer */}
-        <div ref={offerRef} className="w-full max-w-xs sm:max-w-md">
+        <div className="w-full max-w-xs sm:max-w-md">
           {/* Red banner */}
           <div className="bg-[#dc2626] rounded-t-xl py-2 sm:py-3 px-3 sm:px-4">
             <p className="text-white text-xs sm:text-sm font-bold text-center tracking-wider">
