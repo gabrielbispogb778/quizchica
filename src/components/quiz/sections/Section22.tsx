@@ -470,7 +470,7 @@ export const Section22 = ({
                   STEP 3: IMMEDIATE PRACTICE 📱
                 </h4>
                 <p className="text-[#5D4037] text-xs sm:text-sm leading-relaxed">
-                  Done! You enter our <span className="font-bold">"Forbidden Netflix"</span> (like the photo) and can watch the video lessons on your phone, tablet, or computer, wherever and whenever you want.
+                  Done! You enter our platform and can watch the video lessons on your phone, tablet, or computer, wherever and whenever you want.
                 </p>
               </div>
             </div>
