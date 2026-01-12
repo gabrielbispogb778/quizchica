@@ -71,6 +71,8 @@ export const Section22 = ({
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setShowBanner(true);
+        setRedBannerPermanent(true); // show the "ONLY X SPOTS LEFT" bar immediately at Bonus 2
+        observer.disconnect(); // trigger only once
       }
     }, {
       threshold: 0.1, // Trigger when 10% visible
