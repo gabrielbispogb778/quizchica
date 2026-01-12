@@ -64,8 +64,8 @@ export const ScarcityNotification = ({ spotsLeft, onPurchase, isActive, onNotifi
       
       // Set up recurring notifications with variable timing
       const scheduleNext = () => {
-        // Variable interval: 8-18 seconds (to feel natural)
-        const nextInterval = Math.random() * 10000 + 8000;
+        // Variable interval: 10-18 seconds (to feel natural)
+        const nextInterval = Math.random() * 8000 + 10000;
         
         timeoutId = setTimeout(() => {
           if (spotsLeft > 3) {
