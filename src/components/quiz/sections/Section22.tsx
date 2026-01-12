@@ -374,7 +374,7 @@ export const Section22 = ({
           <div className="mt-4 sm:mt-6 w-full">
             {/* Product Image */}
             <div className="flex justify-center mb-3">
-              <img src="/img-front.png" alt="Product preview" className="w-32 sm:w-40 h-auto object-contain" />
+              <img src="/img-front.png" alt="Product preview" className="w-44 sm:w-56 h-auto object-contain" />
             </div>
             {/* Green CTA Button */}
             <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98] block text-center">
@@ -443,7 +443,7 @@ export const Section22 = ({
 
             {/* Product Image */}
             <div className="flex justify-center mb-3 mt-2">
-              <img src="/img-front.png" alt="Product preview" className="w-32 sm:w-40 h-auto object-contain" />
+              <img src="/img-front.png" alt="Product preview" className="w-44 sm:w-56 h-auto object-contain" />
             </div>
             {/* Green CTA Button - Separate */}
             <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98] block text-center">
@@ -870,7 +870,7 @@ export const Section22 = ({
 
               {/* Product Image */}
               <div className="flex justify-center mb-3 mt-6">
-                <img src="/img-front.png" alt="Product preview" className="w-32 sm:w-40 h-auto object-contain" />
+                <img src="/img-front.png" alt="Product preview" className="w-44 sm:w-56 h-auto object-contain" />
               </div>
               {/* CTA Button after FAQ */}
               <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-xs sm:text-base font-bold py-3 sm:py-4 px-3 sm:px-4 rounded-xl transition-colors active:scale-[0.98] block text-center">
