@@ -325,41 +325,29 @@ export const Section22 = ({
 
 
         {/* Part 6 - Limited Time Offer */}
-        <div className="w-full max-w-xs sm:max-w-md flex items-stretch gap-2 sm:gap-3">
-          {/* Image on the left */}
-          <div className="shrink-0 flex items-center">
-            <img 
-              src="/img-front.png" 
-              alt="Product preview" 
-              className="w-28 sm:w-40 h-auto object-contain"
-            />
+        <div className="w-full max-w-xs sm:max-w-md">
+          {/* Red banner */}
+          <div className="bg-[#dc2626] rounded-t-xl py-2 sm:py-3 px-3 sm:px-4">
+            <p className="text-white text-xs sm:text-sm font-bold text-center tracking-wider">
+              LIMITED TIME OFFER! 👇
+            </p>
           </div>
           
-          {/* Offer box on the right */}
-          <div className="flex-1">
-            {/* Red banner */}
-            <div className="bg-[#dc2626] rounded-t-xl py-2 sm:py-3 px-3 sm:px-4">
-              <p className="text-white text-xs sm:text-sm font-bold text-center tracking-wider">
-                LIMITED TIME OFFER! 👇
-              </p>
-            </div>
-            
-            {/* Black box with offer */}
-            <div className="bg-black border-2 border-[#333] rounded-b-xl p-3 sm:p-5">
-              <div className="flex items-center gap-2 sm:gap-4">
-                {/* White vertical bar */}
-                <div className="w-1 sm:w-1.5 h-20 sm:h-24 bg-white rounded-full shrink-0"></div>
-                
-                {/* Text */}
-                <p className="text-white text-sm sm:text-xl font-bold italic leading-tight flex-1">23 Orgasmic Techniques + 2 Exclusive Bonuses! From $99.90</p>
-                
-                {/* Price box */}
-                <div className="bg-[#4a1c1c] rounded-lg px-2 sm:px-4 py-2 sm:py-3 text-center shrink-0">
-                  <p className="text-white text-[8px] sm:text-[10px] font-medium tracking-wide">FOR ONLY</p>
-                  <p className="text-white text-lg sm:text-2xl font-bold">$19,90</p>
-                  <p className="text-white text-[8px] sm:text-[10px] tracking-wide">ONE-TIME</p>
-                  <p className="text-white text-[8px] sm:text-[10px] tracking-wide">PAYMENT</p>
-                </div>
+          {/* Black box with offer */}
+          <div className="bg-black border-2 border-[#333] rounded-b-xl p-3 sm:p-5">
+            <div className="flex items-center gap-2 sm:gap-4">
+              {/* White vertical bar */}
+              <div className="w-1 sm:w-1.5 h-20 sm:h-24 bg-white rounded-full shrink-0"></div>
+              
+              {/* Text */}
+              <p className="text-white text-sm sm:text-xl font-bold italic leading-tight flex-1">23 Orgasmic Techniques + 2 Exclusive Bonuses! From $99.90</p>
+              
+              {/* Price box */}
+              <div className="bg-[#4a1c1c] rounded-lg px-2 sm:px-4 py-2 sm:py-3 text-center shrink-0">
+                <p className="text-white text-[8px] sm:text-[10px] font-medium tracking-wide">FOR ONLY</p>
+                <p className="text-white text-lg sm:text-2xl font-bold">$19,90</p>
+                <p className="text-white text-[8px] sm:text-[10px] tracking-wide">ONE-TIME</p>
+                <p className="text-white text-[8px] sm:text-[10px] tracking-wide">PAYMENT</p>
               </div>
             </div>
           </div>
@@ -384,6 +372,10 @@ export const Section22 = ({
 
           {/* Part 8 - CTA Button + Payment Methods */}
           <div className="mt-4 sm:mt-6 w-full">
+            {/* Product Image */}
+            <div className="flex justify-center mb-3">
+              <img src="/img-front.png" alt="Product preview" className="w-32 sm:w-40 h-auto object-contain" />
+            </div>
             {/* Green CTA Button */}
             <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98] block text-center">
               ACCESS NOW WITH AN 80% DISCOUNT
@@ -449,8 +441,12 @@ export const Section22 = ({
               </div>
             </div>
 
+            {/* Product Image */}
+            <div className="flex justify-center mb-3 mt-2">
+              <img src="/img-front.png" alt="Product preview" className="w-32 sm:w-40 h-auto object-contain" />
+            </div>
             {/* Green CTA Button - Separate */}
-            <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl mt-2 transition-colors active:scale-[0.98] block text-center">
+            <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98] block text-center">
               ACCESS RIGHT NOW
             </a>
 
@@ -872,8 +868,12 @@ export const Section22 = ({
                 </AccordionItem>
               </Accordion>
 
+              {/* Product Image */}
+              <div className="flex justify-center mb-3 mt-6">
+                <img src="/img-front.png" alt="Product preview" className="w-32 sm:w-40 h-auto object-contain" />
+              </div>
               {/* CTA Button after FAQ */}
-              <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-xs sm:text-base font-bold py-3 sm:py-4 px-3 sm:px-4 rounded-xl mt-6 transition-colors active:scale-[0.98] block text-center">
+              <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-xs sm:text-base font-bold py-3 sm:py-4 px-3 sm:px-4 rounded-xl transition-colors active:scale-[0.98] block text-center">
                 👉 YES, I'M READY – GIVE ME INSTANT ACCESS NOW
               </a>
             </div>
