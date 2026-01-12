@@ -54,8 +54,8 @@ export const ScarcityNotification = ({ spotsLeft, onPurchase, isActive, onNotifi
       }, 6000);
     };
 
-    // Initial delay before first notification (3-8 seconds)
-    const initialDelay = Math.random() * 5000 + 3000;
+    // First notification should appear immediately when the user reaches the trigger point
+    const initialDelay = 0;
     
     let timeoutId: ReturnType<typeof setTimeout>;
     
