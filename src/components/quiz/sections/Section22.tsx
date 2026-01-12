@@ -147,35 +147,35 @@ export const Section22 = ({
           <div className="space-y-2 sm:space-y-3">
             <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
               <p className="text-gray-800 text-xs sm:text-sm">
-                <span className="text-[#D92B27] mr-2">☑️</span>
+                <span className="text-[#D92B27] mr-2">✅</span>
                 <strong>Tired of hearing "Not today":</strong> You can't stand the excuses of <em className="text-[#D92B27]">"headache"</em> or <em className="text-[#D92B27]">"tiredness"</em> every time you try to touch her.
               </p>
             </div>
             
             <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
               <p className="text-gray-800 text-xs sm:text-sm">
-                <span className="text-[#D92B27] mr-2">☑️</span>
+                <span className="text-[#D92B27] mr-2">✅</span>
                 <strong>Lives with fear of failing:</strong> The anxiety of <span className="text-[#D92B27] font-semibold">finishing too fast</span> or losing your erection blocks you before you even start.
               </p>
             </div>
             
             <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
               <p className="text-gray-800 text-xs sm:text-sm">
-                <span className="text-[#D92B27] mr-2">☑️</span>
+                <span className="text-[#D92B27] mr-2">✅</span>
                 <strong>Suspects she fakes it:</strong> You have that terrible feeling that she <em className="text-[#D92B27]">"puts on a show"</em> in bed just so you can finish and she can sleep.
               </p>
             </div>
             
             <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
               <p className="text-gray-800 text-xs sm:text-sm">
-                <span className="text-[#D92B27] mr-2">☑️</span>
+                <span className="text-[#D92B27] mr-2">✅</span>
                 <strong>Feels "inferior" in bed:</strong> The silent fear that she's had better partners in the past and you feel you're lacking.
               </p>
             </div>
             
             <div className="bg-white border-l-4 border-[#D92B27] rounded-r-lg p-3">
               <p className="text-gray-800 text-xs sm:text-sm">
-                <span className="text-[#D92B27] mr-2">☑️</span>
+                <span className="text-[#D92B27] mr-2">✅</span>
                 <strong>Wants to turn the tables:</strong> You want to stop being the man who <span className="text-[#D92B27] font-semibold">asks</span> for sex to be the man she <span className="text-[#D92B27] font-semibold">begs</span> to have.
               </p>
             </div>
