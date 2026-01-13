@@ -88,7 +88,7 @@ export const ScarcityNotification = ({ spotsLeft, onPurchase, isActive, onNotifi
 
   return (
     <div 
-      className={`fixed bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-sm z-50 
+      className={`fixed bottom-16 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-sm z-50 
         transition-all duration-500 ease-out
         ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}
     >
