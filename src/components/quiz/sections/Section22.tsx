@@ -377,7 +377,7 @@ export const Section22 = ({
               <img src="/img-front.png" alt="Product preview" className="w-56 sm:w-72 h-auto object-contain" />
             </div>
             {/* Green CTA Button */}
-            <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98] block text-center">
+            <a href="https://go.centerpag.com/PPU38CQ61DD" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98] block text-center">
               ACCESS NOW WITH AN 80% DISCOUNT
             </a>
 
@@ -446,7 +446,7 @@ export const Section22 = ({
               <img src="/img-front.png" alt="Product preview" className="w-56 sm:w-72 h-auto object-contain" />
             </div>
             {/* Green CTA Button - Separate */}
-            <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98] block text-center">
+            <a href="https://go.centerpag.com/PPU38CQ61DD" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors active:scale-[0.98] block text-center">
               ACCESS RIGHT NOW
             </a>
 
@@ -873,7 +873,7 @@ export const Section22 = ({
                 <img src="/img-front.png" alt="Product preview" className="w-56 sm:w-72 h-auto object-contain" />
               </div>
               {/* CTA Button after FAQ */}
-              <a href="https://go.centerpag.com/PPU38CQ4NDP" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-xs sm:text-base font-bold py-3 sm:py-4 px-3 sm:px-4 rounded-xl transition-colors active:scale-[0.98] block text-center">
+              <a href="https://go.centerpag.com/PPU38CQ61DD" target="_blank" rel="noopener noreferrer" className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white text-xs sm:text-base font-bold py-3 sm:py-4 px-3 sm:px-4 rounded-xl transition-colors active:scale-[0.98] block text-center">
                 👉 YES, I'M READY – GIVE ME INSTANT ACCESS NOW
               </a>
             </div>
