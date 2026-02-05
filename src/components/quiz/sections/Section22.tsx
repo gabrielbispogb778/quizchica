@@ -75,7 +75,8 @@ export const Section22 = ({
         observer.disconnect(); // trigger only once
       }
     }, {
-      threshold: 0.1, // Trigger when 10% visible
+      threshold: 0.1,
+      // Trigger when 10% visible
       rootMargin: '0px'
     });
     if (offerRef.current) {
@@ -87,14 +88,9 @@ export const Section22 = ({
   // Spots are now controlled by ScarcityNotification component
   return <div className="min-h-screen min-h-[100dvh] bg-black flex flex-col overflow-y-auto">
       {/* Scarcity Notification */}
-      <ScarcityNotification 
-        spotsLeft={spotsLeft} 
-        onPurchase={handlePurchaseNotification} 
-        isActive={showBanner}
-        onNotificationShow={(visible) => {
-          if (visible) setRedBannerPermanent(true);
-        }}
-      />
+      <ScarcityNotification spotsLeft={spotsLeft} onPurchase={handlePurchaseNotification} isActive={showBanner} onNotificationShow={visible => {
+      if (visible) setRedBannerPermanent(true);
+    }} />
       
       {/* Fixed Red Banner - stays permanently after first notification */}
       {redBannerPermanent && <div className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-2 px-2 sm:py-2 sm:px-3 md:py-3 md:px-4 shadow-lg animate-fade-in">
@@ -345,7 +341,7 @@ export const Section22 = ({
               {/* Price box */}
               <div className="bg-[#4a1c1c] rounded-lg px-2 sm:px-4 py-2 sm:py-3 text-center shrink-0">
                 <p className="text-white text-[8px] sm:text-[10px] font-medium tracking-wide">FOR ONLY</p>
-                <p className="text-white text-lg sm:text-2xl font-bold">$19,90</p>
+                <p className="text-white text-lg sm:text-2xl font-bold">$21,39</p>
                 <p className="text-white text-[8px] sm:text-[10px] tracking-wide">ONE-TIME</p>
                 <p className="text-white text-[8px] sm:text-[10px] tracking-wide">PAYMENT</p>
               </div>
