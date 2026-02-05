@@ -363,7 +363,7 @@ export const Section22 = ({
 
           {/* Offer Image with Bonuses */}
           <div className="rounded-xl overflow-hidden">
-            <img src={offerImage} alt="23 Orgasmic Techniques + Bonuses" className="w-full h-auto" />
+            <img alt="23 Orgasmic Techniques + Bonuses" className="w-full h-auto" src="/lovable-uploads/721e3691-8f1b-4d32-90bd-1eb3e17bbcb3.png" />
           </div>
 
           {/* Part 8 - CTA Button + Payment Methods */}
