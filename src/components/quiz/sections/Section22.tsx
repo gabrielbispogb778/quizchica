@@ -357,7 +357,7 @@ export const Section22 = ({
               <p className="text-white text-base sm:text-lg font-bold">DON'T WORRY!</p>
             </div>
             <p className="text-white text-xs sm:text-sm leading-relaxed px-2">
-              The amount of <span className="text-[#ef4444] underline">$19.90 USD</span> will be automatically converted to your country's currency when you click the button below!
+              The amount of <span className="text-[#ef4444] underline">$21,39 USD</span> will be automatically converted to your country's currency when you click the button below!
             </p>
           </div>
 
