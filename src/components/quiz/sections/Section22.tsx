@@ -430,7 +430,7 @@ export const Section22 = ({
                 {/* Price box */}
                 <div className="bg-[#4a1c1c] rounded-lg px-2 sm:px-4 py-2 sm:py-3 text-center shrink-0">
                   <p className="text-white text-[8px] sm:text-[10px] font-medium tracking-wide">FOR ONLY</p>
-                  <p className="text-white text-lg sm:text-2xl font-bold">$19,90</p>
+                  <p className="text-white text-lg sm:text-2xl font-bold">$21,39</p>
                   <p className="text-white text-[8px] sm:text-[10px] tracking-wide">ONE-TIME</p>
                   <p className="text-white text-[8px] sm:text-[10px] tracking-wide">PAYMENT</p>
                 </div>
