@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ChevronLeft } from "lucide-react";
 import lipsIcon from "@/assets/lips-icon.png";
 
@@ -8,6 +8,8 @@ interface Section14Props {
 }
 
 export const Section14 = ({ onSelect, onBack }: Section14Props) => {
+  const [showContent, setShowContent] = useState(false);
+
   useEffect(() => {
     // Load the vturb player script
     const script = document.createElement("script");
@@ -22,6 +24,15 @@ export const Section14 = ({ onSelect, onBack }: Section14Props) => {
         existingScript.remove();
       }
     };
+  }, []);
+
+  // Timer to show content after 1:30 (90 seconds)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 90000); // 90 seconds = 1:30 minutes
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -74,33 +85,38 @@ export const Section14 = ({ onSelect, onBack }: Section14Props) => {
           </div>
         </div>
 
-        {/* Subtitle */}
-        <p className="text-white text-xs sm:text-sm text-center mb-4 sm:mb-6 max-w-xs sm:max-w-md px-2">
-          This is only 1 of the 23 Techniques we will teach you. Watch until the end! 🙈
-        </p>
+        {/* Content that appears after 90 seconds */}
+        {showContent && (
+          <>
+            {/* Subtitle */}
+            <p className="text-white text-xs sm:text-sm text-center mb-4 sm:mb-6 max-w-xs sm:max-w-md px-2 animate-fade-in">
+              This is only 1 of the 23 Techniques we will teach you. Watch until the end! 🙈
+            </p>
 
-        {/* Question */}
-        <h2 className="text-white text-base sm:text-lg font-bold text-center mb-3 sm:mb-4">
-          How did you like it?
-        </h2>
+            {/* Question */}
+            <h2 className="text-white text-base sm:text-lg font-bold text-center mb-3 sm:mb-4 animate-fade-in">
+              How did you like it?
+            </h2>
 
-        {/* Options */}
-        <div className="flex flex-col gap-3 sm:gap-4 w-full max-w-xs sm:max-w-sm">
-          <button
-            onClick={(e) => onSelect(e)}
-            className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 flex items-center justify-between text-sm sm:text-base active:scale-[0.98]"
-          >
-            <span>Very good</span>
-            <span className="text-lg sm:text-xl">🔥</span>
-          </button>
-          <button
-            onClick={(e) => onSelect(e)}
-            className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 flex items-center justify-between text-sm sm:text-base active:scale-[0.98]"
-          >
-            <span>I'm going to apply it right now!</span>
-            <span className="text-lg sm:text-xl">👀</span>
-          </button>
-        </div>
+            {/* Options */}
+            <div className="flex flex-col gap-3 sm:gap-4 w-full max-w-xs sm:max-w-sm animate-fade-in">
+              <button
+                onClick={(e) => onSelect(e)}
+                className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 flex items-center justify-between text-sm sm:text-base active:scale-[0.98]"
+              >
+                <span>Very good</span>
+                <span className="text-lg sm:text-xl">🔥</span>
+              </button>
+              <button
+                onClick={(e) => onSelect(e)}
+                className="bg-[#D92B27] hover:bg-[#B82422] text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-200 flex items-center justify-between text-sm sm:text-base active:scale-[0.98]"
+              >
+                <span>I'm going to apply it right now!</span>
+                <span className="text-lg sm:text-xl">👀</span>
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
